@@ -1,3 +1,4 @@
+# tip from http://stackoverflow.com/questions/637827/redirect-stderr-and-stdout-in-a-bash-script
 # Close STDOUT file descriptor
 exec 1<&-
 # Close STDERR FD
