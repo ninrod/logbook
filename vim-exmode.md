@@ -2,7 +2,9 @@
 
 * very useful: <c-v> on ex-mode escapes special combos like <C-a>.
 * Here we simulate a 'surround' on every first word of all lines of the file.
-`:%norm cw""P`
+```viml
+:%norm cw""P
+```
 
 * increase next number of all selected lines
 `:'<,'>norm ^A`
