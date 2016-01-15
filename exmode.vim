@@ -13,3 +13,6 @@
 
 " exec @a macro on a range defined by marks 'a' and 'b'.
 :'a,'bnorm @a
+
+" open quickfix window
+:copen
