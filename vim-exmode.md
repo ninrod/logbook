@@ -1,6 +1,6 @@
 ## VIM ex command tricks
 
-* very useful: <c-v> on ex-mode escapes special combos like <C-a>.
+* very useful: `<c-v>` on ex-mode escapes special combos like `<C-a>`.
 * Here we simulate a 'surround' on every first word of all lines of the file.
 ```viml
 :%norm cw""P
