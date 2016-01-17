@@ -19,3 +19,6 @@
 
 " turns buffer into a disposable/scratch buffer
 :set buftype=nofile
+
+" search with 'very magic' mode on.
+/\v searchstring
