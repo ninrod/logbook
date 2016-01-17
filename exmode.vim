@@ -14,7 +14,7 @@
 * exec @a macro on a range defined by marks 'a' and 'b'.
 :'a,'bnorm @a
 
-" open quickfix window:
+" open quickfix window
 :copen
 
 " turns buffer into a disposable/scratch buffer
