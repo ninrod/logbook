@@ -25,3 +25,6 @@
 
 " generate help files from within vim.
 :helpt[ags] ~/.vim/bundle/${plugindir}/doc
+
+"replace each match of the last pattern with 'bar' within the selected lines in visual mode.
+:'<,'>s//bar/g
