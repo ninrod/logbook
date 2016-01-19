@@ -22,3 +22,6 @@
 
 " search with 'very magic' mode on.
 /\v searchstring
+
+" generate help files from within vim.
+:helpt[ags] ~/.vim/bundle/${plugindir}/doc
