@@ -11,4 +11,4 @@ git branch --track experimental origin/experimental
 git checkout experimental
 
 #### seeing what changes are comming from upstream (diff)
-git diff master origin/master
+git diff master..origin/master
