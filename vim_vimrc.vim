@@ -22,3 +22,9 @@ set lazyredraw
 autocmd BufWinEnter * highlight ColorColumn ctermbg=darkred
 set colorcolumn=201
 
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+#
+# BACEN_CENTOS
+#
