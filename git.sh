@@ -12,3 +12,6 @@ git checkout experimental
 
 #### seeing what changes are comming from upstream (diff)
 git diff master..origin/master
+
+#### git pretty format colors
+git log --pretty=format:"%Credblah%Creset %Cgreenbluh%Creset %C(Yellow)lol%Creset %Cblueduh%Creset %C(magenta)lolmagenta%Creset %C(cyan)sdlkfjsdkfj%Creset %C(white)lollololzors%Creset"
