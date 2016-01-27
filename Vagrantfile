@@ -14,6 +14,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider :virtualbox do |vb, override|
     vb.name = "centos-7.2"
     vb.customize ["modifyvm", :id, "--memory", "4096"]
+    vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional']
     # intel card funciona no CentOS
     vb.customize ["modifyvm", :id, "--nictype2", "82540EM"]
   end
