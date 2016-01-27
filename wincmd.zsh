@@ -2,4 +2,7 @@
 regedit /e "%userprofile%\desktop\putty.reg" HKEY_CURRENT_USER\Software\SimonTatham
 
 # create symbolic links for a target
-mklink {link-simbólico} {path real}
+mklink {symlink} {real path}
+
+# recursively delete a directory
+rmdir {heregoesthedirname} /s
