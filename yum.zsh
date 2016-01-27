@@ -1,2 +1,2 @@
-# para instalar o X no CentOS
+# installing X on CentOS
 yum -y groupinstall "X Window System"
