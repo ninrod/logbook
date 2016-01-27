@@ -91,4 +91,4 @@ echo "This line will appear in $LOG_FILE, not 'on screen'"
 ##############################################################################
 
 # top order by memory consumption on OSx
-top -o MEM
+top -o mem
