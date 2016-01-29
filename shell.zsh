@@ -11,16 +11,18 @@
 print -l ^.git(D/)
 
 ##### show all files including 'dot' files that are not named .git
-print -l ^.git(D/)
+print -l ^.git(D.)
 
 # there are glob qualifiers and string modifiers. they are different.
 # this is an example of a modifier
 print file.txt(:a)
 
 #example of a glob qualifier and a glob modifier together. the modifier is separated by a colon ':'.
-# here we print the full qualified name of all files (not directories) that are not '.git'.
+# here we print the full qualified name of all files, including dotfiles (not directories) that are not '.git'.
 print ^(.git*)(D.:a)
 
+# removing all directories except some
+rm -rf ^(vim-colors-solarized|vim-airline)
 
 
 
