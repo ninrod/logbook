@@ -5,11 +5,7 @@
 ##                                                                          ##
 ##############################################################################
 ##############################################################################
-
 # more tips can be found on: http://reasoniamhere.com/2014/01/11/outrageously-useful-tips-to-master-your-z-shell/
-
-##### print lines that match a criteria
-git status --short | awk '$1 == "AA"' {print $0}
 
 ##### show all directories including 'dot' directories that are not named .git
 print -l ^.git(D/)
