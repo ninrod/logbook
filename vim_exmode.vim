@@ -28,3 +28,6 @@
 
 "replace each match of the last pattern with 'bar' within the selected lines in visual mode.
 :'<,'>s//bar/g
+
+" for sorting a range. the 'u' optional parameter will delete duplicate lines
+:'<,'>sort [u]
