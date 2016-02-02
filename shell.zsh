@@ -103,3 +103,19 @@ echo "This line will appear in $LOG_FILE, not 'on screen'"
 
 # top order by memory consumption on OSx
 top -o mem
+
+# to show a keyboard key terminal escape sequence
+cat -v
+
+
+##############################################################################
+##############################################################################
+##                                                                          ##
+##                          INSANE ONE-LINERS                               ##
+##                                                                          ##
+##############################################################################
+##############################################################################
+
+# found on: http://nealford.com/memeagora/2013/01/22/why_everyone_eventually_hates_maven.html
+tr -cs A-Za-z '\n' | tr A-Z a-z | sort | uniq -c | sort -rn | sed ${1}q
+
