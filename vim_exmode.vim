@@ -31,3 +31,9 @@
 
 " for sorting a range. the 'u' optional parameter will delete duplicate lines
 :'<,'>sort [u]
+
+" toggle line numbers
+:set nu!
+
+" toggle relative line numbers
+:set rnu!
