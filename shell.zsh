@@ -35,7 +35,10 @@ rm -rf ^(vim-colors-solarized|vim-airline)
 ##############################################################################
 
 # copy specific files preserving directory structure
+#method 01: using cpio utility
 find . -iname '*.iml' | cpio -pdm ~/code/testdir
+#method 02: using rsync
+find . -iname '*.iml' -exec rsync -R {} ~/code/testdir \;
 
 # find all dot files on home directory
 ls -la `find ~ -maxdepth=1 -type l`
