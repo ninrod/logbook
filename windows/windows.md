@@ -4,7 +4,7 @@ Windows tricks
 ### DOS shell tricks
 
 * Create symbolic links for a target: `mklink {symlink} {real path}`
-* recursively delete a directory: rmdir {heregoesthedirname} /s
+* recursively delete a directory: `rmdir {heregoesthedirname} /s`
 
 ### changing the user home folder
 
