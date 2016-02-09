@@ -93,8 +93,21 @@
 * jump list -> `:jumps` ou `:ju`
 
 
-## ex commands
+## ex mode commands
 
+* very useful: `<c-v>` on ex-mode escapes special combos like `<C-a>`, or `<ESC>`. Here we simulate a 'surround' on every first word of all lines of the file: `:%norm cw""P`
+* increase next number of all selected lines: `:'<,'>norm ^A`
+* decrease next number of all selected lines: `:'<,'>norm ^X`
+* exec @a macro on visually selected lines: `:'<,'>norm @a`
+* exec @a macro on a range defined by marks 'a' and 'b'.  `:'a,'bnorm @a`
+* open quickfix window: `:copen`
+* turns buffer into a disposable/scratch buffer: `:set buftype=nofile`
+* search with 'very magic' mode on:  `/\v searchstring`
+* generate help files from within vim:  `:helpt[ags] ~/.vim/bundle/${plugindir}/doc`
+* replace each match of the last pattern with 'bar' within the selected lines in visual mode: `:'<,'>s//bar/g`
+* for sorting a range. the 'u' optional parameter will delete duplicate lines: `:'<,'>sort [u]`
+* toggle line numbers: `:set nu!`
+* toggle relative line numbers: `:set rnu!`
 * search/replace com atalho: acha os highlight com '/' e depois soca: `%s//nova/g`
 * `:e!`: reverte o buffer para o estado original do arquivo sem sair do vim.
 * mostrar o nome do arquivo corrente: `:echo expand('%:p')`
@@ -140,11 +153,23 @@ autocmd BufWinEnter * highlight ColorColumn ctermbg=darkred
 set colorcolumn=201
 ```
 
+## plugin tricks
+
+### EasyAlign
+
+* easy align any delimiter
+    1. manually select line with `V`
+    2. `<CR>` to enter easy align mode
+    3. `*` to select all delimiters on the line
+    4. `<C-X>` to enter a regular expression
+    5. type your delimiter in regex form.
+    6. done!
+
 ## other tricks
 
 * to force a specific syntax on a file put this on top or bottom
 
 ```vim
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
+# -*- mode: markdown -*-
+# vi: set ft=markdown :
 ```
