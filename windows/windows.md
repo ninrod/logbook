@@ -1,28 +1,18 @@
 Windows tricks
 ==============
 
-### change the user `home` folder location in windows
+### DOS shell tricks
 
-* [See this article][1]. 
-* `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList`
+* Create symbolic links for a target: `mklink {symlink} {real path}`
+* recursively delete a directory: rmdir {heregoesthedirname} /s
 
-### export all putty configs.
+### changing the user home folder
 
-```bat
-regedit /e "%userprofile%\desktop\putty.reg" HKEY_CURRENT_USER\Software\SimonTatham
-```
+* change the user `home` folder location in windows: [See this article][1].
+* user home folder key location: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList`
 
-### create symbolic links for a target
+### assorted tricks
 
-```bat
-mklink {symlink} {real path}
-```
-
-### recursively delete a directory
-
-```bat
-rmdir {heregoesthedirname} /s
-```
-
+* To export all putty configs: `regedit /e "%userprofile%\desktop\putty.reg" HKEY_CURRENT_USER\Software\SimonTatham`
 
 [1]: <http://www.sevenforums.com/tutorials/87555-user-profile-change-default-location.html>
