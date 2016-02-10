@@ -3,19 +3,34 @@
 ## ZSH Globbing
 
 * more tips can be found [here][1].
-* show all directories including 'dot' directories that are not named `.git`: `print -l ^.git(D/)`
-* show all files including 'dot' files that are not named .git: `print -l ^.git(D.)`
-* print the full qualified name of all files, including dotfiles, only files, that are not `.git`.
 
 ```sh
-# there are _glob qualifiers_ and _string modifiers_. these are different.
-# this is an example of a glob qualifier: `print file.txt(:a)`
-# this is an example of a glob qualifier and a string modifier together. the modifier is separated by a colon `:`.
+# In zsh, there are |glob qualifiers| and |string modifiers|.
+
+# Here's an example of a |string modifier| 
+# string modifiers are always separated by a colon `:`
+# `a` = full qualified name
+$ print file.txt(:a)
+
+# Here's an example of a |glob qualifier| 
+# D = include dotfiles 
+# / = only directories
+print -l ^.git(D/)
+
+# here's an example of a |glob qualifier| and a |string modifier| together. the modifier is separated by a colon `:`.
 $ print ^(.git*)(D.:a)
 ```
 
+* show all files including 'dot' files that are not named .git:
+
+```sh
+# D = include dotfiles;
+# . = only files
+$ print -l ^.git(D.)
+```
+
 * removing all directories except some: `rm -rf ^(vim-colors-solarized|vim-airline)`
-* git moving all files of a specific type to another directory:
+* `git` moving all files of a specific type to the current directory:
 
 ```sh
 for i in $(find . -name '*.md'); do
