@@ -40,35 +40,48 @@ done
 
 ## file manipulation
 
-* copy specific files preserving directory structure
-    * method 01: using cpio utility
-        ```sh
-        $ find . -iname '*.iml' | cpio -pdm ~/code/testdir
-        ```
-    * method 02: using rsync
-        ```sh
-        $ find . -iname '*.iml' -exec rsync -R {} ~/code/testdir \;
-        ```
+### copy specific files preserving directory structure
+
+* method 01: using cpio utility
+
+```sh
+$ find . -iname '*.iml' | cpio -pdm ~/code/testdir
+```
+* method 02: using rsync
+
+```sh
+$ find . -iname '*.iml' -exec rsync -R {} ~/code/testdir \;
+```
 
 * finding all dot files on home directory:
+
 ```sh
 $ ls -la `find ~ -maxdepth=1 -type l`
 ```
 
-* show 20 biggest folders from current dir: `du -sm * | sort -nr | head -n 20`
+* show 20 biggest folders from current dir: 
+
+```sh
+du -sm * | sort -nr | head -n 20
+```
 
 
 ## SED MAGIC
 
 * show only the deleted and not staged directories in the current branch/repo.
-    * the regex is striping everything from the first '/' to the end of the filename.
-        ```sh
-        $ git ls-files -d | sed 's/\/.*$//g' | sort | uniq
-        ```
+
+```sh
+# the regex is striping everything from the first '/' to the end of the filename.
+$ git ls-files -d | sed 's/\/.*$//g' | sort | uniq
+```
 
 ## AWK MAGIC
 
-* print lines that match a criteria: `git status --short | awk '$1 == "AA"' {print $0}`
+* print lines that match a criteria:
+
+```sh
+$ git status --short | awk '$1 == "AA"' {print $0}
+```
 
 ## IO REDIRECTION
 
