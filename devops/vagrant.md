@@ -1,9 +1,8 @@
-# to force a specifix syntax, e.g. ruby, put the snippet bellow to the file
+# Vagrant tricks
 
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
+* vagrant file with `private network` configuration
 
-
+```ruby
 Vagrant.configure("2") do |config|
   config.ssh.insert_key = false
   config.vm.box = "centos-7.2"
@@ -22,6 +21,5 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "../../.", "/vagrant", :mount_options => ["dmode=777", "fmode=666"]
 
   config.vm.network :forwarded_port, guest: 2375, host: 2375
-
 end
-
+```

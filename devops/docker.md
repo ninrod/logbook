@@ -3,13 +3,9 @@
 ## Comandos úteis que aprendi
 
 * limpar todos os containers:  `docker rm $(docker ps -aq)`
-
 * SSH no container: `docker run -t -i sua_imagem /bin/bash`
-
 * commitar um container como uma imagem: `docker commit <idcontainer> <ninrod/blah>`
-
 * rodar um container com um mount point (no MAC): `docker run -v /Users/bob/myapp/src:/src`
-
 * rodar um springboot java expondo uma porta X considerando um mount point no OSX
 
 ```sh
@@ -23,8 +19,8 @@ docker run -d -p 8080:8080 ninrod/springboot:test java -jar /home/ninrod/deliver
 ```
 
 * fazer push para o docker hub: `docker push --help`
-
 * logar no ssh considerando um mount point (para copiar coisas para dentro do container)
+
 ```sh
 docker run -v /Users/ninrod/code/java/springboot-hello/sbt/build/libs:/home/ninrod/app -i -t  java:8-jre /bin/bash
 ```
@@ -32,7 +28,6 @@ docker run -v /Users/ninrod/code/java/springboot-hello/sbt/build/libs:/home/ninr
 ## Links
 
 * [cheatsheet](https://github.com/wsargent/docker-cheat-sheet)
-
 * artigos
   * [first steps with docker](http://www.alexecollins.com/first-steps-with-docker/)
   * [tudo o que você precisa saber sobre docker e ninguém nunca te falou](http://developerblog.redhat.com/2014/05/15/practical-introduction-to-docker-containers/)
