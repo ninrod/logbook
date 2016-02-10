@@ -17,7 +17,8 @@ $ print file.txt(:a)
 # / = only directories
 print -l ^.git(D/)
 
-# here's an example of a |glob qualifier| and a |string modifier| together. the modifier is separated by a colon `:`.
+# here's an example of a |glob qualifier| and a |string modifier| together. 
+# the modifier is always separated by a colon `:`.
 $ print ^(.git*)(D.:a)
 ```
 
@@ -36,6 +37,14 @@ $ print -l ^.git(D.)
 for i in $(find . -name '*.md'); do
   git mv $i .
 done
+```
+
+* globbing inside a shell function
+
+```sh
+fullqualifiedname() {
+  print -l ${1:a}
+}
 ```
 
 ## file manipulation
