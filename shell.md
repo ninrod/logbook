@@ -51,13 +51,13 @@ fullqualifiedname() {
 
 ### copy specific files preserving directory structure
 
-* method 01: using cpio utility
+* method 01: using `cpio` utility
 
 ```sh
 $ find . -iname '*.iml' | cpio -pdm ~/code/testdir
 ```
 
-* method 02: using rsync
+* method 02: using `rsync`
 
 ```sh
 $ find . -iname '*.iml' -exec rsync -R {} ~/code/testdir \;
