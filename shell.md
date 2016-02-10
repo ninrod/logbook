@@ -56,10 +56,19 @@ fullqualifiedname() {
 ```sh
 $ find . -iname '*.iml' | cpio -pdm ~/code/testdir
 ```
+
 * method 02: using rsync
 
 ```sh
 $ find . -iname '*.iml' -exec rsync -R {} ~/code/testdir \;
+```
+
+* method 03: using a `for` loop
+
+```sh
+$ for i in $(find . -name '*.md'); do\
+$   cp --parents $i rofl\
+$ done
 ```
 
 * finding all dot files on home directory:
