@@ -14,6 +14,13 @@
             ```
 
 * removing all directories except some: `rm -rf ^(vim-colors-solarized|vim-airline)`
+* git moving all files of a specific type to another directory:
+
+```sh
+for i in $(find . -name '*.md'); do
+  git mv $i .
+done
+```
 
 ## file manipulation
 
