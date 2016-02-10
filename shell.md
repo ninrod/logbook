@@ -63,11 +63,11 @@ $ find . -iname '*.iml' | cpio -pdm ~/code/testdir
 $ find . -iname '*.iml' -exec rsync -R {} ~/code/testdir \;
 ```
 
-* method 03: using a `for` loop
+* method 03: using a `for` loop and `cp --parents`
 
 ```sh
-$ for i in $(find . -name '*.md'); do\
-$   cp --parents $i rofl\
+$ for i in $(find sourcedir -name '*.md'); do
+$   cp --parents $i targetdir
 $ done
 ```
 
