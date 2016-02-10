@@ -5,7 +5,8 @@
 * more tips can be found [here][1].
 * show all directories including 'dot' directories that are not named `.git`: `print -l ^.git(D/)`
 * show all files including 'dot' files that are not named .git: `print -l ^.git(D.)`
-* here we print the full qualified name of all files, including dotfiles (not directories) that are not '.git'.
+* print the full qualified name of all files, including dotfiles, only files, that are not `.git`.
+
 ```sh
 # there are _glob qualifiers_ and _string modifiers_. these are different.
 # this is an example of a glob qualifier: `print file.txt(:a)`
