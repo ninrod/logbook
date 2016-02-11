@@ -28,6 +28,11 @@ git log --pretty=format:"%Credblah%Creset %Cgreenbluh%Creset %C(Yellow)lol%Crese
 
 * find all commits that changed a file: `git log --follow -p -- filename`
 
+## Merges
+
+* para reverter commits locais, veja esse [stackoverflow][1]
+
+
 ## Branches
 
 ### Renomeando um branch
@@ -75,7 +80,6 @@ $ git push -u origin master
 # -vv => doubly verbose
 $ git branch -vv 
 ```
-
 
 ## solução de problemas bizzaros
 
@@ -134,3 +138,6 @@ git reset HEAD --hard at /newrepo
 ```sh
  git archive master | tar -x -C /somewhere/else
 ```
+
+
+[1]: <http://stackoverflow.com/questions/4114095/revert-git-repo-to-a-previous-commit>
