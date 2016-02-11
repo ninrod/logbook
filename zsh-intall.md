@@ -1,5 +1,26 @@
 # Instalação do zsh no OSx
 
+## Installing from source
+
+* dependencies
+
+```sh
+$ sudo apt-get install -y git-core gcc make autoconf yodl libncursesw5-dev texinfo checkinstall
+``` 
+
+* installing
+
+```sh
+# Make configure
+./Util/preconfig
+
+./configure
+make
+make check
+make install
+```
+
+
 ## Se a completion do git estiver toda errada, siga esses passos:
 
 * Existe uma variável do zsh chamada `$fpath`.
