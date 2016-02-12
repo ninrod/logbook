@@ -28,7 +28,64 @@ git log --pretty=format:"%Credblah%Creset %Cgreenbluh%Creset %C(Yellow)lol%Crese
 
 * find all commits that changed a file: `git log --follow -p -- filename`
 
-## Merges
+## Merges and Rebases
+
+### verificando diferenças entre upstream e local
+```sh
+# common base:
+$ git show :1:package.json
+
+# 'ours'
+$ git show :2:package.json
+
+# 'theirs'
+$ git show :3:package.json
+```
+
+### forçando alterações estilo `--theirs` e `--ours`
+
+```sh
+# método 1 'forçando o theirs' (ou :2: para o ours)
+git show :3:package.json > package.json
+git add package.json
+
+# método 2
+$ git checkout --theirs _widget.html.erb
+$ git checkout --ours _widget.html.erb
+```
+
+### reversões
+
+* revertendo um merge commit
+```sh
+$ git revert -m 1 <merge_commit_sha>
+```
+
+* muda o ponteiro para o qual `HEAD` está apontando.
+```sh
+# observar variações: --soft, --mixed e --hard
+$ git reset 0d1d7fc32
+```
+
+* get your index and work tree into the desired state, without changing HEAD
+```sh
+git checkout 0d1d7fc32 .
+```
+
+* para abortar o merge
+```sh
+# merge
+$ git merge --abort
+
+#rebase
+$ git rebase --abort
+
+# ou ainda
+$ git reset HEAD --hard
+```
+
+
+### links úteis
 
 * para reverter commits locais, veja esse [stackoverflow][1]
 
