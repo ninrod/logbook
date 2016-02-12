@@ -1,33 +1,5 @@
 # Git Tricks
 
-## interesting links
-
-  * [tutorial interativo de git. excelente.](http://pcottle.github.io/learnGitBranching/?NODEMO)
-
-## comandos aprendidos
-
-* criar uma tag: `git tag -a string.da.tag -m 'mensagem da tag'`
-* reverter todas as modificações: `git reset HEAD --hard`
-* desligar o track de um arquivo: `git update-index --skip-worktree Gruntfile.js`
-* ligar de vola o track de um arquivo: `git update-index --no-skip-worktree Gruntfile.js`
-
-* criar um patch:
-  * criando: `git format-patch master --stdout > my_new_patch.diff`
-  * aplicando: `git am < my_new_patch.diff`
-  * mais infos nesse [link](https://ariejan.net/2009/10/26/how-to-create-and-apply-a-patch-with-git/)
-
-
-* exportar a working copy: `git archive master | tar -x -C /path`
-
-* seeing what changes are comming from upstream (diff): `git diff master..origin/master`
-
-* git pretty format colors
-```sh
-git log --pretty=format:"%Credblah%Creset %Cgreenbluh%Creset %C(Yellow)lol%Creset %Cblueduh%Creset %C(magenta)lolmagenta%Creset %C(cyan)sdlkfjsdkfj%Creset %C(white)lollololzors%Creset"
-```
-
-* find all commits that changed a file: `git log --follow -p -- filename`
-
 ## Merges and Rebases
 
 ### verificando diferenças entre upstream e local
@@ -131,6 +103,30 @@ $ git push -u origin master
 # -vv => doubly verbose
 $ git branch -vv 
 ```
+
+## outros comandos aprendidos
+
+* criar uma tag: `git tag -a string.da.tag -m 'mensagem da tag'`
+* reverter todas as modificações: `git reset HEAD --hard`
+* desligar o track de um arquivo: `git update-index --skip-worktree Gruntfile.js`
+* ligar de vola o track de um arquivo: `git update-index --no-skip-worktree Gruntfile.js`
+
+* criar um patch:
+  * criando: `git format-patch master --stdout > my_new_patch.diff`
+  * aplicando: `git am < my_new_patch.diff`
+  * mais infos nesse [link](https://ariejan.net/2009/10/26/how-to-create-and-apply-a-patch-with-git/)
+
+
+* exportar a working copy: `git archive master | tar -x -C /path`
+
+* seeing what changes are comming from upstream (diff): `git diff master..origin/master`
+
+* git pretty format colors
+```sh
+git log --pretty=format:"%Credblah%Creset %Cgreenbluh%Creset %C(Yellow)lol%Creset %Cblueduh%Creset %C(magenta)lolmagenta%Creset %C(cyan)sdlkfjsdkfj%Creset %C(white)lollololzors%Creset"
+```
+
+* find all commits that changed a file: `git log --follow -p -- filename`
 
 ## solução de problemas bizzaros
 
