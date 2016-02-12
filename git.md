@@ -187,7 +187,7 @@ git reset HEAD --hard at /newrepo
 ```
 
 
-## interesting links
+## Links interessantes, Tutoriais, Guides, etc...
 
 * [Learn Git Branching][1]: excelente tutorial interativo (quase um jogo).
 * [Think Like (a) Git][2]: um site 'guide' muito bom. 
