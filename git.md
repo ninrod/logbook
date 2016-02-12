@@ -32,7 +32,6 @@ git log --pretty=format:"%Credblah%Creset %Cgreenbluh%Creset %C(Yellow)lol%Crese
 
 * para reverter commits locais, veja esse [stackoverflow][1]
 
-
 ## Branches
 
 ### Renomeando um branch
