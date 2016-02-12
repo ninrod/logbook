@@ -2,6 +2,23 @@
 
 ## Merges and Rebases
 
+### Rebase 
+
+* equivalência entre `rebase` e `cherry-pick` (mais info [aqui][5])
+
+```sh
+# esse trecho
+git checkout foo
+git checkout -b newbar
+git cherry-pick C D E 
+git checkout bar 
+git reset --hard newbar 
+git branch -d newbar
+
+# é funcionalmente equivalente a esse
+git rebase foo bar
+```
+
 ### verificando diferenças entre upstream e local
 ```sh
 # common base:
@@ -198,3 +215,4 @@ git reset HEAD --hard at /newrepo
 [2]: <http://think-like-a-git.net>
 [3]: <http://www-cs-students.stanford.edu/~blynn/gitmagic/>
 [4]: <http://stackoverflow.com/questions/4114095/revert-git-repo-to-a-previous-commit>
+[5]: <http://think-like-a-git.net/sections/rebase-from-the-ground-up/a-helpful-mnemonic-for-git-rebase-arguments.html>
