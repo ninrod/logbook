@@ -84,11 +84,6 @@ $ git rebase --abort
 $ git reset HEAD --hard
 ```
 
-
-### links úteis
-
-* para reverter commits locais, veja esse [stackoverflow][1]
-
 ## Branches
 
 ### Renomeando um branch
@@ -196,4 +191,14 @@ git reset HEAD --hard at /newrepo
 ```
 
 
-[1]: <http://stackoverflow.com/questions/4114095/revert-git-repo-to-a-previous-commit>
+## interesting links
+
+* [Learn Git Branching][1]: excelente tutorial interativo (quase um jogo).
+* [Think Like (a) Git][2]: um site 'guide' muito bom. 
+* [Git Magic][3]: ótimo tutorial html de git.
+* [Reversões de commits][4]: stackoverflow sobre reverter commits.
+
+[1]: <http://pcottle.github.io/learnGitBranching/?NODEMO>
+[2]: <http://think-like-a-git.net>
+[3]: <http://www-cs-students.stanford.edu/~blynn/gitmagic/>
+[4]: <http://stackoverflow.com/questions/4114095/revert-git-repo-to-a-previous-commit>
