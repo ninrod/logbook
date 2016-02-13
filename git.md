@@ -2,7 +2,7 @@
 
 ## Merges and Rebases
 
-### Rebase 
+### Rebase
 
 * equivalência entre `rebase` e `cherry-pick` (mais info [aqui][5])
 
@@ -10,9 +10,9 @@
 # esse trecho
 git checkout foo
 git checkout -b newbar
-git cherry-pick C D E 
-git checkout bar 
-git reset --hard newbar 
+git cherry-pick C D E
+git checkout bar
+git reset --hard newbar
 git branch -d newbar
 
 # é funcionalmente equivalente a esse
@@ -71,6 +71,16 @@ $ git rebase --abort
 
 # ou ainda
 $ git reset HEAD --hard
+```
+
+* remover todos os `untracked` files
+
+```sh
+# verifica o que vai ser removido
+$ git clean -f -n
+
+# remove todos os arquivos e diretórios `untracked`
+$ git clean -fd
 ```
 
 ## Branches
