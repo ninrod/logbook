@@ -85,6 +85,12 @@
 
 * `vim -u NONE`
 
+### invocar um vim com uma config específica
+
+```sh
+$ vim -u NONE -N -c ':set runtimepath+=~/.vim/bundle/vim-sneak/' -c ':runtime plugin/sneak.vim'
+```
+
 ## lists
 
 * command list: `q:`
