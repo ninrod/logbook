@@ -4,10 +4,10 @@
 
 ### Rebase
 
-* equivalência entre `rebase` e `cherry-pick` (mais info [aqui][5])
+* `rebase` and `cherry-pick` equivalency (more info [here][5])
 
 ```sh
-# esse trecho
+# this snippet
 git checkout foo
 git checkout -b newbar
 git cherry-pick C D E
@@ -15,11 +15,11 @@ git checkout bar
 git reset --hard newbar
 git branch -d newbar
 
-# é funcionalmente equivalente a esse
+# is functionally equivalent to this snippet
 git rebase foo bar
 ```
 
-### verificando diferenças entre upstream e local
+### verifying differences between local and upstream
 ```sh
 # common base:
 $ git show :1:package.json
@@ -31,28 +31,28 @@ $ git show :2:package.json
 $ git show :3:package.json
 ```
 
-### forçando alterações estilo `--theirs` e `--ours`
+### resolving conflicts with `--theirs` e `--ours`
 
 ```sh
-# método 1 'forçando o theirs' (ou :2: para o ours)
+# method 01 'forcing theirs' (or :2: for ours)
 git show :3:package.json > package.json
 git add package.json
 
-# método 2
+# method 2
 $ git checkout --theirs _widget.html.erb
 $ git checkout --ours _widget.html.erb
 ```
 
-### reversões
+### reverting things
 
-* revertendo um merge commit
+* reverting a merge commit
 ```sh
 $ git revert -m 1 <merge_commit_sha>
 ```
 
-* muda o ponteiro para o qual `HEAD` está apontando.
+* change the pointer `HEAD` is pointing to
 ```sh
-# observar variações: --soft, --mixed e --hard
+# observe variations: --soft, --mixed e --hard
 $ git reset 0d1d7fc32
 ```
 
@@ -61,7 +61,7 @@ $ git reset 0d1d7fc32
 git checkout 0d1d7fc32 .
 ```
 
-* para abortar o merge
+* aborting a merge/rebase
 ```sh
 # merge
 $ git merge --abort
@@ -69,23 +69,23 @@ $ git merge --abort
 #rebase
 $ git rebase --abort
 
-# ou ainda
+# or yet
 $ git reset HEAD --hard
 ```
 
-* remover todos os `untracked` files
+* remove all `untracked` files
 
 ```sh
-# verifica o que vai ser removido
+# verifying what will be removed
 $ git clean -f -n
 
-# remove todos os arquivos e diretórios `untracked`
+# remove all untracked files and dirs
 $ git clean -fd
 ```
 
 ## Branches
 
-### Renomeando um branch
+### renaming a branch
 
 * If you want to rename a branch while currently at another branch: 
 
@@ -97,9 +97,9 @@ $ git branch -m <oldname> <newname>
 ```sh
 $ git branch -m <newname>
 ```
-### deletando um branch localmente e remotamente
-* localmente: `git branch -D nome/do/branch`
-* remotamente: `git push origin --delete nome/do/branch (git 1.7+)`
+### removing a branch locally and remotelly
+* locally: `git branch -D nome/do/branch`
+* remotelly: `git push origin --delete nome/do/branch (git 1.7+)`
 
 ### remote branch checkout.
 
@@ -115,12 +115,12 @@ $ git branch --track experimental origin/experimental
 $ git checkout experimental
 ```
 
-### fazer um branch local trackear um branch remoto
+### set up branch tracking
 ```sh
-# ou --set-upstream, o -u é de upstream
+# or --set-upstream
 $ git branch -u origin/master 
 
-# para setar o tracking na oportunidade do primeiro push
+# set tracking in a push statement
 $ git push -u origin master
 ```
 
@@ -131,20 +131,20 @@ $ git push -u origin master
 $ git branch -vv 
 ```
 
-## outros comandos aprendidos
+## other useful commands
 
-* criar uma tag: `git tag -a string.da.tag -m 'mensagem da tag'`
-* reverter todas as modificações: `git reset HEAD --hard`
-* desligar o track de um arquivo: `git update-index --skip-worktree Gruntfile.js`
-* ligar de vola o track de um arquivo: `git update-index --no-skip-worktree Gruntfile.js`
+* tag creation: `git tag -a string.da.tag -m 'tag msg'`
+* revert all local modifications: `git reset HEAD --hard`
+* turn off git tracking for a specific file: `git update-index --skip-worktree Gruntfile.js`
+* turn on git tracking for a specific file: `git update-index --no-skip-worktree Gruntfile.js`
 
-* criar um patch:
-  * criando: `git format-patch master --stdout > my_new_patch.diff`
-  * aplicando: `git am < my_new_patch.diff`
-  * mais infos nesse [link](https://ariejan.net/2009/10/26/how-to-create-and-apply-a-patch-with-git/)
+* create a patch:
+  * creating: `git format-patch master --stdout > my_new_patch.diff`
+  * applying: `git am < my_new_patch.diff`
+  * more info [here](https://ariejan.net/2009/10/26/how-to-create-and-apply-a-patch-with-git/)
 
 
-* exportar a working copy: `git archive master | tar -x -C /path`
+* export the working copy: `git archive master | tar -x -C /path`
 
 * seeing what changes are comming from upstream (diff): `git diff master..origin/master`
 
@@ -155,11 +155,11 @@ git log --pretty=format:"%Credblah%Creset %Cgreenbluh%Creset %C(Yellow)lol%Crese
 
 * find all commits that changed a file: `git log --follow -p -- filename`
 
-## solução de problemas bizzaros
+## bizarre problems
 
-### bizarrices de submodulos
+### bizarrices de submodules
 
-* fazendo update de um repo git que tenha submodulos
+* updating a repo with submodules
 
 ```sh
 $ git fetch
@@ -167,21 +167,13 @@ $ git rebase
 $ git submodule update --init --recursive
 ```
 
-* clonando e já inciando os submodules de um git repo que tenha submodulos
+* cloning and initing submodules
 
 ```sh
 $ git clone --recursive git://github.com/foo/bar.git
 ```
 
-* para iniciar um submodulo: 
-
-```sh
-# em versões abaixo do 1.8.4, = e acima disso não precisa fazer isso a partir da raiz do .git
-$ git submodule add http://blah.blu/repo.git
-$ git commit.
-```
-
-* removendo um submodulo
+* removing a submodule
 
 ```sh
 $ git rm --cached <submodule name>
@@ -194,9 +186,9 @@ $ git commit
 ```
 
 
-### Erros ultra super bizarros
+### beyond bizarre erros
 
-* consertando a terrível mensagem [`zero padded file modes`](http://stackoverflow.com/questions/14700502/how-to-fix-git-zero-padded-file-modes-warning):
+* fixing the terrible [`zero padded file modes`](http://stackoverflow.com/questions/14700502/how-to-fix-git-zero-padded-file-modes-warning) message:
 
 ```sh
 mkdir /newrepo
@@ -207,19 +199,19 @@ git fast-export --all | (cd /newrepo && git fast-import)
 git reset HEAD --hard at /newrepo
 ```
 
-* se deu erro de 'bad time zone' timezone nos commits anteriores, ou se você quer exportar somente a working copy
+* `bad time zone` fix (basically an export of the local files)
 
 ```sh
  git archive master | tar -x -C /somewhere/else
 ```
 
 
-## Links interessantes, Tutoriais, Guides, etc...
+## Interesting links, tutorials, etc...
 
-* [Learn Git Branching][1]: excelente tutorial interativo (quase um jogo).
-* [Think Like (a) Git][2]: um site 'guide' muito bom. 
-* [Git Magic][3]: ótimo tutorial html de git.
-* [Reversões de commits][4]: stackoverflow sobre reverter commits.
+* [Learn Git Branching][1]: excelent interactive tutorial (almost a game).
+* [Think Like (a) Git][2]: good guide site.
+* [Git Magic][3]: excelent html tutorial
+* [Reversões de commits][4]: stackoverflow question about how to revert commits.
 
 [1]: <http://pcottle.github.io/learnGitBranching/?NODEMO>
 [2]: <http://think-like-a-git.net>
