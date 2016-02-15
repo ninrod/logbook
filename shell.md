@@ -1,36 +1,9 @@
 # Shell tricks
 
-## ZSH Globbing
+## `find`
 
-* more tips can be found [here][1].
+### `find` and `git`
 
-```sh
-# In zsh, there are |glob qualifiers| and |string modifiers|.
-
-# Here's an example of a |string modifier| 
-# string modifiers are always separated by a colon `:`
-# `a` = full qualified name
-$ print file.txt(:a)
-
-# Here's an example of a |glob qualifier| 
-# D = include dotfiles 
-# / = only directories
-print -l ^.git(D/)
-
-# here's an example of a |glob qualifier| and a |string modifier| together. 
-# the modifier is always separated by a colon `:`.
-$ print ^(.git*)(D.:a)
-```
-
-* show all files including 'dot' files that are not named .git:
-
-```sh
-# D = include dotfiles;
-# . = only files
-$ print -l ^.git(D.)
-```
-
-* removing all directories except some: `rm -rf ^(vim-colors-solarized|vim-airline)`
 * `git` moving all files of a specific type to the current directory:
 
 ```sh
@@ -38,16 +11,6 @@ for i in $(find . -name '*.md'); do
   git mv $i .
 done
 ```
-
-* globbing inside a shell function
-
-```sh
-fullqualifiedname() {
-  print -l ${1:a}
-}
-```
-
-## file manipulation
 
 ### copy specific files preserving directory structure
 
@@ -131,6 +94,5 @@ echo "This line will appear in $LOG_FILE, not 'on screen'"
 tr -cs A-Za-z '\n' | tr A-Z a-z | sort | uniq -c | sort -rn | sed ${1}q
 ```
 
-[1]: <http://reasoniamhere.com/2014/01/11/outrageously-useful-tips-to-master-your-z-shell>
 [2]: <http://stackoverflow.com/questions/637827/redirect-stderr-and-stdout-in-a-bash-script>
 [3]: <http://nealford.com/memeagora/2013/01/22/why_everyone_eventually_hates_maven.html>
