@@ -12,6 +12,9 @@
 # `a` = full qualified name
 $ print file.txt(:a)
 
+# `A` = like `a`, but resolves symlinks
+$ print ~/.vimrc(:A)
+
 # Here's an example of a |glob qualifier| 
 # D = include dotfiles 
 # / = only directories
