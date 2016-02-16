@@ -1,5 +1,16 @@
 # Shell tricks
 
+## curl
+
+* configure `~/.curlrc` proxy
+
+```sh
+$ vim ~/.curlrc 
+
+# add this
+proxy = user:pass@proxy:port
+```
+
 ## `find`
 
 ### `find` and `git`
