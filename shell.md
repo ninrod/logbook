@@ -46,6 +46,13 @@ $ ls -la `find ~ -maxdepth=1 -type l`
 du -sm * | sort -nr | head -n 20
 ```
 
+## change standard shell
+
+```sh
+sudo echo "/usr/local/bin/zsh" >> /etc/shells
+chsh -s /usr/local/bin/zsh
+```
+
 
 ## SED MAGIC
 
@@ -85,6 +92,7 @@ echo "This line will appear in $LOG_FILE, not 'on screen'"
 * `top` -> order by memory consumption on OSx: `top -o mem`
 * show a keyboard key terminal escape sequence: `cat -v`
 * to invoke a pure zsh session without any configuration: `zsh -f`
+
 
 ## INSANE ONE-LINERS
 
