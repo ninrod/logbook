@@ -1,5 +1,21 @@
 # Git Tricks
 
+## Git trio: HEAD, INDEX and LOCAL
+
+* showing contents of a file as it appears in `HEAD` | `INDEX`
+```sh
+# HEAD
+$ git show HEAD:path/to/file
+
+# INDEX
+$ git show :path/to/file
+
+# REMOTE
+$ git show origin/master:path/to/file
+```
+
+* showing contents
+
 ## Merges and Rebases
 
 ### Rebase
