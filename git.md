@@ -1,6 +1,6 @@
 # Git Tricks
 
-## Git trio: HEAD, INDEX and LOCAL
+## Viewing a file as it appears on Remotes, HEAD or INDEX
 
 * showing contents of a file as it appears in `HEAD` | `INDEX`
 ```sh
