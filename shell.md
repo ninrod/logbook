@@ -1,5 +1,16 @@
 # Shell tricks
 
+## general tips
+
+### the `--` linux convention
+
+* the `--` is usually a convention for _what follows is not an option, whatever its name_
+
+```sh
+# suppose you want to delete a branch called `--track` (but --track is also an option to git).
+$ git branch -D -- --track
+```
+
 ## curl
 
 * configure `~/.curlrc` proxy
