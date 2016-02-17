@@ -43,4 +43,12 @@ fullqualifiedname() {
 }
 ```
 
+## zsh erros
+
+* `function definition not found`
+```sh
+# simply remove all .zcompdump* files from ~
+$ rm -f ~/.zcompdump*
+```
+
 [1]: <http://reasoniamhere.com/2014/01/11/outrageously-useful-tips-to-master-your-z-shell>
