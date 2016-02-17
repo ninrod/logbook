@@ -202,7 +202,7 @@ $ git commit
 ```
 
 
-### beyond bizarre erros
+### beyond bizarre errors
 
 * fixing the terrible [`zero padded file modes`](http://stackoverflow.com/questions/14700502/how-to-fix-git-zero-padded-file-modes-warning) message:
 
