@@ -1,6 +1,6 @@
-# The Amazing Tricks repo!
+# Ninrod's shell tricks collection.
 
-* Various command line tricks for vim, zsh, git, awk and other tech inclined vodoo.
+* Various command line tricks for vim, zsh, git, awk and other shell inclined vodoo.
 
 LICENSE
 ---------
