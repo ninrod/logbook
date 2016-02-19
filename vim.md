@@ -17,6 +17,7 @@
 
 ## folding
 
+* `zi` toggles all folds of the current buffer.
 * `zr` decreases the foldlevel by one.
 * `zR` decreases the foldlevel to zero -- all folds will be open.
 * `zm` increases the foldlevel by one.
