@@ -14,6 +14,11 @@ $ git branch -D -- --track
 ## curl
 
 * configure `~/.curlrc` proxy
+* getting a file from a link.
+
+```sh
+$ curl -fLo [path/to/file] [link]
+```
 
 ```sh
 $ vim ~/.curlrc 
