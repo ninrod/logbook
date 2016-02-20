@@ -1,5 +1,9 @@
 # Shell tricks
 
+## Links for study
+
+* __[47 Bash pitfalls][1]__
+
 ## general tips
 
 ### the `--` linux convention
@@ -16,7 +20,7 @@ $ git branch -D -- --track
 * configure `~/.curlrc` proxy
 
 ```sh
-$ vim ~/.curlrc 
+$ vim ~/.curlrc
 
 # add this
 proxy = user:pass@proxy:port
@@ -129,6 +133,6 @@ echo "This line will appear in $LOG_FILE, not 'on screen'"
 ```sh
 tr -cs A-Za-z '\n' | tr A-Z a-z | sort | uniq -c | sort -rn | sed ${1}q
 ```
-
+[1]: <http://mywiki.wooledge.org/BashPitfalls>
 [2]: <http://stackoverflow.com/questions/637827/redirect-stderr-and-stdout-in-a-bash-script>
 [3]: <http://nealford.com/memeagora/2013/01/22/why_everyone_eventually_hates_maven.html>
