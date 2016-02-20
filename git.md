@@ -149,7 +149,7 @@ $ git branch -vv
 
 ## other useful commands
 
-* tag creation: `git tag -a string.da.tag -m 'tag msg'`
+* tag creation: `git tag -a [tagname] -m 'tag msg'`
 * revert all local modifications: `git reset HEAD --hard`
 * turn off git tracking for a specific file: `git update-index --skip-worktree Gruntfile.js`
 * turn on git tracking for a specific file: `git update-index --no-skip-worktree Gruntfile.js`
