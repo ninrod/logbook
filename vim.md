@@ -2,13 +2,15 @@
 
 ## Performance Profiling
 
-* check out vim startup time
+* check vim startup time
 
 ```sh
 $ vim [file] --startuptime startup.log
 ```
 
 *  link: vimcast about performance [vimcast: Profiling vimscript performance](http://vimcasts.org/episodes/profiling-vimscript-performance/)
+
+* vim help on startup time`h: slow-start` 
 
 ## movimentação
 
