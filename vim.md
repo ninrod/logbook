@@ -1,5 +1,11 @@
 # Vim tricks
 
+## check out vim startup time
+
+```sh
+$ vim [file] --startuptime startup.log
+```
+
 ## movimentação
 
 * `n|`: movimenta para a coluna n da linha
