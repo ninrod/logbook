@@ -1,5 +1,16 @@
 # ZSH tricks
 
+## ZSH conditional expressions
+
+* `-z`: testing if a shell variable is set
+
+```zsh
+# `-z` returns true if string's length is equal to 0.
+if [ -z "$HISTFILE" ]; then
+    HISTFILE=$HOME/.zsh_history
+fi
+```
+
 ## ZSH Globbing
 
 * more tips can be found [here][1].
