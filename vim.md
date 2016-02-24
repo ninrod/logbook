@@ -1,5 +1,11 @@
 # Vim tricks
 
+## Simulating a __Zoom__
+
+* `:tab split` will open the current buffer in a new tab.
+* `:tab help nvim-from-vim` will open the help topic in a new tab.
+* `:tabclose` will close the current tab.
+
 ## Performance Profiling
 
 * check vim startup time
