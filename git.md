@@ -228,9 +228,11 @@ git reset HEAD --hard at /newrepo
 * [Think Like (a) Git][2]: good guide site.
 * [Git Magic][3]: excelent html tutorial
 * [Reversões de commits][4]: stackoverflow question about how to revert commits.
+* [Git For Ages 4 And Up][6]: fantastic fun video introducing git. Highly recommended.
 
 [1]: <http://pcottle.github.io/learnGitBranching/?NODEMO>
 [2]: <http://think-like-a-git.net>
 [3]: <http://www-cs-students.stanford.edu/~blynn/gitmagic/>
 [4]: <http://stackoverflow.com/questions/4114095/revert-git-repo-to-a-previous-commit>
 [5]: <http://think-like-a-git.net/sections/rebase-from-the-ground-up/a-helpful-mnemonic-for-git-rebase-arguments.html>
+[6]: <https://www.youtube.com/watch?v=1ffBJ4sVUb4>
