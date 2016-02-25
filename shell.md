@@ -44,6 +44,16 @@ for i in $(find . -name '*.md'); do
 done
 ```
 
+### find: listing all directories that are not child of a `.git` directory
+
+```sh
+# solution 1: using `prune`
+find . -path '*/.git' -prune -o -type d -print
+
+# solution 2: using predicate only
+find . ! \( -path '*/.git' -o -path '*/.git/*' \) -type d
+```
+
 ### copy specific files preserving directory structure
 
 * method 01: using `cpio` utility
