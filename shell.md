@@ -48,10 +48,13 @@ done
 
 ```sh
 # solution 1: using `prune`
-find . -path '*/.git' -prune -o -type d -print
+$ find . -path '*/.git' -prune -o -type d -print
 
 # solution 2: using predicate only
-find . ! \( -path '*/.git' -o -path '*/.git/*' \) -type d
+$ find . ! \( -path '*/.git' -o -path '*/.git/*' \) -type d
+
+# solution 3: more portable and simpler than solution 2
+$ find . -name .git -prune -o -type d -print
 ```
 
 ### copy specific files preserving directory structure
