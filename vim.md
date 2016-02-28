@@ -1,5 +1,7 @@
 # Vim tricks
 
+
+
 ## Simulating a __Zoom__
 
 * `:tab split` will open the current buffer in a new tab.
@@ -139,7 +141,8 @@ $ vim -u NONE -N -c ':set runtimepath+=~/.vim/bundle/vim-sneak/' -c ':runtime pl
 * toggle relative line numbers: `:set rnu!`
 * search/replace com atalho: acha os highlight com '/' e depois soca: `%s//nova/g`
 * `:e!`: reverte o buffer para o estado original do arquivo sem sair do vim.
-* mostrar o nome do arquivo corrente: `:echo expand('%:p')`
+* to show the full name of the current file: `:echo expand('%:p')`
+* or, more easily: `<C-g>`
 * mostrar o arquivo atual, mas cola no register: `let @a = expand('%:p')`
 * mostrar o arquivo atual, mas cola direto no buffer `"a`: `put = expand('%:p')`
 * mostra o diretório autal: `:pwd`
