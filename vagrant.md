@@ -23,6 +23,12 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "..", "/vagrant", :mount_options => ["dmode=777", "fmode=666"]
 
   config.vm.network :forwarded_port, guest: 2375, host: 2375
+
+  # copy RSA keys to the VM
+  config.vm.provision "file", source: "#{Dir.home}/.ssh/id_rsa.pub", destination: "~/.ssh/id_rsa.pub"
+  config.vm.provision "file", source: "#{Dir.home}/.ssh/id_rsa", destination: "~/.ssh/id_rsa"
+  config.vm.provision "shell", inline: "chmod 400 /home/vagrant/.ssh/id_rsa"
+  config.vm.provision "shell", inline: "chmod 600 /home/vagrant/.ssh/id_rsa.pub"
 end
 
 # -*- mode: ruby -*-
