@@ -15,6 +15,16 @@
 $ git branch -D -- --track
 ```
 
+### WTF Unicode? 
+
+```sh
+# To check how it's encoded by your console, you can use hexdump.
+$ echo -n ☠ | hexdump
+$ 0000000 e2 98 a0
+
+$ echo -e "\xE2\x98\xA0"
+$ ☠
+```
 
 ### what shell am I using? 
 
