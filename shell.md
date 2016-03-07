@@ -15,6 +15,13 @@
 $ git branch -D -- --track
 ```
 
+
+### what shell am I using? 
+
+```sh
+$ echo $0
+```
+
 ## curl
 
 * configure `~/.curlrc` proxy
