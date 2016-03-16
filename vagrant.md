@@ -1,5 +1,13 @@
 # Vagrant tricks
 
+* accessing host from guest
+```ruby
+# given this config, you should be able to access the host with the same ip address as the guest only changing the last octet to `1`
+config.vm.network "private_network", ip: "192.168.56.2"
+
+# so your host ip would be `192.168.56.1` in the above case
+```
+
 * vagrant file with `private network` configuration
 ```ruby
 MACHINE_NAME = "arch"
