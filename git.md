@@ -99,6 +99,16 @@ $ git clean -f -n
 $ git clean -fd
 ```
 
+## remove, delete files
+
+* remove all ignored files from the repo
+
+```sh
+$ git ls-files -i -X .gitignore| xargs -I{} git rm "{}"
+```
+
+###
+
 ## Branches
 
 ### renaming a branch
