@@ -133,6 +133,14 @@ $ git ls-files -d | sed 's/\/.*$//g' | sort | uniq
 $ git status --short | awk '$1 == "AA"' {print $0}
 ```
 
+## echo: appending lines to files
+
+* appending a line to a file using `sudo`
+
+```sh
+sudo sh -c "echo '/bin/zsh' >> /etc/shells"
+```
+
 ## IO REDIRECTION
 
 * make a shell script redirect all output to stdout. (see more [here][2])
