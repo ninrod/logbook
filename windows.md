@@ -11,6 +11,12 @@ Windows tricks
 * change the user `home` folder location in windows: [See this article][1].
 * user home folder key location: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList`
 
+### list all AD groups I am a member of
+
+```dos
+gpresult /V
+```
+
 ### assorted tricks
 
 * To export all putty configs: `regedit /e "%userprofile%\desktop\putty.reg" HKEY_CURRENT_USER\Software\SimonTatham`

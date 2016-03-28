@@ -141,17 +141,27 @@ $ vim -u NONE -N -c ':set runtimepath+=~/.vim/bundle/vim-sneak/' -c ':runtime pl
 * toggle relative line numbers: `:set rnu!`
 * search/replace com atalho: acha os highlight com '/' e depois soca: `%s//nova/g`
 * `:e!`: reverte o buffer para o estado original do arquivo sem sair do vim.
-* to show the full name of the current file: `:echo expand('%:p')`
-* or, more easily: `<C-g>`
-* mostrar o arquivo atual, mas cola no register: `let @a = expand('%:p')`
-* mostrar o arquivo atual, mas cola direto no buffer `"a`: `put = expand('%:p')`
-* mostra o diretório autal: `:pwd`
-* mudar de diretório: `:cd novodiretorio`
-* cola no buffer o conteúdo do register 'a': `:put a:`
-* para gerar helptags é só rodar `:helpt[ags] ~/.vim/bundle/nomedoplugin/doc`
-* forçando a syntax de um scratch buffer `:set syntax=html`
-* mostrar ou esconder os números relativos `:set nornu`
-* mostrar ou esconder os números de linha normais: `set nonu`
+
+## show the name of the current file
+
+* to show the full name of the current file: 
+
+```vim
+:echo expand('%:p')
+
+" or
+:let @a = expand('%:p')
+:put a
+
+" or, more easily, just type `<C-g>`
+```
+
+* show the current working directory: `:pwd`
+* change cwd: `:cd newdir`
+* generate vim helptags `:helpt[ags] ~/.vim/bundle/nomedoplugin/doc`
+* force the syntax of a buffer `:set syntax=html`
+* show/hide relative line numbers `:set nornu`
+* show/hide line numbers `:set nonu`
 
 ## vimrc hacks
 
