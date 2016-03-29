@@ -37,7 +37,12 @@ $ echo $0
 * copying a file from local to remote host
 
 ```sh
-$ scp -ra /path/to/local/storage user@remote.host:/path/to/copy
+$ scp -r /path/to/local/storage user@remote.host:/path/to/copy
+```
+
+* copying a file from remote to local host
+```sh
+scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
 ```
 
 ## curl
