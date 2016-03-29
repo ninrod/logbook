@@ -32,6 +32,14 @@ $ ☠
 $ echo $0
 ```
 
+## `sch` | `scp`
+
+* copying a file from local to remote host
+
+```sh
+$ scp -ra /path/to/local/storage user@remote.host:/path/to/copy
+```
+
 ## curl
 
 * configure `~/.curlrc` proxy
