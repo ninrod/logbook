@@ -108,6 +108,20 @@ $ ls -la `find ~ -maxdepth=1 -type l`
 du -sm * | sort -nr | head -n 20
 ```
 
+## ip configurations
+
+* setting up interfaces
+
+```sh
+$ sudo ip link set [eth0] up
+```
+
+* show ip address
+
+```sh
+$ ip addr show
+```
+
 ## change standard shell
 
 ```sh
