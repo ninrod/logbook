@@ -25,6 +25,12 @@ docker run -d -p 8080:8080 ninrod/springboot:test java -jar /home/ninrod/deliver
 docker run -v /Users/ninrod/code/java/springboot-hello/sbt/build/libs:/home/ninrod/app -i -t  java:8-jre /bin/bash
 ```
 
+* log simples no ssh
+
+```sh
+docker exec -it <mycontainer> bash
+```
+
 ## Links
 
 * [cheatsheet](https://github.com/wsargent/docker-cheat-sheet)
