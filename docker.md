@@ -5,8 +5,12 @@
 ### clean all containers 
 
  ```sh
-$ docker rm $(docker ps -aq)
+$ docker rm `docker ps -aq`
+
+# or using xargs
+$ docker ps -qa | xargs docker rm
 ```
+
 
 ### commit a container as an image
 
