@@ -184,6 +184,12 @@ exec 2>&1
 echo "This line will appear in $LOG_FILE, not 'on screen'"
 ```
 
+* execute a program in background and redirect stdout and stderr to a log file
+
+```sh
+$ nohup node server.js > /dev/null 2>&1 &
+```
+
 ## OTHER TOOLS
 
 * `top` -> order by memory consumption on OSx: `top -o mem`
