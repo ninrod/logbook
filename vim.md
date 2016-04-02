@@ -20,18 +20,18 @@ $ vim [file] --startuptime startup.log
 
 * vim help on startup time`h: slow-start` 
 
-## movimentação
+## moviments
 
-* `n|`: movimenta para a coluna n da linha
+* `n|`: moves to the `n-th` column
 * `zt | z<cr>`: Shifts page content so current line sits at the top of the viewport
 * `zb | z`: "Shifts page content so current line sits at the bottom of the viewport"
 * `zz | z`:  "Shifts page content so current line sits at the middle of the viewport"
-* 200zt:  posiciona a linha 200 no top da tela.
+* 200zt:  positions line 200 on top of the screen.
 * `H`: Moves cursor to the top of the viewport
 * `M`: Moves cursor to the middle of the viewport
 * `L`: Moves cursor to the bottom of the viewport"
-* `gv`: seleciona de novo a ultima seleção visual.
-* `o` | `v_o`: quando um bloco de texto está selecionado, você pode usar 'o' para se movimentar do começo para o fim da seleção e vice-versa.
+* `gv`: selects again the last visual selection.
+* `o` | `v_o`: when a block of text is selected you can use `o` to move to the beggining of the selection. Use it again to go to the end of the selection.
 * `g; e g,`:  back and forward na changelist (:changes)
 * `<c-i>, <c-o>` -> back and forward na jumplist (:jumps ou :ju)
 
@@ -100,17 +100,17 @@ $ vim [file] --startuptime startup.log
 
 ## shell interaction
 
-### suspender o vim
+### suspending vim
 
-* `ctrl + z` -> suspende o vim.
-* para ver quais processos estão suspensos: 'jobs'
-* para des-suspender o vim: `fg`, ou `fg vim`.
+* `ctrl + z` -> suspends vim.
+* seeing what processes are suspended: `$ jobs`
+* unsuspend vim: `$ fg`
 
-### invocar um vim limpo (tipo `zsh -f`)
+### invoke a clean vim (as `zsh -f`)
 
 * `vim -u NONE`
 
-### invocar um vim com uma config específica
+### invoke vim with a specific config
 
 ```sh
 $ vim -u NONE -N -c ':set runtimepath+=~/.vim/bundle/vim-sneak/' -c ':runtime plugin/sneak.vim'
