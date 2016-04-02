@@ -42,16 +42,13 @@ $ vim [file] --startuptime startup.log
 * `zR` decreases the foldlevel to zero -- all folds will be open.
 * `zm` increases the foldlevel by one.
 * `zM` closes all open folds.
-
 * `[z` move to start of open fold.
 * `]z` move to end of open fold.
-
 * `zj` moves the cursor to the next fold.
 * `zk` moves the cursor to the previous fold.
 * `zO` opens all folds at the cursor.
 * `zo` opens a fold at the cursor.
 * `zc` closes a fold at the cursor.
-
 * `zd` deletes the fold at the cursor.
 * `zE` deletes all folds.
 * `zf#j` creates a fold from the cursor down # lines.
