@@ -138,8 +138,8 @@ $ ip addr show
 ## change standard shell
 
 ```sh
-sudo echo "/usr/local/bin/zsh" >> /etc/shells
-chsh -s /usr/local/bin/zsh
+sudo sh -c "echo '/bin/zsh' >> /etc/shells"
+chsh -s /bin/zsh
 ```
 
 
