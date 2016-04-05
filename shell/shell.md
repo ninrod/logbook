@@ -32,6 +32,17 @@ $ ☠
 $ echo $0
 ```
 
+## using for and loops
+
+* simple loop to wait 10 secs for something
+
+```sh
+$ for i in {1..10}; do
+    echo "aguardando conexão db2 por" $i " sec..."
+    sleep 1
+  done
+```
+
 ## `sch` | `scp`
 
 * copying a file from local to remote host
@@ -69,6 +80,7 @@ $ curl -fLo [path/to/file] [link]
 * `git` moving all files of a specific type to the current directory:
 
 ```sh
+# this potentially can lead to disaster. See the `47 bash pitfalls link`
 for i in $(find . -name '*.md'); do
   git mv $i .
 done
