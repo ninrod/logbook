@@ -14,7 +14,7 @@
 
 ```sh
 $ vim [file] --startuptime startup.log
-$ cat startup.log | sort -k 2
+$ sort -rk 2 < startup.log | vim -
 ```
 
 *  link: vimcast about performance [vimcast: Profiling vimscript performance](http://vimcasts.org/episodes/profiling-vimscript-performance/)
