@@ -14,13 +14,14 @@
 
 ```sh
 $ vim [file] --startuptime startup.log
+$ cat startup.log | sort -k 2
 ```
 
 *  link: vimcast about performance [vimcast: Profiling vimscript performance](http://vimcasts.org/episodes/profiling-vimscript-performance/)
 
 * vim help on startup time`h: slow-start` 
 
-## moviments
+## movements
 
 * `n|`: moves to the `n-th` column
 * `zt | z<cr>`: Shifts page content so current line sits at the top of the viewport
