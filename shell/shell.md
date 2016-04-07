@@ -73,6 +73,15 @@ proxy = user:pass@proxy:port
 $ curl -fLo [path/to/file] [link]
 ```
 
+## chown
+
+* changing all permissions of the files and directories on current path
+
+```sh
+$ find . -group 5050 -exec sudo chown vagrant:vagrant {} \;
+```
+
+
 ## `find`
 
 ### `find` and `git`
