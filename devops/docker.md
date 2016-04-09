@@ -8,7 +8,7 @@
 $ docker rm `docker ps -aq`
 
 # or using xargs
-$ docker ps -qa | xargs docker rm
+$ docker ps -qa | xargs -I{} docker rm {}
 ```
 
 
@@ -18,7 +18,7 @@ $ docker ps -qa | xargs docker rm
 $ docker commit <idcontainer> <ninrod/blah>
 ```
 
-### open a shell session to the container
+### open a shell session to a running container
 
 ```sh
 docker exec -it <mycontainer> bash
@@ -29,23 +29,6 @@ docker exec -it <mycontainer> bash
 ```sh
 $ docker cp <containerId>:/file/path/within/container /host/path/target
 ```
-
-### run docker inside docker (docker in docker, dind)
-
-* Stolen from https://github.com/jpetazzo/dind
-* official images and docs for docker in docker: https://hub.docker.com/_/docker/
-* mantainers of official images: https://github.com/docker-library/official-images/blob/master/library/docker
-* do not use docker in docker for ci: http://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/
-
-* all you have to do is this: 
-
-```sh
-$ docker run --privileged -d docker:dind
-```
-
-* ... And that's it; you get Docker running in Docker, thanks to the official Docker image, in its "Docker-in-Docker" flavor. You can then connect to this Docker instance by starting another Docker container linking to the first one (which is a pretty amazing thing to do).
-
-* For more details about the docker:dind official image, explanations about how to use it, customize it to use specific storage drivers, and other tidbits of useful knowledge, check its documentation on the Docker Hub: https://hub.docker.com/_/docker/.
 
 ## Links
 
