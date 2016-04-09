@@ -5,9 +5,6 @@
 ### clean all containers 
 
  ```sh
-$ docker rm `docker ps -aq`
-
-# or using xargs
 $ docker ps -qa | xargs -I{} docker rm {}
 ```
 
