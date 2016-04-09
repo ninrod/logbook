@@ -1,5 +1,19 @@
 # Docker
 
+## Arch Linux configuration
+
+```sh
+# start docker daemon
+$ sudo systemctl enable docker
+$ sudo systemctl start docker
+
+# grant group to user
+$ gpasswd -a [user, eg. vagrant] docker
+
+# make current session aware of the new group
+$ newgrp docker
+```
+
 ## Commands
 
 ### clean all containers 
