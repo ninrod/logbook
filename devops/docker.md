@@ -2,6 +2,8 @@
 
 ## Arch Linux configuration
 
+* more info on [arch wiki](https://wiki.archlinux.org/index.php/Docker)
+
 ```sh
 # start docker daemon
 $ sudo systemctl enable docker
