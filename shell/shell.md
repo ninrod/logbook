@@ -144,7 +144,7 @@ du -sm * | sort -nr | head -n 20
 
 ## ip configurations
 
-* setting up interfaces
+* setting up interfaces (need for arch-linux vagrant ip to be reachable)
 
 ```sh
 $ sudo ip link set [eth0] up
