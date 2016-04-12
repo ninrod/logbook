@@ -1,5 +1,24 @@
 # Vim tricks
 
+## dictionary and spell
+
+### building a dictionary file
+
+* download [pt_BR.zip](http://linorg.usp.br/OpenOffice.org/contrib/dictionaries/pt_BR.zip) file.
+* build the spell archive with:
+
+```vim
+:mkspell pt pt_BR
+```
+
+* set the spell on
+
+```vim
+:setlocal spell spelllang=pt
+```
+
+* or set it off
+
 ## Simulating a __Zoom__
 
 * `:tab split` will open the current buffer in a new tab.
