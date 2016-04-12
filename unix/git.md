@@ -157,6 +157,18 @@ $ git push -u origin master
 $ git branch -vv 
 ```
 
+## Git Grep
+
+### searching the history for a pattern
+
+* using xargs
+
+```sh
+$ git rev-list --all | xargs -I{} git grep '.bc' {}
+4a80d1ed1b9cd13b053498e87017890ad8fd72c5:a.txt:vou buscar pela string abc
+$
+```
+
 ## other useful commands
 
 * tag creation: `git tag -a [tagname] -m 'tag msg'`
