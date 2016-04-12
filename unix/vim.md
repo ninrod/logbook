@@ -1,12 +1,26 @@
 # Vim tricks
 
-
-
 ## Simulating a __Zoom__
 
 * `:tab split` will open the current buffer in a new tab.
 * `:tab help nvim-from-vim` will open the help topic in a new tab.
 * `:tabclose` will close the current tab.
+
+## Regex
+
+### visual block regex (with Dr. Chipp's vis plugin)
+
+* substituting `1    2` for `1,2` using `\zs,\ze`
+
+```vim
+:'<,'>B s/\v\d\zs\s+\ze\d/,/g
+```
+
+* substituting `1    2` for `1,2` using matching groups
+
+```vim
+:'<,'>B s/\v(\d)\s+(\d)/\1,\2/g
+```
 
 ## Performance Profiling
 
