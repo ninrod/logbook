@@ -142,6 +142,14 @@ $ ls -la `find ~ -maxdepth=1 -type l`
 du -sm * | sort -nr | head -n 20
 ```
 
+### opening in vim a set of files returned by a `find` search 
+
+* use find and -exec
+
+```sh
+$ find . -name '*.txt' -exec vim {} +
+```
+
 ## ip configurations
 
 * setting up interfaces (need for arch-linux vagrant ip to be reachable)
