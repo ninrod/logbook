@@ -108,6 +108,20 @@ $ find . ! \( -path '*/.git' -o -path '*/.git/*' \) -type d
 $ find . -name .git -prune -o -type d -print
 ```
 
+### find: prune search with multiple patterns
+
+* excluding names `.git`, `.vim`, `.zplug` and `deps` from the search results
+
+```sh
+$ find . \
+  -name .git -prune -o \
+  -name .vim -prune -o \
+  -name .zplug -prune -o \
+  -name deps -prune -o \
+  -type f \
+  -print
+```
+
 ### copy specific files preserving directory structure
 
 * method 01: using `cpio` utility
