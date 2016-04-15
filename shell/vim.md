@@ -175,7 +175,7 @@ $ vim -u NONE -N -c ':set runtimepath+=~/.vim/bundle/vim-sneak/' -c ':runtime pl
 
 ## show the name of the current file
 
-* to show the full name of the current file: 
+* to show the full qualified path/name of the current file: 
 
 ```vim
 :echo expand('%:p')
