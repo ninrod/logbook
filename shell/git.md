@@ -169,6 +169,16 @@ $ git rev-list --all | xargs -I{} git grep '.bc' {}
 $
 ```
 
+* or, specifying a path
+
+```sh
+$ git rev-list --all -- ./.vimrc | xargs -I{} git grep -e 'mapeia' {}
+9531cb5c99dfaec66d7275d5994cb29cf53da794:.vimrc:232:" por padrão o exchange.vim mapeia o X no visual mode
+744ce3fd47bc1cd69a6c79167ca7956f852de5be:.vimrc:232:" por padrão o exchange.vim mapeia o X no visual mode
+fe9958daf4a228b4779689fb9888555684a7ef52:.vimrc:235:" por padrão o exchange.vim mapeia o X no visual mode
+$
+```
+
 ## other useful commands
 
 * tag creation: `git tag -a [tagname] -m 'tag msg'`
