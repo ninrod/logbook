@@ -127,7 +127,7 @@ $ sort -rk 2 < startup.log | vim -
 
 ## searching
 
-  * g* ou g# busca por parte da palavra.
+  * `g*` ou `g#` busca por parte da palavra.
 
 ## shell interaction
 
@@ -187,12 +187,9 @@ $ vim -u NONE -N -c ':set runtimepath+=~/.vim/bundle/vim-sneak/' -c ':runtime pl
 " or, more easily, just type `<C-g>`
 ```
 
-* show the current working directory: `:pwd`
-* change cwd: `:cd newdir`
-* generate vim helptags `:helpt[ags] ~/.vim/bundle/nomedoplugin/doc`
 * force the syntax of a buffer `:set syntax=html`
-* show/hide relative line numbers `:set nornu`
-* show/hide line numbers `:set nonu`
+* show/hide relative line numbers `:set rnu`, `:set nornu`
+* show/hide line numbers `:set nu`, `:set nonu`
 
 ## vimrc hacks
 
