@@ -195,6 +195,18 @@ fe9958daf4a228b4779689fb9888555684a7ef52:.vimrc:235:" por padrão o exchange.vim
 $
 ```
 
+## git-ls-files
+
+* copying all gitignored and untracked files to another folder mantaining directory structure
+```sh
+$ git ls-files -oiX .gitignore | xargs -I{} rsync --relative "{}" ../git-ls-files-test-rsync
+```
+
+* copying all tracked and gitignored files to another folder mantaining directory structure
+```sh
+$ git ls-files -iX .gitignore | xargs -I{} rsync --relative "{}" ../git-ls-files-test-rsync
+```
+
 ## other useful commands
 
 * tag creation: `git tag -a [tagname] -m 'tag msg'`
