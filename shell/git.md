@@ -116,7 +116,13 @@ $ git clean -fd
 * remove all ignored files from the repo
 
 ```sh
-$ git ls-files -i -X .gitignore| xargs -I{} git rm "{}"
+$ git ls-files -iX .gitignore| xargs -I{} git rm "{}"
+```
+
+* show all untracked and gitignored files in the repo
+
+```sh
+$ git ls-files -oiX .gitignore
 ```
 
 ## Branches
