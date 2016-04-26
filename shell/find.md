@@ -46,7 +46,10 @@ $ find . -iname '*.iml' | cpio -pdm ~/code/testdir
 * method 02: using `rsync`
 
 ```sh
-$ find . -iname '*.iml' -exec rsync -R {} ~/code/testdir \;
+$ find . -iname '*.iml' -exec rsync --relative {} ../anotherdir \;
+
+# bonus: we can build upon the same idea with git-ls-files and xargs
+$ git ls-files -iX .gitignore | xargs -I{} rsync --relative "{}" ../anotherdir
 ```
 
 * method 03: using a `-exec` and `cp's` `--parents` option
