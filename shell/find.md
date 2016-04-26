@@ -5,10 +5,7 @@
 * `git` moving all files of a specific type to the current directory:
 
 ```sh
-# this potentially can lead to disaster. See the `47 bash pitfalls link`
-for i in $(find . -name '*.md'); do
-  git mv $i .
-done
+$ find . -name '*.md' -exec git mv {} . \;
 ```
 
 ## find: listing all directories that are not child of a `.git` directory
