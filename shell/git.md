@@ -66,6 +66,18 @@ $ git checkout --ours _widget.html.erb
 $ git revert -m 1 <merge_commit_sha>
 ```
 
+* Reverting last `n` commits: 
+
+```sh
+# say you have `A <- B <- C <- D` and want to create a commit that reverts commits B,C,D
+$ git reset --hard A
+
+# using a git-reflog reference: @{1} is, in fact, D
+$ git reset --soft @{1}
+
+$ git commit
+```
+
 * change the pointer `HEAD` is pointing to
 ```sh
 # observe variations: --soft, --mixed e --hard
@@ -74,7 +86,7 @@ $ git reset 0d1d7fc32
 
 * get your index and work tree into the desired state, without changing HEAD
 ```sh
-git checkout 0d1d7fc32 .
+$ git checkout 0d1d7fc32 .
 ```
 
 * aborting a merge/rebase
@@ -89,6 +101,8 @@ $ git rebase --abort
 $ git reset HEAD --hard
 ```
 
+## remove, delete files
+
 * remove all `untracked` files
 
 ```sh
@@ -99,15 +113,11 @@ $ git clean -f -n
 $ git clean -fd
 ```
 
-## remove, delete files
-
 * remove all ignored files from the repo
 
 ```sh
 $ git ls-files -i -X .gitignore| xargs -I{} git rm "{}"
 ```
-
-###
 
 ## Branches
 
