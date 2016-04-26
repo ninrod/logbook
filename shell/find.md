@@ -52,12 +52,10 @@ $ find . -iname '*.iml' | cpio -pdm ~/code/testdir
 $ find . -iname '*.iml' -exec rsync -R {} ~/code/testdir \;
 ```
 
-* method 03: using a `for` loop and `cp --parents`
+* method 03: using a `-exec` and `cp's` `--parents` option
 
 ```sh
-$ for i in $(find sourcedir -name '*.md'); do
-$   cp --parents $i targetdir
-$ done
+$ find . -name '*.md' -exec cp --parents {} ../tricks-test \;
 ```
 
 * finding all dot files on home directory:
