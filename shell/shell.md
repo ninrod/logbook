@@ -151,11 +151,16 @@ echo "This line will appear in $LOG_FILE, not 'on screen'"
 $ nohup node server.js > /dev/null 2>&1 &
 ```
 
-## OTHER TOOLS
+## OTHER utilities
 
 * `top` -> order by memory consumption on OSx: `top -o mem`
 * show a keyboard key terminal escape sequence: `cat -v`
 * to invoke a pure zsh session without any configuration: `zsh -f`
+* show 20 biggest folders from current dir: 
+
+```sh
+du -sm * | sort -nr | head -n 20
+```
 
 
 ## INSANE ONE-LINERS

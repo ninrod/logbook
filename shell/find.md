@@ -66,12 +66,6 @@ $ done
 $ ls -la `find ~ -maxdepth=1 -type l`
 ```
 
-* show 20 biggest folders from current dir: 
-
-```sh
-du -sm * | sort -nr | head -n 20
-```
-
 ## opening in vim a set of files returned by a `find` search 
 
 * use find and -exec
