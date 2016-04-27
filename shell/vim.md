@@ -127,7 +127,16 @@ $ sort -rk 2 < startup.log | vim -
 
 ## searching
 
-  * `g*` ou `g#` busca por parte da palavra.
+* `g*` ou `g#` searches for the partial word
+
+### vimgrep and the arglist
+
+* search for a pattern on the open files
+
+```vim
+:bufdo :args ## %
+:vim[grep] blah ##
+```
 
 ## shell interaction
 
