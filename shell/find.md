@@ -72,6 +72,12 @@ $ ls -la `find ~ -maxdepth=1 -type l`
 $ find . -name '*.txt' -exec vim {} +
 ```
 
+* Or use a sub shell
+
+```sh
+$ vim $(find . -name '*.txt')
+```
+
 ## find all files and directories `not` owned by a specific user
 
 * use `-user` and the `!` flag
