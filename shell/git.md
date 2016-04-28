@@ -1,6 +1,8 @@
 # Git Tricks
 
-## Viewing a file as it appears on Remotes, HEAD or INDEX
+## git revision syntax
+
+### Viewing a file as it appears on Remotes, HEAD or INDEX
 
 * showing contents of a file as it appears in `HEAD` | `INDEX`
 ```sh
@@ -14,7 +16,28 @@ $ git show :path/to/file
 $ git show origin/master:path/to/file
 ```
 
-* showing contents
+### referencing a commit relative to a any git reference
+
+* you can reference a commit relative to a branch, HEAD, tag, etc...
+* see `$ man git-rev-parse`
+
+```sh
+
+# specifying the leftmost father ancestor of a commit
+# these are equivalent: HEAD^ == HEAD^1 == HEAD~ == HEAD~1
+$ git show HEAD~
+
+
+# grandfather ancestor of head, always choosing the left most branch of ancestry
+# note that: HEAD^^ == HEAD~~ == HEAD~2
+$ git show HEAD~2
+
+# father ancestor of head, choosing the second branch of ancestry, left to right
+$ git show HEAD^2
+
+# father ancestor of head, choosing the third branch of ancestry, left to right
+$ git show HEAD^3
+```
 
 ## Merges and Rebases
 
