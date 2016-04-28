@@ -71,3 +71,11 @@ $ ls -la `find ~ -maxdepth=1 -type l`
 ```sh
 $ find . -name '*.txt' -exec vim {} +
 ```
+
+## find all files and directories `not` owned by a specific user
+
+* use `-user` and the `!` flag
+
+```sh
+$ find . ! -user vagrant
+```
