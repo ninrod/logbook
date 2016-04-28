@@ -22,11 +22,9 @@ $ git show origin/master:path/to/file
 * see `$ man git-rev-parse`
 
 ```sh
-
 # specifying the leftmost father ancestor of a commit
 # these are equivalent: HEAD^ == HEAD^1 == HEAD~ == HEAD~1
 $ git show HEAD~
-
 
 # grandfather ancestor of head, always choosing the left most branch of ancestry
 # note that: HEAD^^ == HEAD~~ == HEAD~2
