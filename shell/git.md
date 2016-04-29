@@ -232,6 +232,7 @@ $ git ls-files -iX .gitignore | xargs -I{} rsync --relative "{}" ../git-ls-files
 ## Creating a remote that lives inside the file system
 
 * Say you have a git repo called `littlegitrepo`. You can create a remote that lives inside the file system with this line: 
+* credits go to Michael Schwern's `Git for ages 4 and up`. 
 
 ```sh
 # here remote will be a true remote
