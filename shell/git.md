@@ -228,6 +228,30 @@ $ git ls-files -oiX .gitignore | xargs -I{} rsync --relative "{}" ../git-ls-file
 $ git ls-files -iX .gitignore | xargs -I{} rsync --relative "{}" ../git-ls-files-test-rsync
 ```
 
+
+## Creating a remote that lives inside the file system
+
+* Say you have a git repo called `littlegitrepo`. You can create a remote that lives inside the file system with this line: 
+
+```sh
+# here remote will be a true remote
+$ git clone --bare littlegitrepo remote
+
+# you can clone from it (local) and do all sorts of stuff
+$ git clone remote local
+$ git clone remote local2
+$ cd local && git status
+$ vi a.txt
+$ git add a.txt
+$ git commit -m 'adding a.txt'
+$ git push
+$ cd ../local2
+$ git fetch
+$ git merge
+```
+
+
+
 ## other useful commands
 
 * tag creation: `git tag -a [tagname] -m 'tag msg'`
