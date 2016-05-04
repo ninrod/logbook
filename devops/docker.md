@@ -24,6 +24,11 @@ $ newgrp docker
 $ docker ps -qa | xargs -I{} docker rm {}
 ```
 
+### clean all images
+
+```sh
+$ docker images | ag '^<none' | awk '{print $3}' | xargs -I{} docker rmi {}
+```
 
 ### commit a container as an image
 
