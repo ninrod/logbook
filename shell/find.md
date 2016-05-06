@@ -11,7 +11,8 @@ $ find . -name '*.md' -exec git mv {} . \;
 * removing all files except `.git` dir
 
 ```sh
-$ find . -maxdepth 1 -name .git -prune -o -type d -print -exec git rm -r {} && rm -r {} \;
+$ find . -maxdepth 1 -name .git -prune -o -type d -print -exec git rm -r {} \;
+$ find . -maxdepth 1 -name .git -prune -o -type d -print -exec rm -r {} \;
 ```
 
 ## find: listing all directories that are not child of a `.git` directory
