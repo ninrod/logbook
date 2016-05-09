@@ -41,6 +41,13 @@
 :'<,'>B s/\v(\d)\s+(\d)/\1,\2/g
 ```
 
+* substituting anything for a newline. (use `\r` instead of `\n`)
+
+```vim
+' more info here: http://stackoverflow.com/a/71334/4921402
+:s/acharacter/\r/g
+```
+
 ## Performance Profiling
 
 * check vim startup time
