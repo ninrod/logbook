@@ -41,10 +41,9 @@
 :'<,'>B s/\v(\d)\s+(\d)/\1,\2/g
 ```
 
-* substituting anything for a newline. (use `\r` instead of `\n`)
+* substituting anything for a newline. (use `\r` instead of `\n`). More info (here)[http://stackoverflow.com/a/71334/4921402]
 
 ```vim
-' more info here: http://stackoverflow.com/a/71334/4921402
 :s/acharacter/\r/g
 ```
 
