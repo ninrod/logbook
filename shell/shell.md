@@ -6,6 +6,30 @@
 
 ## general tips
 
+### importing shell libraries
+
+* write a `import.sh` like this:
+
+```sh
+PROJ_ROOT=$(git rev-parse --show-toplevel)
+function proj_shell_boostrap {
+  local libfile=${PROJ_ROOT}/path/to/shell-lib/proj-lib.sh
+  if [[ -f $libfile ]]; then
+    . $libfile
+  else
+    echo -e "$libfile not found. aborting..."
+    exit 1;
+  fi
+}
+proj_shell_boostrap
+```
+
+* then import this file with the `.` operator
+
+```sh
+. path/to/import.sh
+```
+
 ### the `--` linux convention
 
 * the `--` is usually a convention for _what follows is not an option, whatever its name_
