@@ -1,5 +1,13 @@
 # Git Tricks
 
+## general tips
+
+* find the git root:
+
+```sh
+$ cd $(git rev-parse --show-toplevel)
+```
+
 ## git revision syntax
 
 ### Viewing a file as it appears on Remotes, HEAD or INDEX
