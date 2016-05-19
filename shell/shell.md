@@ -56,6 +56,12 @@ $ ☠
 $ echo $0
 ```
 
+### setting the time and date
+
+```sh
+$ date -s "19 MAY 2016 15:10:00"
+```
+
 ## using for and loops
 
 * simple loop to wait 10 secs for something
