@@ -6,6 +6,12 @@
 
 ## general tips
 
+### gettting the full path off a script to itself
+
+```sh
+$ SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P  )"
+```
+
 ### importing shell libraries
 
 * write a `import.sh` like this:
