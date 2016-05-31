@@ -154,6 +154,12 @@ $ git ls-files -iX .gitignore| xargs -I{} git rm "{}"
 $ git ls-files -oiX .gitignore
 ```
 
+* show all staged (cached, or added to the index) files
+
+```sh
+$ git diff --cached --name-only
+```
+
 ## Branches
 
 ### renaming a branch
