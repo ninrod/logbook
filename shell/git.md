@@ -230,6 +230,15 @@ fe9958daf4a228b4779689fb9888555684a7ef52:.vimrc:235:" por padrão o exchange.vim
 $
 ```
 
+## Git log tricks
+
+### grep trough commit messages
+
+```sh
+$ git log --grep=string_in_commit_msg
+```
+
+
 ## git-ls-files
 
 * copying all gitignored and untracked files to another folder mantaining directory structure
@@ -241,8 +250,6 @@ $ git ls-files -oiX .gitignore | xargs -I{} rsync --relative "{}" ../git-ls-file
 ```sh
 $ git ls-files -iX .gitignore | xargs -I{} rsync --relative "{}" ../git-ls-files-test-rsync
 ```
-
-
 ## Creating a remote that lives inside the file system
 
 * Say you have a git repo called `littlegitrepo`. You can create a remote that lives inside the file system with this line: 
@@ -265,12 +272,9 @@ $ git fetch
 $ git merge
 ```
 
-
-
-## other useful commands
+## Other useful commands
 
 * tag creation: `git tag -a [tagname] -m 'tag msg'`
-* revert all local modifications: `git reset HEAD --hard`
 * turn off git tracking for a specific file: `git update-index --skip-worktree Gruntfile.js`
 * turn on git tracking for a specific file: `git update-index --no-skip-worktree Gruntfile.js`
 
@@ -279,10 +283,7 @@ $ git merge
   * applying: `git am < my_new_patch.diff`
   * more info [here](https://ariejan.net/2009/10/26/how-to-create-and-apply-a-patch-with-git/)
 
-
 * export the working copy: `git archive master | tar -x -C /path`
-
-* seeing what changes are comming from upstream (diff): `git diff master..origin/master`
 
 * git pretty format colors
 ```sh
@@ -291,9 +292,9 @@ git log --pretty=format:"%Credblah%Creset %Cgreenbluh%Creset %C(Yellow)lol%Crese
 
 * find all commits that changed a file: `git log --follow -p -- filename`
 
-## bizarre problems
+## Bizarre problems
 
-### bizarrices de submodules
+### submodules problems
 
 * updating a repo with submodules
 
