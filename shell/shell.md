@@ -18,6 +18,12 @@ $ date "+%Y-%m-%d" --date='1 month ago'
 $ date "+%Y-%m-%d"
 ```
 
+### Setting the time and date
+
+```sh
+$ date -s "19 MAY 2016 15:10:00"
+```
+
 ### Verifying if a command is available 
 
 * use the `posix`: `command`
@@ -82,12 +88,6 @@ $ ☠
 
 ```sh
 $ echo $0
-```
-
-### Setting the time and date
-
-```sh
-$ date -s "19 MAY 2016 15:10:00"
 ```
 
 ### Inspecting what return code the last command gave us
