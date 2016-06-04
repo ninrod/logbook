@@ -68,6 +68,16 @@ $ echo $0
 $ date -s "19 MAY 2016 15:10:00"
 ```
 
+### Inspecting what return code the last command gave us
+
+```sh
+# in zsh
+$ print $?
+
+# in bash
+$ echo $?
+```
+
 ## using for and loops
 
 * simple loop to wait 10 secs for something
