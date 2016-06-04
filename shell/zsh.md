@@ -63,3 +63,40 @@ $ rm -f ~/.zcompdump*
 ```
 
 [1]: <http://reasoniamhere.com/2014/01/11/outrageously-useful-tips-to-master-your-z-shell>
+# Installing zsh on OSx
+## Installing from source
+
+* dependencies
+
+```sh
+$ sudo apt-get install -y git-core gcc make autoconf yodl libncursesw5-dev texinfo checkinstall
+``` 
+
+* installing
+
+```sh
+# Make configure
+./Util/preconfig
+
+./configure
+make
+make check
+make install
+```
+
+
+## if git completion is off, follow this steps
+
+* theres a variable called `$fpath`
+* this variable contains the path to bootstrap functions, completions, etc...
+* `print -l $fpath` will list the directories on $fpath 
+* in my case, I had these:
+
+```sh
+$ /usr/local/share/zsh/site-functions
+$ /usr/local/Cellar/zsh/5.0.8/share/zsh/functions
+```
+
+* in the first one, site-functions, I verified that there were 2 wrong symbolic links:
+  * tinha um `_git` symlink e um link para um bash completions. retirei esses links e funcionou perfeitamente.
+  * a `_git` symlink and a link to a bash completion. I removed these and everything worked like a charm.
