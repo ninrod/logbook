@@ -6,6 +6,16 @@
 
 ## general tips
 
+### verifying if a command is available 
+
+* use the `posix`: `command`
+
+```sh
+if command -v "$COMMAND_NAME" > /dev/null; then
+  echo "$COMMAND_NAME is available"
+fi
+```
+
 ### gettting the full path off a script to itself
 
 ```sh
