@@ -6,6 +6,16 @@
 
 ## general tips
 
+### getting relative dates with gnu coreutils date
+
+```sh
+# 1 month ago
+$ date "+%Y-%m-%d" --date='1 month ago'
+
+# current date
+$ date "+%Y-%m-%d"
+```
+
 ### verifying if a command is available 
 
 * use the `posix`: `command`
