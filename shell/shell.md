@@ -4,9 +4,9 @@
 
 * __[47 Bash pitfalls][1]__
 
-## general tips
+## General tips
 
-### getting relative dates with gnu coreutils date
+### Getting relative dates with gnu coreutils date
 
 * more info [here](http://www.cyberciti.biz/tips/linux-unix-get-yesterdays-tomorrows-date.html)
 
@@ -18,7 +18,7 @@ $ date "+%Y-%m-%d" --date='1 month ago'
 $ date "+%Y-%m-%d"
 ```
 
-### verifying if a command is available 
+### Verifying if a command is available 
 
 * use the `posix`: `command`
 
@@ -28,13 +28,13 @@ if command -v "$COMMAND_NAME" > /dev/null; then
 fi
 ```
 
-### gettting the full path off a script to itself
+### Gettting the full path off a script to itself
 
 ```sh
 $ SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P  )"
 ```
 
-### importing shell libraries
+### Importing shell libraries
 
 * write a `import.sh` like this:
 
@@ -58,7 +58,7 @@ proj_shell_boostrap
 . path/to/import.sh
 ```
 
-### the `--` linux convention
+### The `--` linux convention
 
 * the `--` is usually a convention for _what follows is not an option, whatever its name_
 
@@ -78,13 +78,13 @@ $ echo -e "\xE2\x98\xA0"
 $ ☠
 ```
 
-### what shell am I using? 
+### What shell am I using? 
 
 ```sh
 $ echo $0
 ```
 
-### setting the time and date
+### Setting the time and date
 
 ```sh
 $ date -s "19 MAY 2016 15:10:00"
@@ -100,7 +100,7 @@ $ print $?
 $ echo $?
 ```
 
-## using for and loops
+## Using for and loops
 
 * simple loop to wait 10 secs for something
 
@@ -124,7 +124,7 @@ $ scp -r /path/to/local/storage user@remote.host:/path/to/copy
 scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
 ```
 
-## curl
+## Curl
 
 * configure `~/.curlrc` proxy
 
@@ -141,7 +141,7 @@ proxy = user:pass@proxy:port
 $ curl -fLo [path/to/file] [link]
 ```
 
-## chown
+## Chown
 
 * changing all permissions of the files and directories on current path
 
@@ -150,7 +150,7 @@ $ find . -group 5050 -exec sudo chown vagrant:vagrant {} \;
 ```
 
 
-## ip configurations
+## Ip configurations
 
 * setting up interfaces (need for arch-linux vagrant ip to be reachable)
 
@@ -164,7 +164,7 @@ $ sudo ip link set [eth0] up
 $ ip addr show
 ```
 
-## change standard shell
+## Change standard shell
 
 ```sh
 sudo sh -c "echo '/bin/zsh' >> /etc/shells"
@@ -181,7 +181,7 @@ chsh -s /bin/zsh
 $ git status --short | awk '$1 == "AA"' {print $0}
 ```
 
-## echo: appending lines to files
+## Echo: appending lines to files
 
 * appending a line to a file using `sudo`
 
