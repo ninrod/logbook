@@ -1,11 +1,15 @@
 #Intellij | Idea
 
-## dicas e shortcuts
+## shortcuts
 
-* shortcut para colapsar|expandir código (code folding): [`ctrl+shift+numpad-`](https://www.jetbrains.com/idea/help/folding-and-expanding-code-blocks.html)
+* code folding: [`ctrl+shift+numpad-`](https://www.jetbrains.com/idea/help/folding-and-expanding-code-blocks.html)
 
-* para extrair uma variável: `ctrl+alt+v`
+* to extract a variable: `ctrl+alt+v`
+
 ```java
-tir.getPagadorRecebedorNoPais(); // vira ->
+/* change this */
+tir.getPagadorRecebedorNoPais(); 
+
+/* to this */
 PagadorRecebedorNoPais pag = tir.getPagadorRecebedorNoPais();
 ```
