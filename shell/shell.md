@@ -8,6 +8,8 @@
 
 ### getting relative dates with gnu coreutils date
 
+* more info [here](http://www.cyberciti.biz/tips/linux-unix-get-yesterdays-tomorrows-date.html)
+
 ```sh
 # 1 month ago
 $ date "+%Y-%m-%d" --date='1 month ago'
