@@ -208,6 +208,15 @@ $ vim -u NONE -N -c ':set runtimepath+=~/.vim/bundle/vim-sneak/' -c ':runtime pl
 
 ## vimrc hacks
 
+* configuring vimrc through environment variables (more info [here](https://soledadpenades.com/2013/05/25/using-environment-variables-for-configuring-vim/))
+
+```viml
+let vimtest=$VIM_TEST
+if (vimtest == '1')
+  Plug 'terryma/vim-multiple-cursors'
+endif
+```
+
 * highlighting trailing whitespace
 
 ```vim
