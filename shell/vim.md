@@ -1,5 +1,11 @@
 # Vim tricks
 
+## Top rebindable binds
+
+* `g + char`: `gh`,`gf`,`gl`,`gp`,`gr`,`gs`,`gx`,`gy`,`gz`.
+* `K`: word lookup does not seem to be of much use.
+* `&`: repeat last substitute. rarely useful.
+
 ## dictionary and spell
 
 ### building a dictionary file
@@ -267,3 +273,5 @@ set colorcolumn=201
 # -*- mode: markdown -*-
 # vi: set ft=markdown :
 ```
+
+
