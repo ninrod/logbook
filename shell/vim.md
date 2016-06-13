@@ -6,6 +6,10 @@
 * `K`: word lookup does not seem to be of much use.
 * `&`: repeat last substitute. rarely useful.
 
+## native MRU
+
+* just type `:browse oldfiles`
+
 ## dictionary and spell
 
 ### building a dictionary file
