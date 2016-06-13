@@ -6,6 +6,10 @@
 * `K`: word lookup does not seem to be of much use.
 * `&`: repeat last substitute. rarely useful.
 
+## navigating backwards/forwards `n` writes
+
+* `h: earlier` and `h: later` (or `:h g+`, `:h g-`)
+
 ## native MRU
 
 * just type `:browse oldfiles`
