@@ -1,5 +1,15 @@
 # Vim tricks
 
+## using `execute` `normal` `<Plug>` and `repeat.vim` inside a vim function
+
+```viml
+function! s:blankDown()
+  execute "normal mzo\<esc>`z"
+  silent! call repeat#set("\<Plug>(blankDown)", 1)
+endfunction
+nnoremap <Plug>(blankDown) :<C-u>call <SID>blankDown()<CR>
+nmap K <Plug>(blankDown)
+```
 ## Top rebindable binds
 
 * `g + char`: `gh`,`gf`,`gl`,`gp`,`gr`,`gs`,`gx`,`gy`,`gz`.
