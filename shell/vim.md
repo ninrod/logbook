@@ -293,4 +293,16 @@ set colorcolumn=201
 # vi: set ft=markdown :
 ```
 
+* break a really long line into smaller lines. more info [here](http://stackoverflow.com/a/1272247/4921402).
 
+```vim
+gq{motion} % format the line that {motion} moves over
+{Visual}gq % format the visually selected area
+gqq        % format the current line
+:h gq
+:h gw
+:set tw=80
+
+" setting textwidth (tw) will give you auto line break when exceeded during typing. 
+" It is used in gq too, though if disabled gq breaks on window size or 79 depending on which comes first.
+```
