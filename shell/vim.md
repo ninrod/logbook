@@ -12,9 +12,10 @@ nmap K <Plug>(blankDown)
 ```
 ## Top rebindable binds
 
-* `g + char`: `gh`,`gf`,`gl`,`gp`,`gr`,`gs`,`gx`,`gy`,`gz`.
+* `g + char`: `gb`, `gf`, `gh`,`gl`,`gp`,`gr`,`gs`,`gx`,`gy`,`gz`, `go`, `g<cr>`, `g<space>`.
 * `K`: word lookup does not seem to be of much use.
 * `&`: repeat last substitute. rarely useful.
+* `s`, `S`: easily replaceable for `cl` and `cc`, respectively.
 
 ## navigating backwards/forwards `n` writes
 
