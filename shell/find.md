@@ -92,3 +92,11 @@ $ vim $(find . -name '*.txt')
 ```sh
 $ find . ! -user vagrant
 ```
+
+## search for a class that is inside a jar in a dir full of jars. more info [here](http://stackoverflow.com/a/1343026/4921402)
+
+```sh
+$ find . -name "*.jar" -exec grep -Hsli ActiveTestSuite {} \;
+./junit-4.12.jar
+$ 
+```

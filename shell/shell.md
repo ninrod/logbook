@@ -222,6 +222,12 @@ $ nohup node server.js > /dev/null 2>&1 &
 du -sm * | sort -nr | head -n 20
 ```
 
+* show the contents of a jar file
+
+```sh
+$ unzip -v jarfile.jar
+```
+
 
 ## INSANE ONE-LINERS
 
