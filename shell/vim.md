@@ -236,9 +236,11 @@ $ vim -u NONE -N -c ':set runtimepath+=~/.vim/bundle/vim-sneak/' -c ':runtime pl
 * configuring vimrc through environment variables (more info [here](https://soledadpenades.com/2013/05/25/using-environment-variables-for-configuring-vim/))
 
 ```viml
-let vimtest=$VIM_TEST
-if (vimtest == '1')
-  Plug 'terryma/vim-multiple-cursors'
+let shell_option_fold_start=$SHELL_VIM_FOLD_START
+if (shell_option_fold_start ==# "true")
+  set foldlevelstart=0
+else
+  set foldlevelstart=3
 endif
 ```
 
@@ -305,4 +307,14 @@ gqq        % format the current line
 
 " setting textwidth (tw) will give you auto line break when exceeded during typing. 
 " It is used in gq too, though if disabled gq breaks on window size or 79 depending on which comes first.
+```
+
+* source or edit your vimrc
+
+```viml
+" sourcing
+:so $MYVIMRC
+
+"editing
+:e $MYVIMRC
 ```
