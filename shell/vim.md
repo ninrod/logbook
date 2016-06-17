@@ -288,7 +288,7 @@ set colorcolumn=201
 
 ## other tricks
 
-* to force a specific syntax on a file put this on top or bottom
+* force a specific syntax on a file put this on top or bottom
 
 ```vim
 # -*- mode: markdown -*-
@@ -317,4 +317,10 @@ gqq        % format the current line
 
 "editing
 :e $MYVIMRC
+```
+
+* delete all blank lines (__awesome__)
+
+```vim
+:v/./d
 ```
