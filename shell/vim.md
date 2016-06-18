@@ -324,3 +324,9 @@ gqq        % format the current line
 ```vim
 :v/./d
 ```
+
+* edit the current command line in vim
+
+```viml
+<C-f>
+```
