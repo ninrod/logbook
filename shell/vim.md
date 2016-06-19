@@ -99,6 +99,7 @@ $ sort -rk 2 < startup.log | vim -
 * `o` | `v_o`: when a block of text is selected you can use `o` to move to the beggining of the selection. Use it again to go to the end of the selection.
 * `g; e g,`:  back and forward na changelist (:changes)
 * `<c-i>, <c-o>` -> back and forward na jumplist (:jumps ou :ju)
+* jump to last edited line: `'.`
 
 ## folding
 
