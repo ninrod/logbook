@@ -319,6 +319,20 @@ let g:multi_cursor_exit_from_visual_mode = 0
 let g:multi_cursor_exit_from_insert_mode = 0
 ```
 
+### netrw (ok, not really a plugin, but bear with me)
+
+* options for configuring netrw
+
+```viml
+" options: netrw {{{2
+" let g:loaded_netrwPlugin = 1
+let g:netrw_banner       = 0
+let g:netrw_bufsettings  = 'relativenumber'
+let g:netrw_keepdir      = 0
+let g:netrw_liststyle    = 1
+let g:netrw_sort_options = 'i'kkkkkk
+```
+
 ## other tricks
 
 * force a specific syntax on a file put this on top or bottom
