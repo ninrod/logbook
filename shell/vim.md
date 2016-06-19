@@ -276,7 +276,7 @@ set colorcolumn=201
 
 ## plugin tricks
 
-### EasyAlign
+### junegunn/vim-easy-align
 
 * easy align any delimiter
     1. manually select line with `V`
@@ -285,6 +285,38 @@ set colorcolumn=201
     4. `<C-X>` to enter a regular expression
     5. type your delimiter in regex form.
     6. done!
+
+### jiangmiao/auto-pairs
+
+* fix: inserting `â`
+```viml
+Plug 'jiangmiao/auto-pairs'
+" auto-pairs plugin maps 'â' in insert mode limiting our ability to type 'â'.
+<!-- " let g:AutoPairsShortcutBackInsert='' -->
+```
+
+### chaoren/vim-wordmotion
+
+* sequester of normal mode `w` sucks sometimes
+
+```viml
+Plug 'chaoren/vim-wordmotion'
+" just run `$ man cmd` on the terminal.
+" it's the same as hitting `K` over a word.
+" let us try to leave with :normal!
+" eg: `:norm! ciw`
+" let g:wordmotion_prefix = 'K'
+```
+
+### terryma/vim-multiple-cursors
+
+* better defaults
+
+```viml
+Plug 'terryma/vim-multiple-cursors'
+let g:multi_cursor_exit_from_visual_mode = 0
+let g:multi_cursor_exit_from_insert_mode = 0
+```
 
 ## other tricks
 
