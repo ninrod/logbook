@@ -234,6 +234,14 @@ $ vim -u NONE -N -c ':set runtimepath+=~/.vim/bundle/vim-sneak/' -c ':runtime pl
 
 ## vimrc hacks
 
+* better cursorline
+
+```viml
+" use cursor line only when in current window and out of insert mode
+autocmd InsertLeave,WinEnter * set cursorline
+autocmd InsertEnter,WinLeave * set nocursorline
+```
+
 * configuring vimrc through environment variables (more info [here](https://soledadpenades.com/2013/05/25/using-environment-variables-for-configuring-vim/))
 
 ```viml
