@@ -63,7 +63,43 @@ $ rm -f ~/.zcompdump*
 ```
 
 [1]: <http://reasoniamhere.com/2014/01/11/outrageously-useful-tips-to-master-your-z-shell>
+
+
+## change the cursor shape in zle-vi-mode in mintty
+
+```sh
+# Updates editor information when the keymap changes.
+function zle-keymap-select() {
+  if [[ -n ${TMUX+x} ]]; then
+    if [[ $KEYMAP = vicmd ]]; then
+      # the command mode for vi: block shape
+      echo -ne "\ePtmux;\e\e[2 q\e\\"
+    else
+      # the insert mode for vi: line shape
+      echo -ne "\ePtmux;\e\e[6 q\e\\"
+    fi
+  elif [[ $KEYMAP = vicmd ]]; then
+    # the command mode for vi: block shape
+    echo -ne "\e[2 q"
+  else
+    # the insert mode for vi: line shape
+    echo -ne "\e[6 q"
+  fi
+  zle reset-prompt
+  zle -R
+}
+```
+
+## TODO: change cursor shape in vi-mode in iTerm2
+
+* TODO
+
+```sh
+# place code here
+```
+
 # Installing zsh on OSx
+
 ## Installing from source
 
 * dependencies
