@@ -5,4 +5,4 @@
 LICENSE
 ---------
 
-[Creative Commons 4.0](http://creativecommons.org/licenses/by/4.0/)
+[GNU Free Documentation License - 1.3](https://www.gnu.org/licenses/fdl.html#addendum)
