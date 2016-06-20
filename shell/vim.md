@@ -275,6 +275,42 @@ autocmd BufWinEnter * highlight ColorColumn ctermbg=darkred
 set colorcolumn=201
 ```
 
+* better configuration of cursor shape under iTerm2
+
+```viml
+" better cursor shape for terminal (works with iTerm2)
+if empty($TMUX)
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+else
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+  let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+endif
+```
+
+* better configuration of cursor shape under mintty
+
+```viml
+" SI = START insert mode
+" EI = END insert mode
+" SR = START replace mode
+if exists('$TMUX')
+  " let &t_ti.="\<Esc>Ptmux;\<Esc>\e[1 q\<Esc>\\"
+  " let &t_te.="\<Esc>Ptmux;\<Esc>\e[0 q\<Esc>\\"
+  let &t_SI.="\<Esc>Ptmux;\<Esc>\e[6 q\<Esc>\\"
+  let &t_EI.="\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
+  let &t_SR.="\<Esc>Ptmux;\<Esc>\e[4 q\<Esc>\\"
+else
+  let &t_SI.="\e[6 q"
+  let &t_EI.="\e[2 q"
+  let &t_SR.="\e[4 q"
+  " let &t_ti.="\e[1 q"
+  " let &t_te.="\e[0 q"
+endif
+```
+
 ## plugin tricks
 
 ### junegunn/vim-easy-align
