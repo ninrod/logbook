@@ -330,7 +330,7 @@ let g:netrw_banner       = 0
 let g:netrw_bufsettings  = 'relativenumber'
 let g:netrw_keepdir      = 0
 let g:netrw_liststyle    = 1
-let g:netrw_sort_options = 'i'kkkkkk
+let g:netrw_sort_options = 'i'
 ```
 
 ## other tricks
@@ -376,4 +376,17 @@ gqq        % format the current line
 
 ```viml
 <C-f>
+```
+
+* put the cursor after the end of the line or file. See `:h blockwise-examples` for more info.             a
+
+```viml
+" activate
+:set virtualedit=all
+
+" deactivate
+:set virtualedit=
+
+"now try this
+$10l 
 ```
