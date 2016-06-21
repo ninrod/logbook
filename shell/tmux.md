@@ -18,7 +18,27 @@ bind -n F11 split-window -h
 bind -n F12 split-window -v
 ```
 
-## install tmux with true colors
+## install tmux with true colors 
+
+### the standard way since tmux 2.2
+
+* install tmux 2.2 or compile from source
+
+* write this in your terminal
+
+```sh
+# from outside tmux
+$ echo $TERM
+xterm-256color
+
+$ tmux attach
+$ tmux set-option -ga terminal-overrides ",st-256color:Tc"
+$ tmux detach
+$ tmux attach
+$ tmux info | grep Tc
+```
+
+### the hacky patch way with brew in OSx
 
 * Install tmux with truecolor patch
 
@@ -37,6 +57,3 @@ end if build.with? "truecolor"
 ```
 
 Now you can run `brew install tmux --with-truecolor` and get all the colors for iterm nightly.
-
-[iTerm nightly]: https://iterm2.com/downloads/nightly/
-[homesick]: https://github.com/technicalpickles/homesick
