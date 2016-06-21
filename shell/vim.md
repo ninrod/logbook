@@ -1,5 +1,14 @@
 # Vim tricks
 
+## bulding vim
+
+```sh
+$ git clone --depth 1 https://github.com/vim/vim.git
+$ cd vim
+$ ./configure --prefix=/usr --with-features=huge --enable-pythoninterp --enable-multibyte
+$ make
+```
+
 ## using `execute` `normal` `<Plug>` and `repeat.vim` inside a vim function
 
 ```viml
@@ -10,6 +19,7 @@ endfunction
 nnoremap <Plug>(blankDown) :<C-u>call <SID>blankDown()<CR>
 nmap K <Plug>(blankDown)
 ```
+
 ## Top rebindable binds
 
 * `g + char`: `gb`, `gf`, `gh`,`gl`,`gp`,`gr`,`gs`,`gx`,`gy`,`gz`, `go`, `g<cr>`, `g<space>`.
