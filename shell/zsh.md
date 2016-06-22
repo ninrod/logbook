@@ -1,5 +1,15 @@
 # ZSH tricks
 
+## build zsh from source
+
+```sh
+$ git clone https://github.com/zsh-users/zsh.git && cd zsh
+$ ./Util/preconfig
+$ ./configure --with-tcsetpgrp
+$ make -j5 
+$ make install
+```
+
 ## ZSH conditional expressions
 
 * `-z`: testing if a shell variable is set
@@ -52,6 +62,18 @@ $ print -l ^.git(D.)
 fullqualifiedname() {
   print -l ${1:a}
 }
+```
+
+* print all files not ending with `.bar`
+
+```sh
+$ print -l ^*.bar
+```
+
+* print all files not ending with .bar nor .foo
+
+```sh
+$ print -l ^(*.bar|*.foo)
 ```
 
 ## zsh errors

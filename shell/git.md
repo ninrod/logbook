@@ -8,6 +8,12 @@
 $ cd $(git rev-parse --show-toplevel)
 ```
 
+* find the most recent tag from HEAD
+
+```sh
+$ git describe --abbrev=0 --tags
+```
+
 ## git revision syntax
 
 ### Viewing a file as it appears on Remotes, HEAD or INDEX
