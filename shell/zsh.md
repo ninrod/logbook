@@ -3,8 +3,9 @@
 ## build zsh from source
 
 ```sh
-$ git clone https://github.com/zsh-users/zsh.git && cd zsh
-$ ./Util/preconfig
+$ curl -fLo zsh-5.2.tar.gz http://www.zsh.org/pub/zsh-5.2.tar.gz
+$ tar -zxvf zsh-5.2.tar.gz
+$ cd zsh-5.2
 $ ./configure --with-tcsetpgrp
 $ make -j5 
 $ make install
