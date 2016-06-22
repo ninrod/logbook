@@ -159,3 +159,7 @@ $ /usr/local/Cellar/zsh/5.0.8/share/zsh/functions
 * in the first one, site-functions, I verified that there were 2 wrong symbolic links:
   * tinha um `_git` symlink e um link para um bash completions. retirei esses links e funcionou perfeitamente.
   * a `_git` symlink and a link to a bash completion. I removed these and everything worked like a charm.
+
+## interesting links, tutorials, infos, docs, you name it
+
+[ZSH Gems series #2](http://www.refining-linux.org/archives/37/ZSH-Gem-2-Extended-globbing-and-expansion/#CommentsPane)
