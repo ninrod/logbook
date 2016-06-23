@@ -443,3 +443,7 @@ gqq        % format the current line
 "now try this
 $10l 
 ```
+
+## interesting links
+
+[zapper vim tips](http://zzapper.co.uk/vimtips.html)
