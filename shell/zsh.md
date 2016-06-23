@@ -163,3 +163,4 @@ $ /usr/local/Cellar/zsh/5.0.8/share/zsh/functions
 ## interesting links, tutorials, infos, docs, you name it
 
 [ZSH Gems series #2](http://www.refining-linux.org/archives/37/ZSH-Gem-2-Extended-globbing-and-expansion/#CommentsPane)
+[zappter zsh tips](http://zzapper.co.uk/zshtips.html)
