@@ -24,3 +24,7 @@ PagadorRecebedorNoPais pag = tir.getPagadorRecebedorNoPais();
 ### querydsl and code generators
 
 * open dialog like this: settings -> build, execution, deployment -> compiler -> annotation processors 
+* as vezes tem que configurar o nome do FQ processor, e.g:
+
+    com.querydsl.apt.jpa.JPAAnnotationProcessor
+    lombok.core.AnnotationProcessor
