@@ -34,6 +34,8 @@ $ docker cp <containerId>:/file/path/within/container /host/path/target
 
 ### discover the ip of the docker host 
 
+* more info [here](https://github.com/docker/docker/issues/23177#issuecomment-228096508)
+
 ```sh
 $ docker inspect -f '{{.NetworkSettings.Gateway}}' $HOSTNAME
 ```
