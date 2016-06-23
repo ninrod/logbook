@@ -1,5 +1,18 @@
 # Tmux tricks
 
+## build tmux
+
+```sh
+$ curl -fLo tmux-2.2.tar.gz https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz
+$ tar -zxvf
+$ cd tmux-2.2
+# make sure `libevent-devel` is available
+$ yum install livevent-devel
+$ ./configure
+$ make
+$ make install
+```
+
 ## [sunaku's](https://github.com/sunaku) [hack](http://sunaku.github.io/vim-256color-bce.html) for fixing 256-colors colorschemes for vim inside tmux
 
 * this hack solves issues [804](https://github.com/vim/vim/issues/804) of [vim](http://github.com/vim/vim)
