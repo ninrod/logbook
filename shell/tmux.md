@@ -31,6 +31,15 @@ bind -n F11 split-window -h
 bind -n F12 split-window -v
 ```
 
+* navigate panes with alt+arrow without prefix
+
+```txt
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+```
+
 ## toggle tmux bar on/off
 
 ```sh
