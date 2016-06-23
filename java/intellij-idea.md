@@ -13,3 +13,10 @@ tir.getPagadorRecebedorNoPais();
 /* to this */
 PagadorRecebedorNoPais pag = tir.getPagadorRecebedorNoPais();
 ```
+
+## instalando colorschemes
+
+### arquivo .icls
+
+* linux: coloca o arquivo aqui: `~/.IdeaICXX/config/colors`
+* more info [here](https://github.com/jkaving/intellij-colors-solarized)
