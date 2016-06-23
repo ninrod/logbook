@@ -32,6 +32,12 @@ docker exec -it <mycontainer> bash
 $ docker cp <containerId>:/file/path/within/container /host/path/target
 ```
 
+### discover the ip of the docker host 
+
+```sh
+$ docker inspect -f '{{.NetworkSettings.Gateway}}' $HOSTNAME
+```
+
 ## Links
 
 * [nginx html5mode angularjs sample config](https://gist.github.com/cjus/b46a243ba610661a7efb)
