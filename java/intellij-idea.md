@@ -20,3 +20,7 @@ PagadorRecebedorNoPais pag = tir.getPagadorRecebedorNoPais();
 
 * linux: coloca o arquivo aqui: `~/.IdeaICXX/config/colors`
 * more info [here](https://github.com/jkaving/intellij-colors-solarized)
+
+### querydsl and code generators
+
+* open dialog like this: settings -> build, execution, deployment -> compiler -> annotation processors 
