@@ -31,6 +31,13 @@ bind -n F11 split-window -h
 bind -n F12 split-window -v
 ```
 
+## toggle tmux bar on/off
+
+```sh
+# toggles tmux bar on/off
+bind-key -n F12 set status
+```
+
 ## install tmux with true colors 
 
 ### the standard way since tmux 2.2
