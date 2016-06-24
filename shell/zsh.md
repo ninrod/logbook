@@ -118,6 +118,7 @@ function zle-keymap-select() {
 ## TODO: change cursor shape in vi-mode in iTerm2
 
 * more info [here](https://www.iterm2.com/documentation-escape-codes.html)
+* escape sequence: `^[]1337;CursorShape=N^G`. N=1, vertical line, N=0, block.
 
 ```sh
 # place code here
