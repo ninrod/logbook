@@ -90,6 +90,8 @@ $ rm -f ~/.zcompdump*
 
 ## change the cursor shape in zle-vi-mode in mintty
 
+
+
 ```sh
 # Updates editor information when the keymap changes.
 function zle-keymap-select() {
@@ -115,7 +117,7 @@ function zle-keymap-select() {
 
 ## TODO: change cursor shape in vi-mode in iTerm2
 
-* TODO
+* more info [here](https://www.iterm2.com/documentation-escape-codes.html)
 
 ```sh
 # place code here
