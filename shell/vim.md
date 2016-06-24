@@ -328,6 +328,12 @@ else
 endif
 ```
 
+* really silence a custom bind
+
+```viml
+nnoremap <silent> s :silent! normal za<cr>
+```
+
 ## plugin tricks
 
 ### junegunn/vim-easy-align
