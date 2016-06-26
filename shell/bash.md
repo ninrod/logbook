@@ -1,5 +1,13 @@
 # Bash tricks
 
+## options
+
+* dot not print meta chars, e.g. `ˆC` when <C-c> is pressed to escape a command
+
+```sh
+$ stty -echoctl
+```
+
 ## vi mode
 
 * you can enter vi mode on bash by typing this:
