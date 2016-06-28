@@ -244,6 +244,15 @@ $
 $ git log --grep=string_in_commit_msg
 ```
 
+### show only the master branch (only commits made to master)
+
+```sh
+# if you are on master
+$ git log --first-parent
+
+# if you are not on master
+$ git log --first-parent master
+```
 
 ## git-ls-files
 
