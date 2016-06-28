@@ -257,6 +257,14 @@ $ git log --first-parent
 $ git log --first-parent master
 ```
 
+### show all commits reachable from current heads in your repo
+
+* and without using `--reflog`!
+
+```sh
+$ gl $(git show-ref --heads -s | tr '\n' ' ') | head -n 20
+```
+
 ## git-ls-files
 
 * copying all gitignored and untracked files to another folder mantaining directory structure
