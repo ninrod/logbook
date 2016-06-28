@@ -208,6 +208,20 @@ $ vim -u NONE -N -c ':set runtimepath+=~/.vim/bundle/vim-sneak/' -c ':runtime pl
 
 ## ex mode commands
 
+### long range manipulation with ex
+
+* copy or move lines with ex without leaving your cursor point
+
+```viml
+" copy. more info :h :copy
+:-9,-7t.
+
+" move. more info :h :move
+:-9,-7m+2
+```
+
+### various assorted ex tricks
+
 * very useful: `<c-v>` on ex-mode escapes special combos like `<C-a>`, or `<ESC>`. Here we simulate a 'surround' on every first word of all lines of the file: `:%norm cw""P`
 * increase next number of all selected lines: `:'<,'>norm ^A`
 * decrease next number of all selected lines: `:'<,'>norm ^X`
