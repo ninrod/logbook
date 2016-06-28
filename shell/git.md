@@ -71,6 +71,9 @@ git rebase foo bar
 ```
 
 ### verifying differences between local and upstream
+
+* more info on `$ man gitrevisions` around the line that contains: `:<n>:<path>` 
+
 ```sh
 # common base:
 $ git show :1:package.json
