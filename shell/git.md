@@ -357,6 +357,11 @@ git reset HEAD --hard at /newrepo
 ```
 
 
+
+## interesting manual entries
+
+* `man gitrevisions(7)`
+
 ## Interesting links, tutorials, etc...
 
 * [Learn Git Branching][1]: excelent interactive tutorial (almost a game).
