@@ -85,7 +85,7 @@ $ git show :2:package.json
 $ git show :3:package.json
 ```
 
-### resolving conflicts with `--theirs` e `--ours`
+* bonus: resolving conflicts with `--theirs` e `--ours`
 
 ```sh
 # method 01 'forcing theirs' (or :2: for ours)
