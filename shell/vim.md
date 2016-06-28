@@ -453,4 +453,4 @@ $10l
 ## interesting links
 
 * more than a hundred vim snippets and tips: [zapper vim tips](http://zzapper.co.uk/vimtips.html)
-* a short geek vim novel: [vim creep](https://www.norfolkwinters.com/vim-creep/)
+* a short fiction vim novel: [vim creep](https://www.norfolkwinters.com/vim-creep/)
