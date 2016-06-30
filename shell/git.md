@@ -256,6 +256,7 @@ $ git log --grep=string_in_commit_msg --grep=anotherpattern
 ```
 
 * AND operation with various patterns
+* more info [on Julio C. Hamano's blog](http://gitster.livejournal.com/30195.html)
 
 ```sh
 $ git log --all-match --grep='to' --grep='mapa' --grep='lu'
@@ -403,6 +404,7 @@ git reset HEAD --hard at /newrepo
 * [Git Magic][3]: excelent html tutorial
 * [Reversões de commits][4]: stackoverflow question about how to revert commits.
 * [Git For Ages 4 And Up][6]: fantastic fun video introducing git. Highly recommended.
+* [git mantainer github page](https://github.com/gitster)
 
 [1]: <http://pcottle.github.io/learnGitBranching/?NODEMO>
 [2]: <http://think-like-a-git.net>
