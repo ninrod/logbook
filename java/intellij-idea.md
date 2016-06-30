@@ -14,6 +14,25 @@ tir.getPagadorRecebedorNoPais();
 PagadorRecebedorNoPais pag = tir.getPagadorRecebedorNoPais();
 ```
 
+## ideavim
+
+### listing/using possible actions
+
+* just type: `:actionlist`
+* sample usage
+
+```viml
+nnoremap gcc :action CommentByLineComment<cr>
+nnoremap <leader>fu :action FindUsages<cr>
+nnoremap <leader>im :action GotoImplementation<cr>
+nnoremap <leader>cv :action ChangeView<cr>
+nnoremap <leader>br :action ViewBreakpoints<cr>
+nnoremap <leader>ic :action InspectCode<cr>
+nnoremap <leader>oi :action OptimizeImports<cr>
+nnoremap <leader>re :action RenameElement<cr>
+nnoremap <leader>rf :action RenameFile<cr>
+```
+
 ## instalando colorschemes
 
 ### arquivo .icls
