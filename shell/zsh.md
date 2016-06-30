@@ -131,6 +131,10 @@ function zle-keymap-select() {
   * ➤
   * ❯ (from https://raw.githubusercontent.com/sindresorhus/pure/master/readme.md)
 
+## discover unicode characters by drawing them
+
+* the site is named [shapecatcher](http://shapecatcher.com/).
+
 
 # Installing zsh on OSx
 
