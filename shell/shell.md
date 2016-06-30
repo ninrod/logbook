@@ -80,6 +80,10 @@ $ git branch -D -- --track
 $ echo -n ☠ | hexdump
 $ 0000000 e2 98 a0
 
+$ tricks › echo -n ❯ | hexdump
+$ 0000000 9de2 00af
+$ 0000003
+
 $ echo -e "\xE2\x98\xA0"
 $ ☠
 ```
