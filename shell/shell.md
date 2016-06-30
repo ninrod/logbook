@@ -84,6 +84,10 @@ $ tricks › echo -n ❯ | hexdump
 $ 0000000 9de2 00af
 $ 0000003
 
+$ echo ★ | hexdump -C
+$ 00000000  e2 98 85 0a                                       |....|
+$ 00000004
+
 $ echo -e "\xE2\x98\xA0"
 $ ☠
 ```

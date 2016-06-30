@@ -124,11 +124,22 @@ function zle-keymap-select() {
 # place code here
 ```
 
+## parameter substitution
+
+* if variable is set, use variable. if not, use default:
+
+```sh
+$ ${variable:-default}
+```
+
 # cosmetic tricks
 
 * awesome unicode prompt chars:
   * ›
   * ➤
+  * ∴
+  * →
+  * ★
   * ❯ (from https://raw.githubusercontent.com/sindresorhus/pure/master/readme.md)
 
 ## discover unicode characters by drawing them
