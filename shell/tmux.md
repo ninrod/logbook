@@ -86,3 +86,8 @@ end if build.with? "truecolor"
 ```
 
 Now you can run `brew install tmux --with-truecolor` and get all the colors for iterm nightly.
+
+## list all tmux binds
+
+just press `<prefix> + ?`
+more info [here](http://unix.stackexchange.com/a/269542/155613)
