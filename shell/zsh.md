@@ -124,6 +124,14 @@ function zle-keymap-select() {
 # place code here
 ```
 
+# cosmetic tricks
+
+* awesome unicode prompt chars:
+  * ›
+  * ➤
+  * ❯ (from https://raw.githubusercontent.com/sindresorhus/pure/master/readme.md)
+
+
 # Installing zsh on OSx
 
 ## Installing from source
