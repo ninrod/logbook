@@ -243,8 +243,22 @@ $
 
 ### grep trough commit messages
 
+* one pattern
+
 ```sh
 $ git log --grep=string_in_commit_msg
+```
+
+* OR operation with various patterns
+
+```sh
+$ git log --grep=string_in_commit_msg --grep=anotherpattern
+```
+
+* AND operation with various patterns
+
+```sh
+$ git log --all-match --grep='to' --grep='mapa' --grep='lu'
 ```
 
 ### show only the master branch (only commits made to master)
