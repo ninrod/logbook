@@ -55,7 +55,7 @@ $ git show HEAD^3
 
 ### Rebase
 
-* `rebase` and `cherry-pick` equivalency (more info [here][5])
+* `rebase` and `cherry-pick` equivalency (more info [here](http://think-like-a-git.net/sections/rebase-from-the-ground-up/a-helpful-mnemonic-for-git-rebase-arguments.html))
 
 ```sh
 # this snippet
@@ -399,16 +399,10 @@ git reset HEAD --hard at /newrepo
 
 ## Interesting links, tutorials, etc...
 
-* [Learn Git Branching][1]: excelent interactive tutorial (almost a game).
-* [Think Like (a) Git][2]: good guide site.
-* [Git Magic][3]: excelent html tutorial
-* [Reversões de commits][4]: stackoverflow question about how to revert commits.
-* [Git For Ages 4 And Up][6]: fantastic fun video introducing git. Highly recommended.
+* [Learn Git Branching](http://pcottle.github.io/learnGitBranching/?NODEMO): excelent interactive tutorial (almost a game).
+* [Think Like (a) Git](http://think-like-a-git.net): good guide site.
+* [Git Magic](http://www-cs-students.stanford.edu/~blynn/gitmagic/): excelent html tutorial
+* [Reversões de commits](http://stackoverflow.com/questions/4114095/revert-git-repo-to-a-previous-commit): stackoverflow question about how to revert commits.
+* [Git For Ages 4 And Up](https://www.youtube.com/watch?v=1ffBJ4sVUb4): fantastic fun video introducing git. Highly recommended.
 * [git mantainer github page](https://github.com/gitster)
-
-[1]: <http://pcottle.github.io/learnGitBranching/?NODEMO>
-[2]: <http://think-like-a-git.net>
-[3]: <http://www-cs-students.stanford.edu/~blynn/gitmagic/>
-[4]: <http://stackoverflow.com/questions/4114095/revert-git-repo-to-a-previous-commit>
-[5]: <http://think-like-a-git.net/sections/rebase-from-the-ground-up/a-helpful-mnemonic-for-git-rebase-arguments.html>
-[6]: <https://www.youtube.com/watch?v=1ffBJ4sVUb4>
+* [git tips](https://github.com/git-tips/tips)
