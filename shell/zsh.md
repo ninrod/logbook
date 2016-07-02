@@ -2,6 +2,8 @@
 
 ## build zsh from source
 
+* note: the release tarball contains the documentation. the source repo needs [yodl](https://github.com/fbb-git/yodl) to build the documentation.
+
 ```sh
 $ curl -fLo zsh-5.2.tar.gz http://www.zsh.org/pub/zsh-5.2.tar.gz
 $ tar -zxvf zsh-5.2.tar.gz
@@ -9,6 +11,9 @@ $ cd zsh-5.2
 $ ./configure --with-tcsetpgrp
 $ make -j5 
 $ make install
+
+# to install only the documentation (man pages)
+$ make install.man
 ```
 
 ## ZSH conditional expressions
