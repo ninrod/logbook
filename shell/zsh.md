@@ -9,11 +9,19 @@ $ curl -fLo zsh-5.2.tar.gz http://www.zsh.org/pub/zsh-5.2.tar.gz
 $ tar -zxvf zsh-5.2.tar.gz
 $ cd zsh-5.2
 $ ./configure --with-tcsetpgrp
-$ make -j5 
+$ make -j9 
 $ make install
 
 # to install only the documentation (man pages)
 $ make install.man
+```
+
+* extra note: careful with where the source repo will install the functions
+* I had to put this line in my zshrc once when building zsh from HEAD 
+* the zsh binary should have changed it's $fpath var to include the directory, but who knows.
+
+```sh
+fpath=(/usr/local/share/zsh/5.2-dev-1/functions $fpath)
 ```
 
 ## ZSH conditional expressions
