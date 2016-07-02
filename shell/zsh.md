@@ -24,6 +24,24 @@ $ make install.man
 fpath=(/usr/local/share/zsh/5.2-dev-1/functions $fpath)
 ```
 
+## building from github HEAD
+
+* if something fails, make sure these deps are in:
+
+```sh
+$ sudo apt-get install -y git-core gcc make autoconf yodl libncursesw5-dev texinfo checkinstall
+``` 
+
+* then hit:
+
+```sh
+./Util/preconfig
+./configure
+make
+make check
+make install
+```
+
 ## ZSH conditional expressions
 
 * `-z`: testing if a shell variable is set
