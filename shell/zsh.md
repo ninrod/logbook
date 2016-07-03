@@ -163,6 +163,17 @@ function zle-keymap-select() {
 $ ${variable:-default}
 ```
 
+## add all subdirs of a folder to `$PATH`
+
+* this would go in .zshenv
+
+```sh
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:
+
+#include all ~/bin/subdirs
+[[ -d ~/bin ]] && export PATH=${PATH}:$(find ~/bin -type d | tr '\n' ':' | sed 's/:$//') 
+```
+
 # cosmetic tricks
 
 * awesome unicode prompt chars:
