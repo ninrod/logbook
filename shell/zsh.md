@@ -177,6 +177,7 @@ export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:
 # cosmetic tricks
 
 * awesome unicode prompt chars:
+  * λ
   * ›
   * ➤
   * ∴
