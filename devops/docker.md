@@ -40,6 +40,16 @@ $ docker cp <containerId>:/file/path/within/container /host/path/target
 $ docker inspect -f '{{.NetworkSettings.Gateway}}' $HOSTNAME
 ```
 
+### sync timezone with host
+
+* just mount /etc/localtime, e.g:
+```sh
+docker run \
+  -d -t \
+  -v /etc/localtime:/etc/localtime:ro \
+  yourdocker/image
+```
+
 ## Links
 
 * [nginx html5mode angularjs sample config](https://gist.github.com/cjus/b46a243ba610661a7efb)
