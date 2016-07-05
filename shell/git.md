@@ -280,6 +280,19 @@ $ git log --first-parent master
 $ gl $(git show-ref --heads -s | tr '\n' ' ') | head -n 20
 ```
 
+### git diff directly from git log
+
+```sh
+# or -p
+$ git log --patch
+```
+
+### don't use a pager, git, please. thanks
+
+```sh
+$ git --no-pager --the-rest-of-your-command
+```
+
 ## git-ls-files
 
 * copying all gitignored and untracked files to another folder mantaining directory structure
