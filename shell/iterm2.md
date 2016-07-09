@@ -2,4 +2,4 @@
 
 ## fix M-x in iterm2
 
-[profile`->`keys](http://stackoverflow.com/a/438892/4921402)
+* Go to [profile`->`keys](http://stackoverflow.com/a/438892/4921402)
