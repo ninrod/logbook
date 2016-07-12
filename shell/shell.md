@@ -164,6 +164,15 @@ $ curl -fLo [path/to/file] [link]
 $ find . -group 5050 -exec sudo chown vagrant:vagrant {} \;
 ```
 
+## alternative to `realpath`
+
+* just use readlink more info [here](http://stackoverflow.com/a/284671/4921402):
+
+```sh
+# just man readlink to see the differences
+$ readlink -m /path/to/somewhere
+$ readlink -f /path/to/somewhere
+```
 
 ## Ip configurations
 
