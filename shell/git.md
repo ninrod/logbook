@@ -312,6 +312,20 @@ $ git ls-files -iX .gitignore | xargs -I{} rsync --relative "{}" ../git-ls-files
 $ git ls-tree --name-only HEAD .
 ```
 
+## git push tricks
+
+### sync all 
+
+* here suppose you have two remotes: one called github and other called origin. 
+* the github remote has 137 branches and 370 tags. 
+* the origin repo has only 1 branch, master, and it is already synced with master from github.
+* you want to push all branches and all tags from github to origin.
+* You only have to type this:
+
+```sh
+$ git push --mirror
+```
+
 ## Creating a remote that lives inside the file system
 
 * Say you have a git repo called `littlegitrepo`. You can create a remote that lives inside the file system with this line: 
