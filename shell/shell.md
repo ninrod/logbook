@@ -108,6 +108,12 @@ $ print $?
 $ echo $?
 ```
 
+### verify if a user has sudo powers
+
+```sh
+$ sudo -l -U user_login
+```
+
 ## Using for and loops
 
 * simple loop to wait 10 secs for something
