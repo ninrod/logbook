@@ -347,10 +347,20 @@ $ cd ../local2
 $ git fetch
 $ git merge
 ```
+## git tag
+
+### anotated tag 
+
+*  tag creation: `git tag -a [tagname] -m 'tag msg'`
+
+### automatically name a tag with `git describe`
+
+```sh
+$ git tag -a "my-wonderful-tag-$(git describe --abbrev=7 --tags)" -m 'tag msg'
+```
 
 ## Other useful commands
 
-* tag creation: `git tag -a [tagname] -m 'tag msg'`
 * turn off git tracking for a specific file: `git update-index --skip-worktree Gruntfile.js`
 * turn on git tracking for a specific file: `git update-index --no-skip-worktree Gruntfile.js`
 
