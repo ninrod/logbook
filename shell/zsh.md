@@ -176,14 +176,14 @@ export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:
 
 # cosmetic tricks
 
-* awesome unicode prompt chars:
+* nice unicode prompt chars:
   * λ
   * ›
   * ➤
   * ∴
   * →
-  * ➜
   * ★
+  * ➜ (from robyrussel omz theme)
   * ❯ (from https://raw.githubusercontent.com/sindresorhus/pure/master/readme.md)
 
 ## discover unicode characters by drawing them
