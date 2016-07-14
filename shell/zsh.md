@@ -182,6 +182,7 @@ export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:
   * ➤
   * ∴
   * →
+  * ➜
   * ★
   * ❯ (from https://raw.githubusercontent.com/sindresorhus/pure/master/readme.md)
 
