@@ -217,7 +217,15 @@ $ git push -u origin master
 $ git branch -vv 
 ```
 
-## Git Grep
+## git checkout
+
+* grabbing a specific file from another branch/commit/ref and add it to the index in current branch
+
+```sh
+$ git checkout name_of_the_branch_or_commit_where_the_file_is -- path/to/the/file/you/want/to/grab
+```
+
+## git grep
 
 ### searching the history for a pattern
 
@@ -239,7 +247,7 @@ fe9958daf4a228b4779689fb9888555684a7ef52:.vimrc:235:" por padrão o exchange.vim
 $
 ```
 
-## Git log tricks
+## git log tricks
 
 ### grep trough commit messages
 
