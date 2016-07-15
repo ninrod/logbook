@@ -223,6 +223,14 @@ $ vim -u NONE -N -c ':set runtimepath+=~/.vim/bundle/vim-sneak/' -c ':runtime pl
 ### various assorted ex tricks
 
 * very useful: `<c-v>` on ex-mode escapes special combos like `<C-a>`, or `<ESC>`. Here we simulate a 'surround' on every first word of all lines of the file: `:%norm cw""P`
+* another example. create a sequence of increasingly greater numbers: 
+
+```viml
+" suppose you have your cursor parked at a a line that has: "1" written.
+:norm yyp<CR>
+30@:
+```
+
 * increase next number of all selected lines: `:'<,'>norm ^A`
 * decrease next number of all selected lines: `:'<,'>norm ^X`
 * exec @a macro on visually selected lines: `:'<,'>norm @a`
