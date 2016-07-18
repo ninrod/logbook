@@ -189,12 +189,22 @@ $ find . -group 5050 -exec sudo chown vagrant:vagrant {} \;
 
 ## alternative to `realpath`
 
-* just use readlink more info [here](http://stackoverflow.com/a/284671/4921402):
+* use non-POSIX readlink more info [here](http://stackoverflow.com/a/284671/4921402):
 
 ```sh
+# this is from GNU's readlink implementation
 # just man readlink to see the differences
 $ readlink -m /path/to/somewhere
 $ readlink -f /path/to/somewhere
+```
+
+* a semi-POSIX way: (not all unices implemen the pwd `-P` option)
+
+```sh
+# usage custom_realpath /path/to/file/or/dir
+custom_realpath() {
+  echo $(cd $(dirname $1); pwd -P)/$(basename $1);
+}
 ```
 
 ## Ip configurations
