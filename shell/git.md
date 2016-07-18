@@ -334,7 +334,21 @@ $ git ls-tree --name-only HEAD .
 $ git push --mirror
 ```
 
-## Creating a remote that lives inside the file system
+## git clone
+
+### get a shallow clone of a repo
+
+```sh
+$ git clone --depth 1 repo
+```
+
+### you can also *unshallow* the clone
+
+```sh
+$ git fetch --unshallow
+```
+
+### Creating a remote that lives inside the file system
 
 * Say you have a git repo called `littlegitrepo`. You can create a remote that lives inside the file system with this line: 
 * credits go to Michael Schwern's `Git for ages 4 and up`. 
