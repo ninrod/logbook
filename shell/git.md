@@ -348,6 +348,12 @@ $ git clone --depth 1 repo
 $ git fetch --unshallow
 ```
 
+* alternative: go deeper n commits down the history (e.g. 100 commits)
+
+```sh
+$ git fetch --depth=100
+```
+
 ### Creating a remote that lives inside the file system
 
 * Say you have a git repo called `littlegitrepo`. You can create a remote that lives inside the file system with this line: 
