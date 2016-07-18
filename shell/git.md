@@ -344,6 +344,8 @@ $ git clone --depth 1 repo
 
 ### you can also *unshallow* the clone
 
+* more info [here](http://stackoverflow.com/a/6802238/4921402)
+
 ```sh
 $ git fetch --unshallow
 ```
