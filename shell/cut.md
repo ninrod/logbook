@@ -9,3 +9,11 @@
 GConf2
 ~ ❯
 ```
+
+## delete the nth column of an output
+
+* use the --complement option
+
+```sh
+$ echo '1 2 3 4 5 6 7 8 9 10' | cut -f3 --complement -d' '
+```
