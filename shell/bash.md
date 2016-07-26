@@ -27,3 +27,21 @@ then
   echo "It's there!";
 fi
 ```
+
+## extended globbing
+
+* inverting glob patterns in bash
+
+```bash
+#!/usr/bin/env bash
+# turns on bash extended glob
+shopt -s extglob
+
+# inverts *.cp glob
+for file in dot/*.cp; do
+  echo $file
+done
+
+# turns off bash extended glob
+shopt -u extglob
+```
