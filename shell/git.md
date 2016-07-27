@@ -301,6 +301,12 @@ $ git log --patch
 $ git --no-pager --the-rest-of-your-command
 ```
 
+### show all developers names and emails for a particular project
+
+```sh
+$ git shortlog -sne
+```
+
 ## git-ls-files
 
 * copying all gitignored and untracked files to another folder mantaining directory structure
