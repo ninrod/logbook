@@ -307,6 +307,12 @@ $ git --no-pager --the-rest-of-your-command
 $ git shortlog -sne
 ```
 
+### filter logs by author name using mailmap
+
+```sh
+$ gl --use-mailmap --author=DeveloperName
+```
+
 ## git-ls-files
 
 * copying all gitignored and untracked files to another folder mantaining directory structure
