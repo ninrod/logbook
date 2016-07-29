@@ -174,9 +174,20 @@ export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:
 [[ -d ~/bin ]] && export PATH=${PATH}:$(find ~/bin -type d | tr '\n' ':' | sed 's/:$//') 
 ```
 
-# cosmetic tricks
+# cosmetic prompt tricks
 
-* nice unicode prompt chars:
+## show a diferent prompt char on privileged shells
+
+* use the `%(x.blah.bluh)` construct
+* more info [here](http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html) on the `13.2.3 Shell state` section
+* [nparikh's page](http://www.nparikh.org/unix/prompt.php#zsh) also has good tips about prompt expansion
+
+```sh
+# shows a `#` if user is root
+# shows `$` otherwise
+PROMPT='%(!.#.$) '
+```
+## nice unicode prompt chars:
   * λ
   * ›
   * ➤
@@ -189,6 +200,7 @@ export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:
 ## discover unicode characters by drawing them
 
 * the site is named [shapecatcher](http://shapecatcher.com/).
+
 
 
 # Installing zsh on OSx
