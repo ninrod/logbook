@@ -180,6 +180,7 @@ export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:
 
 * use the `%(x.blah.bluh)` construct
 * more info [here](http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html) on the `13.2.3 Shell state` section
+  - by the way, the `13.2.5 Visual effects` also has relevant information
 * [nparikh's page](http://www.nparikh.org/unix/prompt.php#zsh) also has good tips about prompt expansion
 * see also [Phil's page](http://aperiodic.net/phil/prompt/)
 
