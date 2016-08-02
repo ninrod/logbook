@@ -1,7 +1,6 @@
 # Docker
 
-## Commands
-
+## Assorted Tricks
 ### clean all containers 
 
  ```sh
@@ -22,8 +21,19 @@ $ docker commit <idcontainer> <ninrod/blah>
 
 ### open a shell session to a running container
 
+* normal case: 
+
 ```sh
 docker exec -it <mycontainer> bash
+```
+
+* if you want to run tmux inside the container
+
+```sh
+# clever hack to overcome docker-exec tty propblem
+# see: https://github.com/docker/docker/issues/8755
+# in particular, see this comment: https://github.com/docker/docker/issues/8755#issuecomment-83403289
+docker exec -it $CONTAINER_NAME script -qc "zsh" /dev/null
 ```
 
 ### copy a file from the container to the host
@@ -48,6 +58,16 @@ docker run \
   -d -t \
   -v /etc/localtime:/etc/localtime:ro \
   yourdocker/image
+```
+
+## docker ps
+
+### shrink docker ps horizontal output length
+
+* use the --format option
+
+```sh
+alias dp='docker ps --format="table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Command}}\t{{.Status}}"'
 ```
 
 ## Links
