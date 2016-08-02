@@ -137,6 +137,40 @@ $ echo $?
 $ sudo -l -U user_login
 ```
 
+## ldd: discover on what libraries does an executable depends upon in runtime
+
+* docker example
+
+```sh
+~ λ ldd /usr/bin/docker-current
+        linux-vdso.so.1 =>  (0x00007fffa61f8000)
+        libaudit.so.1 => /lib64/libaudit.so.1 (0x00007f02f5e37000)
+        libsystemd.so.0 => /lib64/libsystemd.so.0 (0x00007f02f5e0f000)
+        libseccomp.so.2 => /lib64/libseccomp.so.2 (0x00007f02f5be2000)
+        libpthread.so.0 => /lib64/libpthread.so.0 (0x00007f02f59c6000)
+        libdl.so.2 => /lib64/libdl.so.2 (0x00007f02f57c2000)
+        libdevmapper.so.1.02 => /lib64/libdevmapper.so.1.02 (0x00007f02f5567000)
+        libc.so.6 => /lib64/libc.so.6 (0x00007f02f51a5000)
+        libcap.so.2 => /lib64/libcap.so.2 (0x00007f02f4fa0000)
+        libm.so.6 => /lib64/libm.so.6 (0x00007f02f4c9d000)
+        librt.so.1 => /lib64/librt.so.1 (0x00007f02f4a95000)
+        libselinux.so.1 => /lib64/libselinux.so.1 (0x00007f02f4870000)
+        liblzma.so.5 => /lib64/liblzma.so.5 (0x00007f02f464a000)
+        libgcrypt.so.11 => /lib64/libgcrypt.so.11 (0x00007f02f43c9000)
+        libgpg-error.so.0 => /lib64/libgpg-error.so.0 (0x00007f02f41c4000)
+        libresolv.so.2 => /lib64/libresolv.so.2 (0x00007f02f3fa9000)
+        libdw.so.1 => /lib64/libdw.so.1 (0x00007f02f3d62000)
+        libgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x00007f02f3b4c000)
+        /lib64/ld-linux-x86-64.so.2 (0x00007f02f6068000)
+        libsepol.so.1 => /lib64/libsepol.so.1 (0x00007f02f3906000)
+        libudev.so.1 => /lib64/libudev.so.1 (0x00007f02f38f1000)
+        libattr.so.1 => /lib64/libattr.so.1 (0x00007f02f36ec000)
+        libpcre.so.1 => /lib64/libpcre.so.1 (0x00007f02f348a000)
+        libelf.so.1 => /lib64/libelf.so.1 (0x00007f02f3274000)
+        libbz2.so.1 => /lib64/libbz2.so.1 (0x00007f02f3064000)
+        libz.so.1 => /lib64/libz.so.1 (0x00007f02f2e4d000)
+~ λ
+```
 ## Using for and loops
 
 * simple loop to wait 10 secs for something
