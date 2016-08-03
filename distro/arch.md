@@ -9,3 +9,9 @@ $ ip addr show
 # interface will be down. bring it up
 $ sudo ip link set [eth0] up
 ```
+
+## Pacman tricks
+
+```sh
+$ pacman -Ss $package
+```
