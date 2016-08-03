@@ -30,3 +30,7 @@ $ reboot
 * put `delay until repeat` on shortest
 * ???
 * profit!
+
+## screenshot
+
+* `cmd+shift+4` + `<SPC>` + `click` 
