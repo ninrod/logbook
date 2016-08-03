@@ -4,6 +4,16 @@
 
 * __[47 Bash pitfalls][1]__
 
+## posix tricks
+### getting the truepath to a location
+
+* you usually have access to `realpath` or `readlink -f`. If not, try this:
+
+```sh
+truepath () {
+  echo $(cd $(dirname $1); pwd P)/$(basename $1);
+}
+```
 ## General tips
 
 ### the date utility
