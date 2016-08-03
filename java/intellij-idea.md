@@ -18,7 +18,7 @@ PagadorRecebedorNoPais pag = tir.getPagadorRecebedorNoPais();
 
 ### listing/using possible actions
 
-* just type: `:actionlist`
+* just type: `:actionlist [pattern]`
 * sample usage
 
 ```viml
