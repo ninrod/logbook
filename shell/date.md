@@ -1,5 +1,16 @@
 # date tricks
 
+## setting current date
+
+```sh
+# print the current date in standard format
+$ date
+Thu Aug 11 19:02:45 BRT 2016
+
+# copy and paste and change above output to this command
+$ date --set 'copy/paste/change/above/format/here'
+```
+
 ## relative dates 
 
 * Getting relative dates with gnu coreutils date. More info [here](http://www.cyberciti.biz/tips/linux-unix-get-yesterdays-tomorrows-date.html)
