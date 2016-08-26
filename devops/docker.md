@@ -70,6 +70,19 @@ docker run \
 alias dp='docker ps --format="table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Command}}\t{{.Status}}"'
 ```
 
+## docker inspect
+
+
+### discover what is the real path of a mountpoint from within a container
+
+* relevant [so question](http://stackoverflow.com/q/39151188/4921402)
+* relevant [github issue](https://github.com/docker/docker/issues/26021)
+
+```sh
+# issued from the container that mounted the host's docker socket and client
+# of course, the results need to be parsed
+$ docker inspect --format '{{json .Mounts }}' <container>
+```
 ## Links
 
 * [nginx html5mode angularjs sample config](https://gist.github.com/cjus/b46a243ba610661a7efb)
