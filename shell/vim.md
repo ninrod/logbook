@@ -111,6 +111,11 @@ $ sort -rk 2 < startup.log | vim -
 * `<c-i>, <c-o>` -> back and forward na jumplist (:jumps ou :ju)
 * jump to last edited line: `'.`
 
+### **ninja trick**: insert mode movements
+
+* to quickly access normal mode movements while inside insert mode, just issue `<C-o>+{motion}`
+  - for more info: `:help i_CTRL-O`
+
 ## folding
 
 * `zi` toggles all folds of the current buffer.
