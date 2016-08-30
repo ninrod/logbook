@@ -251,7 +251,8 @@ $ vim -u NONE -N -c ':set runtimepath+=~/.vim/bundle/vim-sneak/' -c ':runtime pl
 * toggle line numbers: `:set nu!`
 * toggle relative line numbers: `:set rnu!`
 * search/replace com atalho: acha os highlight com '/' e depois soca: `%s//nova/g`
-* `:e!`: reverte o buffer para o estado original do arquivo sem sair do vim.
+* `:e`: reloads file from filesystem
+* `:e!`:reloads file from filesystem, forcefully
 
 ## show the name of the current file
 
