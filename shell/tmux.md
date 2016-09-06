@@ -91,3 +91,8 @@ Now you can run `brew install tmux --with-truecolor` and get all the colors for 
 
 just press `<prefix> + ?`
 more info [here](http://unix.stackexchange.com/a/269542/155613)
+
+## Session Management
+
+to rename the current session: `<prefix> + $`
+
