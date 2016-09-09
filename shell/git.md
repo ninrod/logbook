@@ -217,6 +217,13 @@ $ git push -u origin master
 $ git branch -vv 
 ```
 
+### remove branch tracking (untrack, unset remote tracking branch)
+
+* just issue `git branch --unset-upstream` (since 1.8)
+* works since `git 1.8+`, Oct. 2012, [commit b84869e](https://github.com/git/git/commit/b84869ef14081b298a4ab825219221ccfcb2a3ba) by [Carlos Martín Nieto (`carlosmn`)](https://github.com/carlosmn)
+* relevant SO [question](http://stackoverflow.com/a/3046478/4921402)
+
+
 ## git checkout
 
 * grabbing a specific file from another branch/commit/ref and add it to the index in current branch
