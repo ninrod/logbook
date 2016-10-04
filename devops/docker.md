@@ -1,6 +1,7 @@
 # Docker
 
 ## Assorted Tricks
+
 ### clean all containers 
 
  ```sh
@@ -60,6 +61,7 @@ docker run \
   yourdocker/image
 ```
 
+
 ## docker ps
 
 ### shrink docker ps horizontal output length
@@ -83,6 +85,12 @@ alias dp='docker ps --format="table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Command}
 # of course, the results need to be parsed
 $ docker inspect --format '{{json .Mounts }}' <container>
 ```
+## docker tag
+
+```sh
+docker tag $TAG_ID full.image/name:version
+```
+
 ## Links
 
 * [nginx html5mode angularjs sample config](https://gist.github.com/cjus/b46a243ba610661a7efb)
