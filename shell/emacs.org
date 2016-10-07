@@ -1,0 +1,16 @@
+#+STARTUP: overview
+#+STARTUP: indent
+
+* tricks
+** start a clean emacs
+   #+BEGIN_SRC shell
+   emacs -Q
+   #+END_SRC
+** change current directory
+#+BEGIN_SRC emacs-lisp
+M-x cd
+#+END_SRC
+
+* Links, references
+- [[https://medium.com/@bryangarza/my-descent-into-evil-98f7017475b6#.49n4guhq4][my descent into evil]]
+
