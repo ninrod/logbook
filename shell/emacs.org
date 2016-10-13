@@ -5,7 +5,18 @@
    #+BEGIN_SRC shell
    emacs -Q
    #+END_SRC
+* locally force a mode inside a file
+- from [[http://emacs.stackexchange.com/a/26508/12585][emacs.stackexchange]]
+#+BEGIN_SRC shell
+# in the beginning of the file:
+# -*- mode: sh -*-
 
+# or at the bottom:
+
+# Local Variables:
+# mode: sh
+# End:
+#+END_SRC
 * change current directory
 #+BEGIN_SRC emacs-lisp
 M-x cd
