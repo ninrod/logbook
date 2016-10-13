@@ -45,3 +45,21 @@ done
 # turns off bash extended glob
 shopt -u extglob
 ```
+
+## parameter substitution
+
+* use the parameter substitution form
+
+```shell
+fixpath() {
+  if [[ "${SHELL_IS_DOCKERIZED}" == "true" ]]; then
+    abs_path=$(readlink -f $1)
+    fix_path=${abs_path/$HOME/\/home\/vagrant}
+    echo $fix_path
+  fi
+}
+
+path=~/code
+abs_path=$(readlink -f $path)
+fixed_path=$(fixpath $path)
+```
