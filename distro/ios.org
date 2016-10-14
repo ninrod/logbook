@@ -1,0 +1,6 @@
+#+STARTUP: indent
+#+STARTUP: overview
+
+* search within a webpage
+  - you have to type the search in the address bar.
+  - more info [[http://www.howtogeek.com/184871/8-tips-and-tricks-for-browsing-with-safari-on-ipad-and-iphone/][here]]
