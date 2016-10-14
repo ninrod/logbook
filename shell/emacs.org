@@ -14,7 +14,12 @@
 #+BEGIN_SRC emacs-lisp
 M-x cd
 #+END_SRC
-
+* eshell
+** to redirect the output of a command
+#+BEGIN_SRC shell
+echo hello >>> #<*scratch*>
+echo hello >>> #<buffer *scratch*>
+#+END_SRC
 * Magit
 - tranform a magit-diff buffer into a normal text buffer: `C-t`
 * Ivy/Counsel
