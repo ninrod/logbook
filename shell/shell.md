@@ -4,6 +4,16 @@
 
 * __[47 Bash pitfalls][1]__
 
+## running commands/scripts in background
+
+```sh
+#!/bin/sh
+SCRIPT_PATH="$(cd "$(dirname "$0")"; pwd -P)"; cd $SCRIPT_PATH
+squirrel_log=$SCRIPT_PATH/init.log
+echo "initiating. check file $init_log"
+nohup $SCRIPT_PATH/awesome-script.sh "$@" > $init_log 2>&1 &
+```
+
 ## posix tricks
 
 ### getting the truepath to a location
