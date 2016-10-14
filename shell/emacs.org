@@ -7,6 +7,9 @@
    #+END_SRC
 * locally force a mode inside a file
 - see here [[http://emacs.stackexchange.com/a/26508/12585][emacs.stackexchange]]
+- for example, put this on top of your shell file
+  (but substitute for sh)
+# -*- mode: org -*-
 * change current directory
 #+BEGIN_SRC emacs-lisp
 M-x cd
