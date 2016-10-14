@@ -1,0 +1,67 @@
+
+#+STARTUP: overview
+#+STARTUP: indent
+
+* options
+** dot not print nothing when `ˆC` when <C-c> is pressed 
+ - to escape a command
+
+ #+BEGIN_SRC sh
+ $ stty -echoctl
+ #+END_SRC
+
+** vi mode
+ - you can enter vi mode on bash by typing this:
+
+#+BEGIN_SRC sh
+$ set -o vi
+#+END_SRC
+
+
+* string comparision
+- Based on [[http://stackoverflow.com/a/229606/4921402][this]] answer
+#+BEGIN_SRC sh
+string='My long string';
+if [[ $string == *"My long"*  ]]; then
+  echo "It's there!";
+fi
+#+END_SRC
+
+* inverting glob patterns in bash
+
+#+BEGIN_SRC sh
+
+#!/usr/bin/env bash
+# turns on bash extended glob
+shopt -s extglob
+
+# inverts *.cp glob
+for file in dot/*.cp; do
+  echo $file
+done
+
+# turns off bash extended glob
+shopt -u extglob
+#+END_SRC
+
+
+
+* parameter substitution
+* use the parameter substitution form
+
+#+BEGIN_SRC sh
+fixpath() {
+  if [[ "${SHELL_IS_DOCKERIZED}" == "true" ]]; then
+    abs_path=$(readlink -f $1)
+    fix_path=${abs_path/$HOME/\/home\/vagrant}
+    echo $fix_path
+  fi
+}
+path=~/code
+abs_path=$(readlink -f $path)
+fixed_path=$(fixpath $path)
+#+END_SRC
+
+* useful links
+1. [[http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html][bash conditional statements]]
+``
