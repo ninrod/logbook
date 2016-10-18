@@ -55,7 +55,9 @@ echo hello >>> #<buffer *scratch*>
 * org-mode tables
 ** exporting an org table to csv format
  #+name: foo
+
  | header A | header B |
+ |----------+----------|
  | cell 1   | cell 2   |
  | cell 3   | cell 4   |
  
@@ -74,7 +76,9 @@ echo hello >>> #<buffer *scratch*>
 3. type |
 4. C-q RET TAB (or ,) (or whatever)
 5. profit!
-
+** delete an entire org-table
+- see [[https://www.reddit.com/r/emacs/comments/56oc9c/orgtables_is_there_a_way_to_delete_a_whole_table/][here]]
+- select the top left bar (|) and issue M-x org-mark-element. then destroy the region as you see fit.
 * Links, references
 - [[https://medium.com/@bryangarza/my-descent-into-evil-98f7017475b6#.49n4guhq4][my descent into evil]]
 
