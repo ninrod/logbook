@@ -68,6 +68,12 @@ echo hello >>> #<buffer *scratch*>
 : cell 1,cell 2
 : cell 3,cell 4
 
+** convert an org table to csv format
+1. select the region
+2. M-x replace-string
+3. type |
+4. C-q RET TAB (or ,) (or whatever)
+5. profit!
 
 * Links, references
 - [[https://medium.com/@bryangarza/my-descent-into-evil-98f7017475b6#.49n4guhq4][my descent into evil]]
