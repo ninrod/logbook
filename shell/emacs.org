@@ -5,6 +5,7 @@
    #+BEGIN_SRC shell
    emacs -Q
    #+END_SRC
+
 * locally force a mode inside a file
 - see here [[http://emacs.stackexchange.com/a/26508/12585][emacs.stackexchange]]
 - for example, put this on top of your shell file
@@ -14,12 +15,14 @@
 #+BEGIN_SRC emacs-lisp
 M-x cd
 #+END_SRC
+
 * eshell
 ** to redirect the output of a command
 #+BEGIN_SRC shell
 echo hello >>> #<*scratch*>
 echo hello >>> #<buffer *scratch*>
 #+END_SRC
+
 * Magit
 - tranform a magit-diff buffer into a normal text buffer: `C-t`
 * Ivy/Counsel
@@ -48,6 +51,22 @@ echo hello >>> #<buffer *scratch*>
       (use-package flx :ensure t)
   )
 #+END_SRC
+
+* org-mode tables
+** exporting an org table to csv format
+ #+name: foo
+ | header A | header B |
+ | cell 1   | cell 2   |
+ | cell 3   | cell 4   |
+ 
+#+BEGIN_SRC elisp :var x=foo
+(orgtbl-to-csv x nil)
+#+END_SRC
+
+#+RESULTS:
+: header A,header B
+: cell 1,cell 2
+: cell 3,cell 4
 
 
 * Links, references
