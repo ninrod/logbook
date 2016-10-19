@@ -2,11 +2,12 @@
 
 ## build tmux
 
+* obs: make sure `libevent-devel` is available
+
 ```sh
 $ curl -fLo tmux-2.2.tar.gz https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz
 $ tar -zxvf
 $ cd tmux-2.2
-# make sure `libevent-devel` is available
 $ yum install livevent-devel
 $ ./configure
 $ make
@@ -22,7 +23,7 @@ $ make install
 
 * pane and window management
 
-```txt
+```shell
 bind -n F1 previous-window
 bind -n F2 next-window
 bind -n F3 select-pane -t :.-
@@ -33,19 +34,38 @@ bind -n F12 split-window -v
 
 * navigate panes with alt+arrow without prefix
 
-```txt
+```shell
 bind -n M-Left select-pane -L
 bind -n M-Right select-pane -R
 bind -n M-Up select-pane -U
 bind -n M-Down select-pane -D
 ```
 
+* create panes with C-arrow without prefix
+
+```shell
+bind -n C-Left split-window -h
+bind -n C-Right split-window -h
+bind -n C-Up split-window -v
+bind -n C-Down split-window -v
+```
+
 ## toggle tmux bar on/off
 
+* this toggles tmux bar on/off
+
 ```sh
-# toggles tmux bar on/off
 bind-key -n F12 set status
 ```
+
+## directly rename tmux window
+
+* more info [here](http://unix.stackexchange.com/a/269542/155613)
+
+```sh
+bind -n F7 command-prompt "rename-window '%%'"
+```
+
 
 ## install tmux with true colors 
 
