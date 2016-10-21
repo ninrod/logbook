@@ -119,6 +119,19 @@ $ rm -f ~/.zcompdump*
 [1]: <http://reasoniamhere.com/2014/01/11/outrageously-useful-tips-to-master-your-z-shell>
 
 
+
+## associative arrays
+
+* to test if an associative array has a certain key, do this
+
+```sh
+typeset -A hashtest
+hashtest[a]='valid'
+((${+hashtest[a]})) && print a is defined
+((${+hashtest[b]})) && print b is defined
+((${+hashtest[c]})) && print c is defined
+```
+
 ## change the cursor shape in zle-vi-mode in mintty
 
 
@@ -226,7 +239,6 @@ make
 make check
 make install
 ```
-
 
 ## if git completion is off, follow this steps
 
