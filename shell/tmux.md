@@ -32,6 +32,18 @@ bind -n F11 split-window -h
 bind -n F12 split-window -v
 ```
 
+* direct assign F1,F2,F3,etc... to window 1,2,3
+
+```shell
+bind -n F1 select-window -t 1
+bind -n F2 select-window -t 2
+bind -n F3 select-window -t 3
+bind -n F4 select-window -t 4
+bind -n F5 select-window -t 5
+bind -n F6 new-window
+bind -n F7 command-prompt "rename-window '%%'"
+```
+
 * navigate panes with alt+arrow without prefix
 
 ```shell
