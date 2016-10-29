@@ -30,6 +30,7 @@ echo hello >>> #<buffer *scratch*>
 - page up: =DEL=
 - node navigation: u(up), n(next), p(previous)
 - link navigation. put cursor on next visible link: =TAB=
+- vai pro começo da pagina atual do node: =b=
 
 * Magit
 - tranform a magit-diff buffer into a normal text buffer: `C-t`
