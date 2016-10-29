@@ -23,6 +23,14 @@ echo hello >>> #<*scratch*>
 echo hello >>> #<buffer *scratch*>
 #+END_SRC
 
+* info files
+- scroll down: =C-e=
+- scroll up: =C-y=
+- page down: =SPC=
+- page up: =DEL=
+- node navigation: u(up), n(next), p(previous)
+- link navigation. put cursor on next visible link: =TAB=
+
 * Magit
 - tranform a magit-diff buffer into a normal text buffer: `C-t`
 * Ivy/Counsel
