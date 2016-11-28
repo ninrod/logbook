@@ -62,6 +62,12 @@ abs_path=$(readlink -f $path)
 fixed_path=$(fixpath $path)
 #+END_SRC
 
+* start a clean bash environment
+- from [[http://unix.stackexchange.com/a/291913/155613][this]] so question
+#+BEGIN_SRC sh
+env -i bash --noprofile --norc
+#+END_SRC
+
 * useful links
 1. [[http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html][bash conditional statements]]
 ``
