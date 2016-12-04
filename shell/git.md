@@ -223,6 +223,13 @@ $ git branch -vv
 * works since `git 1.8+`, Oct. 2012, [commit b84869e](https://github.com/git/git/commit/b84869ef14081b298a4ab825219221ccfcb2a3ba) by [Carlos Martín Nieto (`carlosmn`)](https://github.com/carlosmn)
 * relevant SO [question](http://stackoverflow.com/a/3046478/4921402)
 
+### verifying to what branches a commit is merged to
+
+* in other words, list all branches which commit_sha is an ancestor of
+
+```sh
+$ git branch --all --contains <commit_sha>
+```
 
 ## git checkout
 
