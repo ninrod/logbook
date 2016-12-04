@@ -226,6 +226,7 @@ $ git branch -vv
 ### verifying to what branches a commit is merged to
 
 * in other words, list all branches which commit_sha is an ancestor of
+* more info [here](http://stackoverflow.com/questions/18345157/how-can-i-tell-if-one-commit-is-an-ancestor-of-another-commit-or-vice-versa)
 
 ```sh
 $ git branch --all --contains <commit_sha>
