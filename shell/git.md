@@ -214,7 +214,7 @@ $ git push -u origin master
 
 ```sh
 # -vv => doubly verbose
-$ git branch -vv 
+$ git branch -vv
 ```
 
 ### remove branch tracking (untrack, unset remote tracking branch)
