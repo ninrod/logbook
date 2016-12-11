@@ -91,6 +91,13 @@ $ docker inspect --format '{{json .Mounts }}' <container>
 docker tag $TAG_ID full.image/name:version
 ```
 
+## docker save | docker load
+
+```sh
+$ docker save mynewimage > /tmp/mynewimage.tar
+$ docker load < /tmp/mynewimage.tar
+```
+
 ## Links
 
 * [nginx html5mode angularjs sample config](https://gist.github.com/cjus/b46a243ba610661a7efb)
