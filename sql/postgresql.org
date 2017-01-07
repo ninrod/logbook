@@ -1,0 +1,32 @@
+
+* Sample create schema and insert query
+  #+BEGIN_SRC sql
+
+    -- Table: public."MCT_MY_COOL_TABLE"
+
+    -- DROP TABLE public."MCT_MY_COOL_TABLE";
+
+    CREATE TABLE public."MCT_MY_COOL_TABLE"
+    (
+    "MCT_ID" bigint NOT NULL,
+    "MCT_STRING" character varying COLLATE pg_catalog."default"
+    )
+    WITH (
+    OIDS = FALSE
+    )
+    TABLESPACE pg_default;
+
+    ALTER TABLE public."MCT_MY_COOL_TABLE"
+    OWNER to postgres;
+    COMMENT ON TABLE public."MCT_MY_COOL_TABLE"
+    IS 'apenas uma table';
+
+    COMMENT ON COLUMN public."MCT_MY_COOL_TABLE"."MCT_ID"
+    IS 'um id';
+
+    COMMENT ON COLUMN public."MCT_MY_COOL_TABLE"."MCT_STRING"
+    IS 'uma string';
+
+    insert into public."MCT_MY_COOL_TABLE" ("MCT_ID", "MCT_STRING") VALUES(2, 'ola');
+
+  #+END_SRC
