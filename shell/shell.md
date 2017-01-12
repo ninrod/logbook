@@ -3,6 +3,9 @@
 ## Links for study
 
 * __[47 Bash pitfalls][1]__
+* __[writing better shell if's]__(http://mywiki.wooledge.org/BashPitfalls#if_.5Bgrep_foo_myfile.5D)
+* __[more ifs](http://serverfault.com/a/52050/394694)
+* __[what is the difference between single and double brackets?](http://mywiki.wooledge.org/BashFAQ/031)
 
 ## running commands/scripts in background
 
@@ -313,6 +316,7 @@ $ unzip -v jarfile.jar
 ```sh
 tr -cs A-Za-z '\n' | tr A-Z a-z | sort | uniq -c | sort -rn | sed ${1}q
 ```
+
 [1]: <http://mywiki.wooledge.org/BashPitfalls>
 [2]: <http://stackoverflow.com/questions/637827/redirect-stderr-and-stdout-in-a-bash-script>
 [3]: <http://nealford.com/memeagora/2013/01/22/why_everyone_eventually_hates_maven.html>
