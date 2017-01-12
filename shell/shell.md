@@ -3,9 +3,9 @@
 ## Links for study
 
 * __[47 Bash pitfalls][1]__
-* __[writing better shell if's]__(http://mywiki.wooledge.org/BashPitfalls#if_.5Bgrep_foo_myfile.5D)
-* __[more ifs](http://serverfault.com/a/52050/394694)
-* __[what is the difference between single and double brackets?](http://mywiki.wooledge.org/BashFAQ/031)
+* __[writing better shell if's](http://mywiki.wooledge.org/BashPitfalls#if_.5Bgrep_foo_myfile.5D)__
+* __[more ifs](http://serverfault.com/a/52050/394694)__
+* __[what is the difference between single and double brackets?](http://mywiki.wooledge.org/BashFAQ/031)__
 
 ## running commands/scripts in background
 
