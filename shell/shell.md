@@ -4,8 +4,8 @@
 
 * __[47 Bash pitfalls][1]__
 * __[writing better shell if's](http://mywiki.wooledge.org/BashPitfalls#if_.5Bgrep_foo_myfile.5D)__
-* __[more ifs](http://serverfault.com/a/52050/394694)__
-* __[what is the difference between single and double brackets?](http://mywiki.wooledge.org/BashFAQ/031)__
+* __[what is the difference between single and double square brackets?](http://serverfault.com/a/52050/394694)__
+* __[the \[\[ operator](http://mywiki.wooledge.org/BashFAQ/031)__
 * `$ man test`
 
 ## running commands/scripts in background
