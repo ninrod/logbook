@@ -347,6 +347,17 @@ $ git ls-files -iX .gitignore | xargs -I{} rsync --relative "{}" ../git-ls-files
 $ git ls-tree --name-only HEAD .
 ```
 
+## git-read-tree
+
+* read tree contents from any remote directly into index:
+
+more info [here](http://stackoverflow.com/a/5293270/4921402)
+
+```sh
+$ git read-tree remote/branch
+$ git checkout .
+```
+
 ## git push tricks
 
 ### sync all 
@@ -484,8 +495,6 @@ git reset HEAD --hard at /newrepo
 ```sh
  git archive master | tar -x -C /somewhere/else
 ```
-
-
 
 ## interesting manual entries
 
