@@ -1,0 +1,102 @@
+#+STARTUP: overview
+#+STARTUP: indent
+
+* tables
+** exporting an org table to csv format
+ #+name: foo
+
+ | header A | header B |
+ |----------+----------|
+ | cell 1   | cell 2   |
+ | cell 3   | cell 4   |
+
+#+BEGIN_SRC elisp :var x=foo
+(orgtbl-to-csv x nil)
+#+END_SRC
+
+#+RESULTS:
+: header A,header B
+: cell 1,cell 2
+: cell 3,cell 4
+
+** convert an org table to csv format
+1. select the region
+2. M-x replace-string
+3. type |
+4. C-q RET TAB (or ,) (or whatever)
+5. profit!
+** delete an entire org-table
+- see [[https://www.reddit.com/r/emacs/comments/56oc9c/orgtables_is_there_a_way_to_delete_a_whole_table/][here]]
+- select the top left bar (|) and issue M-x org-mark-element. then destroy the region as you see fit.
+** calculations
+- multiline formulas have to respect some precedences
+- @ (row) comes before $ (line) linewise and formulawise
+*** Sum and mean
+
+| Student                   | Maths | Physics | Mean |
+|---------------------------+-------+---------+------|
+| Bertrand                  |   200 |      10 |   15 |
+| Henri                     |    15 |      14 | 14.5 |
+| Arnold                    |    17 |      13 |   15 |
+|---------------------------+-------+---------+------|
+| Bertrand + Henri + Arnold |   232 |      37 | 44.5 |
+#+TBLFM: @>=vsum(@2..@-1)
+#+TBLFM: $>=vmean($2..$3)
+
+*** concatenating strings
+
+| firstname | lastname | email                  |
+|-----------+----------+------------------------|
+| bob       | dilan    | bob.dylan@emacs.edu    |
+| filipe    | silva    | filipe.silva@emacs.edu |
+
+#+TBLFM: $3='(concat $1 "." $2 "@emacs.edu")
+
+*** using elisp to multiply
+
+| name   | age | phone | test |
+|--------+-----+-------+------|
+| ninrod |   2 |     3 |    6 |
+| filipe |  10 |     2 |   20 |
+#+TBLFM: $4='(* (string-to-number $2) (string-to-number $3))
+
+*** examples
+**** quarto dé
+
+| desc   | quarto       | qtd | valor unidade | valor total |
+|--------+--------------+-----+---------------+-------------|
+| sogros | água         |   2 |            10 |          20 |
+| sogros | sorvetes     |   3 |            10 |          30 |
+| sogros | picolé       |   2 |             9 |          18 |
+| sogros | caipirinha   |   1 |            12 |          12 |
+| sogros | casa valduga |   1 |            57 |          57 |
+|--------+--------------+-----+---------------+-------------|
+| total  |              |     |               |         137 |
+#+TBLFM: @>$>=vsum(@2..@-1)::$>=$-1 * $-2
+
+**** quarto fe
+
+| desc   | quarto       | qtd | valor unidade | valor total |
+|--------+--------------+-----+---------------+-------------|
+| filipe | água         |   2 |             3 |           6 |
+| filipe | batata frita |   1 |         23.90 |        23.9 |
+| filipe | original     |   2 |            11 |          22 |
+| filipe | caipirinha   |   3 |            20 |          60 |
+|--------+--------------+-----+---------------+-------------|
+|        |              |     |               |       111.9 |
+#+TBLFM: @>$>=vsum(@2..@-1)
+#+TBLFM: $>= $3 * $4
+
+**** tabela
+
+| item    |  valor |
+|---------+--------|
+| mercado |   20.3 |
+| mercado | 140.97 |
+| mercado |   6.00 |
+| mercado |  11.37 |
+| mercado | 114.97 |
+| uber    |   80.0 |
+|---------+--------|
+| total   | 373.61 |
+#+TBLFM: @>$>=vsum(@2..@-1)

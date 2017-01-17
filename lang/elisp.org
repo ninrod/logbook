@@ -13,9 +13,9 @@
   - `cygwin'      compiled using the Cygwin library.
 - Anything else indicates some sort of Unix system.
   #+BEGIN_SRC emacs-lisp
-(if (eq system-type 'darwin)
-  ; something for OS X if true
-  ; optional something if not
-)
+    (if (eq system-type 'darwin)
+                                            ; something for OS X if true
+                                            ; optional something if not
+        )
   #+END_SRC
 
