@@ -49,7 +49,6 @@
 |-----------+----------+------------------------|
 | bob       | dilan    | bob.dylan@emacs.edu    |
 | filipe    | silva    | filipe.silva@emacs.edu |
-
 #+TBLFM: $3='(concat $1 "." $2 "@emacs.edu")
 
 *** using elisp to multiply
@@ -87,7 +86,7 @@
 #+TBLFM: @>$>=vsum(@2..@-1)
 #+TBLFM: $>= $3 * $4
 
-**** tabela
+**** tabela simples
 
 | item    |  valor |
 |---------+--------|
@@ -100,6 +99,24 @@
 |---------+--------|
 | total   | 373.61 |
 #+TBLFM: @>$>=vsum(@2..@-1)
+**** tabela complexa
+
+| preco | qtd | total |
+|-------+-----+-------|
+|     1 |   2 |     2 |
+|     2 |   2 |     4 |
+|     3 |   2 |     6 |
+|     4 |   2 |     8 |
+|     5 |   3 |    15 |
+|     6 |   2 |    12 |
+|     7 |   2 |    14 |
+|     8 |   2 |    16 |
+|     9 |   2 |    18 |
+|    10 | 100 |  1000 |
+|-------+-----+-------|
+|       |     |  1095 |
+#+TBLFM: @>$>=vsum(@2..@-1)::$>=$1 * $2
+
 * completion
 - org mode specific completion uses the =M-x pcomplete= function
 - it is bound to =M-C-i=
