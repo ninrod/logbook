@@ -100,3 +100,7 @@
 |---------+--------|
 | total   | 373.61 |
 #+TBLFM: @>$>=vsum(@2..@-1)
+* completion
+- org mode specific completion uses the =M-x pcomplete= function
+- it is bound to =M-C-i=
+
