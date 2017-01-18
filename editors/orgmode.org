@@ -120,4 +120,5 @@
 * completion
 - org mode specific completion uses the =M-x pcomplete= function
 - it is bound to =M-C-i=
-
+* exporting
+[[http://orgmode.org/manual/Markdown-export.html][convert]] org to markdown with =org-md-export-to-markdown=

@@ -58,4 +58,5 @@ echo hello >>> #<buffer *scratch*>
 
 * links
 - [[https://medium.com/@bryangarza/my-descent-into-evil-98f7017475b6#.49n4guhq4][my descent into evil]]
-
+* line wrapping
+- you can use =M-q= or evil's =gq= motion
