@@ -328,6 +328,22 @@ $ git shortlog -sne
 $ gl --use-mailmap --author=DeveloperName
 ```
 
+### find when a file was deleted
+
+* more info [here](http://stackoverflow.com/a/953573/4921402)
+
+```sh
+$ gl -- [file/path]
+$ gl -1 -- [file/path]
+
+# or
+$ gl --diff-filter=D --summary
+$ gco $commit~1 filename
+
+# or
+git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"
+```
+
 ## git-ls-files
 
 * copying all gitignored and untracked files to another folder mantaining directory structure
