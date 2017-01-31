@@ -330,11 +330,14 @@ $ gl --use-mailmap --author=DeveloperName
 
 ### find when a file was deleted
 
-* more info [here](http://stackoverflow.com/a/953573/4921402)
+* more info [here](http://stackoverflow.com/a/953573/4921402), [here](http://stackoverflow.com/a/7203551/4921402)
 
 ```sh
 $ gl -- [file/path]
 $ gl -1 -- [file/path]
+
+# or even
+git log --all --full-history -- **/thefile.*
 
 # or
 $ gl --diff-filter=D --summary
@@ -342,6 +345,7 @@ $ gco $commit~1 filename
 
 # or
 git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"
+
 ```
 
 ## git-ls-files

@@ -18,4 +18,8 @@
                                             ; optional something if not
         )
   #+END_SRC
-
+* use lexical binding: t
+- this [[http://nullprogram.com/blog/2017/01/30/][should]] be the first line of every lisp file you write:
+#+BEGIN_SRC emacs-lisp
+;;; -*- lexical-binding: t; -*-
+#+END_SRC
