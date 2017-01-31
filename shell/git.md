@@ -376,14 +376,16 @@ more info [here](http://stackoverflow.com/a/5293270/4921402)
 ```sh
 $ git read-tree remote/branch
 $ git checkout .
+$ git clean -fd
+$ git commit -m 'message'
 ```
 
 ## git push tricks
 
-### sync all 
+### sync all
 
-* here suppose you have two remotes: one called github and other called origin. 
-* the github remote has 137 branches and 370 tags. 
+* here suppose you have two remotes: one called github and other called origin.
+* the github remote has 137 branches and 370 tags.
 * the origin repo has only 1 branch, master, and it is already synced with master from github.
 * you want to push all branches and all tags from github to origin.
 * You only have to type this:
