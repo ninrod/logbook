@@ -28,7 +28,7 @@ echo hello >>> #<buffer *scratch*>
 - vai pro começo da pagina atual do node: =b=
 
 * Magit
-- tranform a magit-diff buffer into a normal text buffer: `C-t`
+- tranform a magit-diff buffer into a normal text buffer: =C-t=
 * Ivy/Counsel
 ** turn on fuzzy matching
 #+BEGIN_SRC emacs-lisp
