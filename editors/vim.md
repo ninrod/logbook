@@ -253,10 +253,11 @@ $ vim -u NONE -N -c ':set runtimepath+=~/.vim/bundle/vim-sneak/' -c ':runtime pl
 * search/replace com atalho: acha os highlight com '/' e depois soca: `%s//nova/g`
 * `:e`: reloads file from filesystem
 * `:e!`:reloads file from filesystem, forcefully
+* remove all empty lines: `:v/./d`
 
 ## show the name of the current file
 
-* to show the full qualified path/name of the current file: 
+* to show the full qualified path/name of the current file:
 
 ```vim
 :echo expand('%:p')
