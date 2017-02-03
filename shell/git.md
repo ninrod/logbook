@@ -348,6 +348,14 @@ git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"
 
 ```
 
+### trace the evolution of a range of lines
+
+* use the -L option:
+
+```sh
+$ git log -L 33,+5:core-db2-up.sh
+```
+
 ## git-ls-files
 
 * copying all gitignored and untracked files to another folder mantaining directory structure
