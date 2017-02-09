@@ -29,6 +29,7 @@ echo hello >>> #<buffer *scratch*>
 
 * Magit
 - tranform a magit-diff buffer into a normal text buffer: =C-t=
+- open any file in any revision/branch: use ~magit-find-file~ and ~magit-log-buffer-file~. more info [[http://emacs.stackexchange.com/a/7683/12585][here]]
 * Ivy
 - ivy is a narrowing framework
 ** fuzzy matching
