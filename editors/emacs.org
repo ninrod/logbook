@@ -29,7 +29,7 @@ echo hello >>> #<buffer *scratch*>
 
 * Magit
 - tranform a magit-diff buffer into a normal text buffer: =C-t=
-* Ivy/Counsel
+* Ivy
 - ivy is a narrowing framework
 ** fuzzy matching
 #+BEGIN_SRC emacs-lisp
@@ -59,7 +59,5 @@ echo hello >>> #<buffer *scratch*>
 ** ivy-occur
 - ~ivy-occur~: this function save the current minibuffers candidates to a new buffer
 - more info [[http://oremacs.com/swiper/#saving-the-current-completion-session-to-a-buffer][here]]
-* links
-- [[https://medium.com/@bryangarza/my-descent-into-evil-98f7017475b6#.49n4guhq4][my descent into evil]]
 * line wrapping
 - you can use =M-q= or evil's =gq= motion
