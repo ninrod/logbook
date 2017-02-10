@@ -5,7 +5,8 @@
    #+BEGIN_SRC shell
    emacs -Q
    #+END_SRC
-
+* emacs broke flowchart
+- [[http://brause.cc/emacs-flowchart.png][emacs-flowchart.png]]
 * locally force a mode inside a file
 - see here [[http://emacs.stackexchange.com/a/26508/12585][emacs.stackexchange]]
 - for example, put this on top of your shell file
