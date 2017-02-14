@@ -61,5 +61,7 @@ echo hello >>> #<buffer *scratch*>
 ** ivy-occur
 - ~ivy-occur~: this function save the current minibuffers candidates to a new buffer
 - more info [[http://oremacs.com/swiper/#saving-the-current-completion-session-to-a-buffer][here]]
+* minor-modes
+- =minor-mode-alist= is very useful for matching diminishes
 * line wrapping
 - you can use =M-q= or evil's =gq= motion
