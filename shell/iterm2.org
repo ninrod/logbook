@@ -1,6 +1,0 @@
-* iTerm2 tricks
-
-** fix M-x in iterm2
-
--  Go to [[http://stackoverflow.com/a/438892/4921402][profile=->=keys]]
-

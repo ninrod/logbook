@@ -1,8 +1,0 @@
-* rsync tricks
-
--  copy a huge file with a progress bar
-
-#+BEGIN_SRC sh
-    rsync -ah --progress source destination
-#+END_SRC
-
