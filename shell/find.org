@@ -1,0 +1,97 @@
+* =find= and =git=
+
+-  =git= moving all files of a specific type to the current directory:
+#+BEGIN_SRC sh
+    $ find . -name '*.md' -exec git mv {} . \;
+#+END_SRC
+
+-  removing all files except =.git= dir
+#+BEGIN_SRC sh
+    $ find . -maxdepth 1 -name .git -prune -o -type d -print -exec git rm -r {} \;
+    $ find . -maxdepth 1 -name .git -prune -o -type d -print -exec rm -r {} \;
+#+END_SRC
+
+* list all directories that are not child of a =.git= directory
+
+#+BEGIN_SRC sh
+    # solution 1: using `prune`
+    $ find . -path '*/.git' -prune -o -type d -print
+
+    # solution 2: using predicate only
+    $ find . ! \( -path '*/.git' -o -path '*/.git/*' \) -type d
+
+    # solution 3: more portable and simpler than solution 2
+    $ find . -name .git -prune -o -type d -print
+#+END_SRC
+
+* prune search with multiple patterns
+
+-  excluding names =.git=, =.vim=, =.zplug= and =deps= from the search results
+#+BEGIN_SRC sh
+    $ find . \
+      -name .git -prune -o \
+      -name .vim -prune -o \
+      -name .zplug -prune -o \
+      -name deps -prune -o \
+      -type f \
+      -print
+#+END_SRC
+
+* copy specific files preserving directory structure
+
+-  method 01: using =cpio= utility
+#+BEGIN_SRC sh
+    $ find . -iname '*.iml' | cpio -pdm ~/code/testdir
+#+END_SRC
+
+-  method 02: using =rsync=
+#+BEGIN_SRC sh
+    $ find . -iname '*.iml' -exec rsync --relative {} ../anotherdir \;
+
+    # bonus: we can build upon the same idea with git-ls-files and xargs
+    $ git ls-files -iX .gitignore | xargs -I{} rsync --relative "{}" ../anotherdir
+#+END_SRC
+
+-  method 03: using a =-exec= and =cp's= =--parents= option
+#+BEGIN_SRC sh
+    $ find . -name '*.md' -exec cp --parents {} ../tricks-test \;
+#+END_SRC
+
+-  finding all dot files on home directory:
+#+BEGIN_SRC sh
+    $ ls -la `find ~ -maxdepth=1 -type l`
+#+END_SRC
+
+* opening in vim a set of files returned by a =find= search
+
+-  use find and -exec
+#+BEGIN_SRC sh
+    $ find . -name '*.txt' -exec vim {} +
+#+END_SRC
+
+-  Or use a sub shell
+#+BEGIN_SRC sh
+    $ vim $(find . -name '*.txt')
+#+END_SRC
+
+* find all files and directories =not= owned by a specific user
+
+-  use =-user= and the =!= flag
+#+BEGIN_SRC sh
+    $ find . ! -user vagrant
+#+END_SRC
+
+* search for a class that is inside a jar in a dir full of jars
+
+- more info [[http://stackoverflow.com/a/1343026/4921402][here]]
+#+BEGIN_SRC sh
+    $ find . -name "*.jar" -exec grep -Hsli ActiveTestSuite {} \;
+    ./junit-4.12.jar
+    $
+#+END_SRC
+* convert all .md files into .org files using pandoc
+
+- more info [[http://askubuntu.com/a/35994][here]]
+#+BEGIN_SRC sh
+$ find . -type f -name "*.md" -exec bash -c 'pandoc "$1" -o "${1%.md}.org"' _ {} \;
+#+END_SRC
