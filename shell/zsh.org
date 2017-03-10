@@ -1,0 +1,273 @@
+* ZSH tricks
+
+** build zsh from source
+
+-  note: the release tarball contains the documentation. the source repo
+   needs [[https://github.com/fbb-git/yodl][yodl]] to build the
+   documentation.
+
+#+BEGIN_SRC sh
+    $ curl -fLo zsh-5.2.tar.gz http://www.zsh.org/pub/zsh-5.2.tar.gz
+    $ tar -zxvf zsh-5.2.tar.gz
+    $ cd zsh-5.2
+    $ ./configure --with-tcsetpgrp
+    $ make -j9 
+    $ make install
+
+    # to install only the documentation (man pages)
+    $ make install.man
+#+END_SRC
+
+-  extra note: careful with where the source repo will install the
+   functions
+-  I had to put this line in my zshrc once when building zsh from HEAD
+-  the zsh binary should have changed it's $fpath var to include the
+   directory, but who knows.
+
+#+BEGIN_SRC sh
+    fpath=(/usr/local/share/zsh/5.2-dev-1/functions $fpath)
+#+END_SRC
+
+** building from github HEAD
+
+-  if something fails, make sure these deps are in:
+
+#+BEGIN_SRC sh
+    $ sudo apt-get install -y git-core gcc make autoconf yodl libncursesw5-dev texinfo checkinstall
+#+END_SRC
+
+-  then hit:
+
+#+BEGIN_SRC sh
+    ./Util/preconfig
+    ./configure
+    make
+    make check
+    make install
+#+END_SRC
+
+** ZSH conditional expressions
+
+-  =-z=: testing if a shell variable is set
+
+#+BEGIN_EXAMPLE
+    # `-z` returns true if string's length is equal to 0.
+    if [ -z "$HISTFILE" ]; then
+        HISTFILE=$HOME/.zsh_history
+    fi
+#+END_EXAMPLE
+
+** ZSH Globbing
+
+-  more tips can be found
+   [[http://reasoniamhere.com/2014/01/11/outrageously-useful-tips-to-master-your-z-shell][here]].
+
+#+BEGIN_SRC sh
+    # In zsh, there are |glob qualifiers| and |string modifiers|.
+
+    # Here's an example of a |string modifier| 
+    # string modifiers are always separated by a colon `:`
+    # `a` = full qualified name
+    $ print file.txt(:a)
+
+    # `A` = like `a`, but resolves symlinks
+    $ print ~/.vimrc(:A)
+
+    # Here's an example of a |glob qualifier| 
+    # D = include dotfiles 
+    # / = only directories
+    print -l ^.git(D/)
+
+    # here's an example of a |glob qualifier| and a |string modifier| together. 
+    # the modifier is always separated by a colon `:`.
+    $ print ^(.git*)(D.:a)
+#+END_SRC
+
+-  show all files including 'dot' files that are not named .git:
+
+#+BEGIN_SRC sh
+    # D = include dotfiles;
+    # . = only files
+    $ print -l ^.git(D.)
+#+END_SRC
+
+-  removing all directories except some:
+   =rm -rf ^(vim-colors-solarized|vim-airline)=
+
+-  globbing inside a shell function
+
+#+BEGIN_SRC sh
+    fullqualifiedname() {
+      print -l ${1:a}
+    }
+#+END_SRC
+
+-  print all files not ending with =.bar=
+
+#+BEGIN_SRC sh
+    $ print -l ^*.bar
+#+END_SRC
+
+-  print all files not ending with .bar nor .foo
+
+#+BEGIN_SRC sh
+    $ print -l ^(*.bar|*.foo)
+#+END_SRC
+
+** zsh errors
+
+-  =function definition not found= error
+
+   #+BEGIN_SRC sh
+       # simply remove all .zcompdump* files from ~
+       $ rm -f ~/.zcompdump*
+   #+END_SRC
+
+** associative arrays
+
+-  to test if an associative array has a certain key, do this
+
+#+BEGIN_SRC sh
+    typeset -A hashtest
+    hashtest[a]='valid'
+    ((${+hashtest[a]})) && print a is defined
+    ((${+hashtest[b]})) && print b is defined
+    ((${+hashtest[c]})) && print c is defined
+#+END_SRC
+
+** change the cursor shape in zle-vi-mode in mintty
+
+#+BEGIN_SRC sh
+    # Updates editor information when the keymap changes.
+    function zle-keymap-select() {
+      if [[ -n ${TMUX+x} ]]; then
+        if [[ $KEYMAP = vicmd ]]; then
+          # the command mode for vi: block shape
+          echo -ne "\ePtmux;\e\e[2 q\e\\"
+        else
+          # the insert mode for vi: line shape
+          echo -ne "\ePtmux;\e\e[6 q\e\\"
+        fi
+      elif [[ $KEYMAP = vicmd ]]; then
+        # the command mode for vi: block shape
+        echo -ne "\e[2 q"
+      else
+        # the insert mode for vi: line shape
+        echo -ne "\e[6 q"
+      fi
+      zle reset-prompt
+      zle -R
+    }
+#+END_SRC
+
+** TODO: change cursor shape in vi-mode in iTerm2
+
+-  more info
+   [[https://www.iterm2.com/documentation-escape-codes.html][here]]
+-  escape sequence: =^[]1337;CursorShape=N^G=. N=1, vertical line, N=0,
+   block.
+
+#+BEGIN_SRC sh
+    # place code here
+#+END_SRC
+
+** parameter substitution
+
+-  if variable is set, use variable. if not, use default:
+
+#+BEGIN_SRC sh
+    $ ${variable:-default}
+#+END_SRC
+
+** add all subdirs of a folder to =$PATH=
+
+-  this would go in .zshenv
+
+#+BEGIN_SRC sh
+    export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:
+
+    #include all ~/bin/subdirs
+    [[ -d ~/bin ]] && export PATH=${PATH}:$(find ~/bin -type d | tr '\n' ':' | sed 's/:$//') 
+#+END_SRC
+
+* cosmetic prompt tricks
+
+** show a diferent prompt char on privileged shells
+
+-  use the =%(x.blah.bluh)= construct
+-  more info
+   [[http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html][here]]
+   on the =13.2.3 Shell state= section
+-  by the way, the =13.2.5 Visual effects= also has relevant information
+-  [[http://www.nparikh.org/unix/prompt.php#zsh][nparikh's page]] also
+   has good tips about prompt expansion
+-  see also [[http://aperiodic.net/phil/prompt/][Phil's page]]
+
+#+BEGIN_SRC sh
+    # shows a `#` if user is root
+    # shows `$` otherwise
+    PROMPT='%(!.#.$) '
+#+END_SRC
+
+** nice unicode prompt chars:
+
+-  λ
+-  ›
+-  ➤
+-  ∴
+-  →
+-  ★
+-  ➜ (from robyrussel omz theme)
+-  ❯ (from
+   https://raw.githubusercontent.com/sindresorhus/pure/master/readme.md)
+
+** discover unicode characters by drawing them
+
+-  the site is named [[http://shapecatcher.com/][shapecatcher]].
+
+* Installing zsh on OSx
+
+** Installing from source
+
+-  dependencies
+
+#+BEGIN_SRC sh
+    $ sudo apt-get install -y git-core gcc make autoconf yodl libncursesw5-dev texinfo checkinstall
+#+END_SRC
+
+-  installing
+
+#+BEGIN_SRC sh
+    # Make configure
+    ./Util/preconfig
+
+    ./configure
+    make
+    make check
+    make install
+#+END_SRC
+
+** if git completion is off, follow this steps
+
+-  theres a variable called =$fpath=
+-  this variable contains the path to bootstrap functions, completions,
+   etc...
+-  =print -l $fpath= will list the directories on $fpath
+-  in my case, I had these:
+
+#+BEGIN_SRC sh
+    $ /usr/local/share/zsh/site-functions
+    $ /usr/local/Cellar/zsh/5.0.8/share/zsh/functions
+#+END_SRC
+
+-  in the first one, site-functions, I verified that there were 2 wrong
+   symbolic links:
+-  tinha um =_git= symlink e um link para um bash completions. retirei
+   esses links e funcionou perfeitamente.
+-  a =_git= symlink and a link to a bash completion. I removed these and
+   everything worked like a charm.
+
+** interesting links, tutorials, infos, docs, you name it
+
+[[http://www.refining-linux.org/archives/37/ZSH-Gem-2-Extended-globbing-and-expansion/#CommentsPane][ZSH
+Gems series #2]] [[http://zzapper.co.uk/zshtips.html][zappter zsh tips]]

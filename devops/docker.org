@@ -1,0 +1,106 @@
+* Docker
+
+** Assorted Tricks
+
+*** clean all containers
+
+=sh $ docker ps -qa | xargs -I{} docker rm {}=
+
+*** clean all images
+
+#+BEGIN_SRC sh
+    $ docker images | ag '^<none' | awk '{print $3}' | xargs -I{} docker rmi {}
+#+END_SRC
+
+*** commit a container as an image
+
+#+BEGIN_SRC sh
+    $ docker commit <idcontainer> <ninrod/blah>
+#+END_SRC
+
+*** open a shell session to a running container
+
+-  normal case:
+
+#+BEGIN_SRC sh
+    docker exec -it <mycontainer> bash
+#+END_SRC
+
+-  if you want to run tmux inside the container
+
+#+BEGIN_SRC sh
+    # clever hack to overcome docker-exec tty propblem
+    # see: https://github.com/docker/docker/issues/8755
+    # in particular, see this comment: https://github.com/docker/docker/issues/8755#issuecomment-83403289
+    docker exec -it $CONTAINER_NAME script -qc "zsh" /dev/null
+#+END_SRC
+
+*** copy a file from the container to the host
+
+#+BEGIN_SRC sh
+    $ docker cp <containerId>:/file/path/within/container /host/path/target
+#+END_SRC
+
+*** discover the ip of the docker host
+
+-  more info
+   [[https://github.com/docker/docker/issues/23177#issuecomment-228096508][here]]
+
+#+BEGIN_SRC sh
+    $ docker inspect -f '{{.NetworkSettings.Gateway}}' $HOSTNAME
+#+END_SRC
+
+*** sync timezone with host
+
+-  just mount /etc/localtime, e.g:
+
+   #+BEGIN_SRC sh
+       docker run \
+         -d -t \
+         -v /etc/localtime:/etc/localtime:ro \
+         yourdocker/image
+   #+END_SRC
+
+** docker ps
+
+*** shrink docker ps horizontal output length
+
+-  use the --format option
+
+#+BEGIN_SRC sh
+    alias dp='docker ps --format="table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Command}}\t{{.Status}}"'
+#+END_SRC
+
+** docker inspect
+
+*** discover what is the real path of a mountpoint from within a
+container
+
+-  relevant [[http://stackoverflow.com/q/39151188/4921402][so question]]
+-  relevant [[https://github.com/docker/docker/issues/26021][github
+   issue]]
+
+#+BEGIN_SRC sh
+    # issued from the container that mounted the host's docker socket and client
+    # of course, the results need to be parsed
+    $ docker inspect --format '{{json .Mounts }}' <container>
+#+END_SRC
+
+** docker tag
+
+#+BEGIN_SRC sh
+    docker tag $TAG_ID full.image/name:version
+#+END_SRC
+
+** docker save | docker load
+
+#+BEGIN_SRC sh
+    $ docker save mynewimage > /tmp/mynewimage.tar
+    $ docker load < /tmp/mynewimage.tar
+#+END_SRC
+
+** Links
+
+-  [[https://gist.github.com/cjus/b46a243ba610661a7efb][nginx html5mode
+   angularjs sample config]]
+
