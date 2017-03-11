@@ -1,0 +1,6 @@
+* redirect stack trace of coredump file to a file without entering gdb interactively
+
+- from [[http://www.commandlinefu.com/commands/view/4039/print-stack-trace-of-a-core-file-without-needing-to-enter-gdb-interactively][commandlinefu]]
+#+BEGIN_SRC shell
+$ gdb --batch --quiet -ex "thread apply all bt full" -ex "quit" /usr/local/bin/emacs core.2466 > coredump.txt
+#+END_SRC
