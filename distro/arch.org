@@ -1,0 +1,6 @@
+* Pacman tricks
+
+- search for a package?
+#+BEGIN_SRC sh
+$ pacman -Ss $package
+#+END_SRC
