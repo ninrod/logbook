@@ -1,7 +1,3 @@
-
-#+STARTUP: overview
-#+STARTUP: indent
-
 * options
 ** dot not print nothing when `ˆC` when <C-c> is pressed 
  - to escape a command
