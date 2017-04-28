@@ -302,7 +302,7 @@ $ nohup node server.js > /dev/null 2>&1 &
 * `top` -> order by memory consumption on OSx: `top -o mem`
 * show a keyboard key terminal escape sequence: `cat -v`
 * to invoke a pure zsh session without any configuration: `zsh -f`
-* show 20 biggest folders from current dir: 
+* show 20 biggest folders from current dir:
 
 ```sh
 du -sm * | sort -nr | head -n 20
