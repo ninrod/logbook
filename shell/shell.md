@@ -296,6 +296,7 @@ $ nohup node server.js > /dev/null 2>&1 &
 ### more info about shell redirection
 
 [What are the shell's control and redirection operators?](https://unix.stackexchange.com/q/159513/155613)
+[Difference between 2>&1 > output.log and 2>&1 | tee output.log](https://unix.stackexchange.com/a/20472/155613)
 
 ## OTHER utilities
 
