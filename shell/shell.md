@@ -272,7 +272,7 @@ sudo sh -c "echo '/bin/zsh' >> /etc/shells"
 
 ## IO REDIRECTION
 
-* make a shell script redirect all output to stdout. (see more [here][2])
+### make a shell script redirect all output to stdout. (see more [here][2])
 
 ```sh
 # Close STDOUT file descriptor
@@ -286,11 +286,16 @@ exec 2>&1
 echo "This line will appear in $LOG_FILE, not 'on screen'"
 ```
 
+
 * execute a program in background and redirect stdout and stderr to a log file
 
 ```sh
 $ nohup node server.js > /dev/null 2>&1 &
 ```
+
+### more info about shell redirection
+
+[What are the shell's control and redirection operators?](https://unix.stackexchange.com/q/159513/155613)
 
 ## OTHER utilities
 
