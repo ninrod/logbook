@@ -4,3 +4,16 @@
 #+BEGIN_SRC sh
 $ pacman -Ss $package
 #+END_SRC
+
+* create a USB bootable pendrive
+** In MacOS
+
+ #+BEGIN_SRC sh
+ # in macos
+ diskutil list
+ diskutil unmountDisk /dev/diskX
+ # notice the 'r' before 'disk' for raw mode which makes the transfer much faster:
+ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
+ # After completion, macOS may complain that "The disk you inserted was not readable by this computer".
+ # Select 'Ignore'. The USB device will be bootable.
+ #+END_SRC
