@@ -17,3 +17,10 @@ $ pacman -Ss $package
  # After completion, macOS may complain that "The disk you inserted was not readable by this computer".
  # Select 'Ignore'. The USB device will be bootable.
  #+END_SRC
+
+* use sudo without a password
+- from: https://bbs.archlinux.org/viewtopic.php?id=7482
+- edit /etc/pam.d/sudo and set the following as the 1st line to allow wheel group to use sudo with no password :
+#+BEGIN_SRC sh
+auth           sufficient      pam_wheel.so trust use_uid
+#+END_SRC
