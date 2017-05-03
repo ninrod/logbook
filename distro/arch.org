@@ -1,4 +1,4 @@
-* Pacman tricks
+* pacman tricks
 
 - search for a package?
 #+BEGIN_SRC sh
@@ -56,4 +56,21 @@ GTK_IM_MODULE=cedilla
 QT_IM_MODULE=cedilla
 
 5)restart your computer
+#+END_SRC
+* generate ssh-key
+
+- stolen from [[http://www.w3docs.com/snippets/git/how-to-generate-ssh-key-for-git.html][here]]
+#+BEGIN_SRC sh
+# generate key
+ssh-keygen -t rsa -b 4096 -C "[your github's email]" # then enter, enter, enter
+
+# start ssh-agent
+eval "$(ssh-agent -s)"
+> Agent pid 59566
+
+# add key to ssh-agent
+ssh-add ~/.ssh/id_rsa
+
+# add key to github
+cat .ssh/id_rsa.pub
 #+END_SRC
