@@ -5,7 +5,7 @@
 $ pacman -Ss $package
 #+END_SRC
 
-* create a USB bootable pendrive
+* create USB bootable pendrive
 ** In MacOS
 
  #+BEGIN_SRC sh
@@ -18,17 +18,15 @@ $ pacman -Ss $package
  # Select 'Ignore'. The USB device will be bootable.
  #+END_SRC
 
-* use sudo without a password
-- from: https://bbs.archlinux.org/viewtopic.php?id=7482
+* sudo without a password
+- stolen from here: [[https://bbs.archlinux.org/viewtopic.php?id=7482][here]]
 - edit /etc/pam.d/sudo and set the following as the 1st line to allow wheel group to use sudo with no password :
 #+BEGIN_SRC sh
 auth           sufficient      pam_wheel.so trust use_uid
 #+END_SRC
 
-* fix cedilha
-
-- stolen from: https://gist.github.com/ninrod/a29a99a20e695ba1a2ce7e774803a501
-
+* fix cedilha in US-internation with deadkeys
+- stolen from: [[https://gist.github.com/ninrod/a29a99a20e695ba1a2ce7e774803a501][here]]
 #+BEGIN_SRC txt
 Author: Nilo Dantas - n1lo
 Based on: https://bugs.launchpad.net/ubuntu/+source/ibus/+bug/518056 - helio-valente post
@@ -36,18 +34,14 @@ Based on: https://bugs.launchpad.net/ubuntu/+source/ibus/+bug/518056 - helio-val
 How to use Cedilha on US Keyboard on ArchLinux
 
 1) Put: English(US, internacional with dead Keys) on your system keyboard layout.
-
 2) Editing the files:
-
 sudo vim /usr/lib/gtk-3.0/3.0.0/immodules.cache
 sudo vim /usr/lib/gtk-2.0/2.10.0/immodules.cache
 
 changing the line
 
 "cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa"
-
 to
-
 "cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa:en"
 
 3) replacing "ć" to "ç" and "Ć" to "Ç" on /usr/share/X11/locale/en_US.UTF-8/Compose
