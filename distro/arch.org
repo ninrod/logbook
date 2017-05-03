@@ -24,3 +24,42 @@ $ pacman -Ss $package
 #+BEGIN_SRC sh
 auth           sufficient      pam_wheel.so trust use_uid
 #+END_SRC
+
+* fix cedilha
+
+- stolen from: https://gist.github.com/ninrod/a29a99a20e695ba1a2ce7e774803a501
+
+#+BEGIN_SRC txt
+Author: Nilo Dantas - n1lo
+Based on: https://bugs.launchpad.net/ubuntu/+source/ibus/+bug/518056 - helio-valente post
+
+How to use Cedilha on US Keyboard on ArchLinux
+
+1) Put: English(US, internacional with dead Keys) on your system keyboard layout.
+
+2) Editing the files:
+
+sudo vim /usr/lib/gtk-3.0/3.0.0/immodules.cache
+sudo vim /usr/lib/gtk-2.0/2.10.0/immodules.cache
+
+changing the line
+
+"cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa"
+
+to
+
+"cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa:en"
+
+3) replacing "ć" to "ç" and "Ć" to "Ç" on /usr/share/X11/locale/en_US.UTF-8/Compose
+
+sudo cp /usr/share/X11/locale/en_US.UTF-8/Compose /usr/share/X11/locale/en_US.UTF-8/Compose.bak
+sed 's/ć/ç/g' < /usr/share/X11/locale/en_US.UTF-8/Compose | sed 's/Ć/Ç/g' > Compose
+sudo mv Compose /usr/share/X11/locale/en_US.UTF-8/Compose
+
+4) add two lines on /etc/environment
+
+GTK_IM_MODULE=cedilla
+QT_IM_MODULE=cedilla
+
+5)restart your computer
+#+END_SRC
