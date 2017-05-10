@@ -5,20 +5,8 @@
 $ pacman -Ss $package
 #+END_SRC
 
-* create USB bootable pendrive
-** In MacOS
-
- #+BEGIN_SRC sh
- # in macos
- diskutil list
- diskutil unmountDisk /dev/diskX
- # notice the 'r' before 'disk' for raw mode which makes the transfer much faster:
- dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
- # After completion, macOS may complain that "The disk you inserted was not readable by this computer".
- # Select 'Ignore'. The USB device will be bootable.
- #+END_SRC
-
 * sudo without a password
+
 - stolen from here: [[https://bbs.archlinux.org/viewtopic.php?id=7482][here]]
 - edit /etc/pam.d/sudo and set the following as the 1st line to allow wheel group to use sudo with no password :
 #+BEGIN_SRC sh
@@ -26,6 +14,7 @@ auth           sufficient      pam_wheel.so trust use_uid
 #+END_SRC
 
 * fix cedilha in US-internation with deadkeys
+
 - stolen from: [[https://gist.github.com/ninrod/a29a99a20e695ba1a2ce7e774803a501][here]]
 #+BEGIN_SRC txt
 Author: Nilo Dantas - n1lo
@@ -57,7 +46,8 @@ QT_IM_MODULE=cedilla
 
 5)restart your computer
 #+END_SRC
-* generate ssh-key
+
+* github: generate ssh-key
 
 - stolen from [[http://www.w3docs.com/snippets/git/how-to-generate-ssh-key-for-git.html][here]]
 #+BEGIN_SRC sh
@@ -74,3 +64,35 @@ ssh-add ~/.ssh/id_rsa
 # add key to github
 cat .ssh/id_rsa.pub
 #+END_SRC
+
+* arch command line full install
+** create USB bootable pendrive
+*** In MacOS
+
+#+BEGIN_SRC sh
+# in macos
+diskutil list
+diskutil unmountDisk /dev/diskX
+# notice the 'r' before 'disk' for raw mode which makes the transfer much faster:
+dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
+# After completion, macOS may complain that "The disk you inserted was not readable by this computer".
+# Select 'Ignore'. The USB device will be bootable.
+#+END_SRC
+
+** partitioning
+
+- had to use gdisk to get a GPT/UEFI partition table
+- used a / and a /boot and a swap partition
+- the / had to be ext4 formated (mounted on /mnt)
+- the /boot had to be vfat formated (mounted on /mnt/boot)
+
+** reFind bootloader
+
+ - had to manually edit the refind_linux.conf
+ #+BEGIN_SRC sh
+ "boot with std options" "root=/dev/nvme0n1p3 rw add_efi_memmap"
+ ...
+ #+END_SRC
+
+** TPM error (6)
+   - had to disable the security chip in the thinkpad BIOS
