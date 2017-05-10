@@ -66,6 +66,7 @@ cat .ssh/id_rsa.pub
 #+END_SRC
 
 * arch command line full install
+** disable secure boot on bios
 ** create USB bootable pendrive
 *** In MacOS
 
