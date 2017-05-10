@@ -66,7 +66,11 @@ cat .ssh/id_rsa.pub
 #+END_SRC
 
 * arch command line full install
-** disable secure boot on bios
+** BIOS
+*** disable secure boot on bios
+*** TPM error (6)
+    - had to disable the security chip in the thinkpad BIOS
+*** enable intel virtualization on thinkpad
 ** create USB bootable pendrive
 *** In MacOS
 
@@ -95,5 +99,3 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
  ...
  #+END_SRC
 
-** TPM error (6)
-   - had to disable the security chip in the thinkpad BIOS
