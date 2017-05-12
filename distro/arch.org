@@ -100,3 +100,7 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
  #+END_SRC
 * configuring X
   - had to install xorg and xorg-xinit
+* configuring bspwm
+  - pacman -S bspwm sxhkd dmenu
+  - copy the config files (arch wiki on bspwm) to .config/bspwm, etc...
+  - export XDG_CONFIG_HOME="$HOME/.config" on bashrc
