@@ -104,3 +104,8 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
   - pacman -S bspwm sxhkd dmenu
   - copy the config files (arch wiki on bspwm) to .config/bspwm, etc...
   - export XDG_CONFIG_HOME="$HOME/.config" on bashrc
+  - install pulse audio
+* audio on arch
+  - install pulse audio, alsa, etc...
+  - install alsamixer
+  - install pavucontrol and tweak settings and umute things
