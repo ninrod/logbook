@@ -109,3 +109,5 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
   - install pulse audio, alsa, etc...
   - install alsamixer
   - install pavucontrol and tweak settings and umute things
+* configuring wifi
+  - =netctl enable profile= to permanent add your profile
