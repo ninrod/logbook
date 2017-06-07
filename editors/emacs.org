@@ -32,7 +32,6 @@ echo hello >>> #<buffer *scratch*>
 - tranform a magit-diff buffer into a normal text buffer: =C-t= or =M-x evil-magit-toggle-text-mode=
 - open any file in any revision/branch: use ~magit-find-file~ and ~magit-log-buffer-file~. more info [[http://emacs.stackexchange.com/a/7683/12585][here]]
 * Ivy
-- ivy is a narrowing framework
 ** fuzzy matching
 #+BEGIN_SRC emacs-lisp
   (use-package ivy
@@ -64,6 +63,8 @@ echo hello >>> #<buffer *scratch*>
 ** find-file, renames
 - use C-M-j =M-x: ivy-immediate-done=
 - ref: [[http://oremacs.com/swiper/#key-bindings][5.2.2 keybindings]]
+** copy the candidate list
+- =M-w=
 * minor-modes
 - =minor-mode-alist= is very useful for matching diminishes
 * line wrapping
