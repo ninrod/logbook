@@ -1,71 +1,4 @@
-* pacman tricks
-
-- search for a package?
-#+BEGIN_SRC sh
-$ pacman -Ss $package
-#+END_SRC
-
-* sudo without a password
-
-- stolen from here: [[https://bbs.archlinux.org/viewtopic.php?id=7482][here]]
-- edit /etc/pam.d/sudo and set the following as the 1st line to allow wheel group to use sudo with no password :
-#+BEGIN_SRC sh
-auth           sufficient      pam_wheel.so trust use_uid
-#+END_SRC
-
-* fix cedilha in US-internation with deadkeys
-
-- stolen from: [[https://gist.github.com/ninrod/a29a99a20e695ba1a2ce7e774803a501][here]]
-#+BEGIN_SRC txt
-Author: Nilo Dantas - n1lo
-Based on: https://bugs.launchpad.net/ubuntu/+source/ibus/+bug/518056 - helio-valente post
-
-How to use Cedilha on US Keyboard on ArchLinux
-
-1) Put: English(US, internacional with dead Keys) on your system keyboard layout.
-2) Editing the files:
-sudo vim /usr/lib/gtk-3.0/3.0.0/immodules.cache
-sudo vim /usr/lib/gtk-2.0/2.10.0/immodules.cache
-
-changing the line
-
-"cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa"
-to
-"cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa:en"
-
-3) replacing "ć" to "ç" and "Ć" to "Ç" on /usr/share/X11/locale/en_US.UTF-8/Compose
-
-sudo cp /usr/share/X11/locale/en_US.UTF-8/Compose /usr/share/X11/locale/en_US.UTF-8/Compose.bak
-sed 's/ć/ç/g' < /usr/share/X11/locale/en_US.UTF-8/Compose | sed 's/Ć/Ç/g' > Compose
-sudo mv Compose /usr/share/X11/locale/en_US.UTF-8/Compose
-
-4) add two lines on /etc/environment
-
-GTK_IM_MODULE=cedilla
-QT_IM_MODULE=cedilla
-
-5)restart your computer
-#+END_SRC
-
-* github: generate ssh-key
-
-- stolen from [[http://www.w3docs.com/snippets/git/how-to-generate-ssh-key-for-git.html][here]]
-#+BEGIN_SRC sh
-# generate key
-ssh-keygen -t rsa -b 4096 -C "[your github's email]" # then enter, enter, enter
-
-# start ssh-agent
-eval "$(ssh-agent -s)"
-> Agent pid 59566
-
-# add key to ssh-agent
-ssh-add ~/.ssh/id_rsa
-
-# add key to github
-cat .ssh/id_rsa.pub
-#+END_SRC
-
-* arch command line full install
+* command line install
 ** BIOS
 *** disable secure boot on bios
 *** TPM error (6)
@@ -98,16 +31,93 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
  "boot with std options" "root=/dev/nvme0n1p3 rw add_efi_memmap"
  ...
  #+END_SRC
-* configuring X
+* pacman
+
+- search for a package?
+#+BEGIN_SRC sh
+$ pacman -Ss $package
+#+END_SRC
+
+* sudo without a password
+
+- stolen from here: [[https://bbs.archlinux.org/viewtopic.php?id=7482][here]]
+- edit /etc/pam.d/sudo and set the following as the 1st line to allow wheel group to use sudo with no password :
+#+BEGIN_SRC sh
+auth           sufficient      pam_wheel.so trust use_uid
+#+END_SRC
+
+* X
   - had to install xorg and xorg-xinit
-* configuring bspwm
+* bspwm
   - pacman -S bspwm sxhkd dmenu
   - copy the config files (arch wiki on bspwm) to .config/bspwm, etc...
   - export XDG_CONFIG_HOME="$HOME/.config" on bashrc
   - install pulse audio
-* audio on arch
+* audio
   - install pulse audio, alsa, etc...
   - install alsamixer
   - install pavucontrol and tweak settings and umute things
-* configuring wifi
+  - pavucontrol is actually the volume slider
+* wifi
   - =netctl enable profile= to permanent add your profile
+* keyboard
+** fix layout
+
+ - with help from [[https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg#Setting_keyboard_layout][arch wiki]]
+ #+BEGIN_SRC sh
+   localectl set-x11-keymap us pc104 intl
+ #+END_SRC
+
+** fix cedilha in US-internation with deadkeys
+
+ - stolen from: [[https://gist.github.com/ninrod/a29a99a20e695ba1a2ce7e774803a501][here]]
+ #+BEGIN_SRC txt
+ Author: Nilo Dantas - n1lo
+ Based on: https://bugs.launchpad.net/ubuntu/+source/ibus/+bug/518056 - helio-valente post
+
+ How to use Cedilha on US Keyboard on ArchLinux
+
+ 1) Put: English(US, internacional with dead Keys) on your system keyboard layout.
+ 2) Editing the files:
+ sudo vim /usr/lib/gtk-3.0/3.0.0/immodules.cache
+ sudo vim /usr/lib/gtk-2.0/2.10.0/immodules.cache
+
+ changing the line
+
+ "cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa"
+ to
+ "cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa:en"
+
+ 3) replacing "ć" to "ç" and "Ć" to "Ç" on /usr/share/X11/locale/en_US.UTF-8/Compose
+
+ sudo cp /usr/share/X11/locale/en_US.UTF-8/Compose /usr/share/X11/locale/en_US.UTF-8/Compose.bak
+ sed 's/ć/ç/g' < /usr/share/X11/locale/en_US.UTF-8/Compose | sed 's/Ć/Ç/g' > Compose
+ sudo mv Compose /usr/share/X11/locale/en_US.UTF-8/Compose
+
+ 4) add two lines on /etc/environment
+
+ GTK_IM_MODULE=cedilla
+ QT_IM_MODULE=cedilla
+
+ 5)restart your computer
+ #+END_SRC
+
+
+* github: generate ssh-key
+
+- stolen from [[http://www.w3docs.com/snippets/git/how-to-generate-ssh-key-for-git.html][here]]
+#+BEGIN_SRC sh
+# generate key
+ssh-keygen -t rsa -b 4096 -C "[your github's email]" # then enter, enter, enter
+
+# start ssh-agent
+eval "$(ssh-agent -s)"
+> Agent pid 59566
+
+# add key to ssh-agent
+ssh-add ~/.ssh/id_rsa
+
+# add key to github
+cat .ssh/id_rsa.pub
+#+END_SRC
+
