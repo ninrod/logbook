@@ -1,17 +1,17 @@
-#+STARTUP: overview
-#+STARTUP: indent
-
 * start a clean emacs
-   #+BEGIN_SRC shell
-   emacs -Q
-   #+END_SRC
+
+#+BEGIN_SRC shell
+emacs -Q
+#+END_SRC
+
 * emacs broke flowchart
 - [[http://brause.cc/emacs-flowchart.png][emacs-flowchart.png]]
 * locally force a mode inside a file
 - see here [[http://emacs.stackexchange.com/a/26508/12585][emacs.stackexchange]]
-- for example, put this on top of your shell file
-  (but substitute for sh)
+- for example, put this on top of your shell file (but substitute for sh)
+  #+BEGIN_SRC txt
 # -*- mode: org -*-
+  #+END_SRC
 * eshell
 ** to redirect the output of a command
 #+BEGIN_SRC shell
@@ -28,11 +28,13 @@ echo hello >>> #<buffer *scratch*>
 - link navigation. put cursor on next visible link: =TAB=
 - vai pro começo da pagina atual do node: =b=
 
-* Magit
-- tranform a magit-diff buffer into a normal text buffer: =C-t= or =M-x evil-magit-toggle-text-mode=
-- open any file in any revision/branch: use ~magit-find-file~ and ~magit-log-buffer-file~. more info [[http://emacs.stackexchange.com/a/7683/12585][here]]
-* Ivy
-** fuzzy matching
+* minor-modes
+- =minor-mode-alist= is very useful for matching diminishes
+* line wrapping
+- you can use =M-q= or evil's =gq= motion
+* packages
+** ivy
+*** fuzzy matching
 #+BEGIN_SRC emacs-lisp
   (use-package ivy
     :ensure t
@@ -57,15 +59,15 @@ echo hello >>> #<buffer *scratch*>
       (use-package flx :ensure t)
   )
 #+END_SRC
-** ivy-occur
+*** ivy-occur
 - ~ivy-occur~: this function save the current minibuffers candidates to a new buffer
 - more info [[http://oremacs.com/swiper/#saving-the-current-completion-session-to-a-buffer][here]]
-** find-file, renames
+*** find-file, renames
 - use C-M-j =M-x: ivy-immediate-done=
 - ref: [[http://oremacs.com/swiper/#key-bindings][5.2.2 keybindings]]
-** copy the candidate list
+*** copy the candidate list
 - =M-w=
-* minor-modes
-- =minor-mode-alist= is very useful for matching diminishes
-* line wrapping
-- you can use =M-q= or evil's =gq= motion
+
+** magit
+- tranform a magit-diff buffer into a normal text buffer: =C-t= or =M-x evil-magit-toggle-text-mode=
+- open any file in any revision/branch: use ~magit-find-file~ and ~magit-log-buffer-file~. more info [[http://emacs.stackexchange.com/a/7683/12585][here]]
