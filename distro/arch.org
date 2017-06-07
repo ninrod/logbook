@@ -103,7 +103,8 @@ auth           sufficient      pam_wheel.so trust use_uid
  #+END_SRC
 
 
-* github: generate ssh-key
+* github
+** generate ssh-key
 
 - stolen from [[http://www.w3docs.com/snippets/git/how-to-generate-ssh-key-for-git.html][here]]
 #+BEGIN_SRC sh
