@@ -102,7 +102,6 @@ auth           sufficient      pam_wheel.so trust use_uid
  5)restart your computer
  #+END_SRC
 
-
 * github
 ** generate ssh-key
 
@@ -121,4 +120,12 @@ ssh-add ~/.ssh/id_rsa
 # add key to github
 cat .ssh/id_rsa.pub
 #+END_SRC
+* screenshots
 
+#+BEGIN_SRC sh
+$ pacman -S maim
+$ maim screenshot.png
+$ maim -d 5 screenshot.png # pause for 5 seconds
+$ maim -s shot.png # select an area
+$ man maim # for more options
+#+END_SRC
