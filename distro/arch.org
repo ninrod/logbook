@@ -129,3 +129,12 @@ $ maim -d 5 screenshot.png # pause for 5 seconds
 $ maim -s shot.png # select an area
 $ man maim # for more options
 #+END_SRC
+* bspwm
+** set brightness
+- just put this in your sxkhdrc:
+#+BEGIN_SRC
+XF86MonBrightnessUp
+    xbacklight -inc 10
+XF86MonBrightnessDown
+    xbacklight -dec 10
+#+END_SRC
