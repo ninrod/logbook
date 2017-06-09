@@ -140,3 +140,4 @@ XF86MonBrightnessDown
 #+END_SRC
 * battery life
   - =pacman -S acpi; acpi -V=
+  - tlp stat
