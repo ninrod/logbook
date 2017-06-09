@@ -138,3 +138,5 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     xbacklight -dec 10
 #+END_SRC
+* battery life
+  - =pacman -S acpi; acpi -V=
