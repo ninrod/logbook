@@ -62,7 +62,7 @@ echo hello >>> #<buffer *scratch*>
 *** ivy-occur
 - ~ivy-occur~: this function save the current minibuffers candidates to a new buffer
 - more info [[http://oremacs.com/swiper/#saving-the-current-completion-session-to-a-buffer][here]]
-*** find-file, renames
+*** find-file, renames, ivy-immediate-done
 - use C-M-j =M-x: ivy-immediate-done=
 - ref: [[http://oremacs.com/swiper/#key-bindings][5.2.2 keybindings]]
 *** copy the candidate list
