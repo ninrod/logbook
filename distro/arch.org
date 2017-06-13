@@ -146,3 +146,5 @@ XF86MonBrightnessDown
    - just use xrandr
 ** audio
    - just use pavucontrol
+* pendrives and usb sticks management
+  - use =udisksctl= and =udiskie=
