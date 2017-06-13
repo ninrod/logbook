@@ -141,3 +141,8 @@ XF86MonBrightnessDown
 * battery life
   - =pacman -S acpi; acpi -V=
   - tlp stat
+* hmdi
+** video
+   - just use xrandr
+** audio
+   - just use pavucontrol
