@@ -149,3 +149,8 @@ XF86MonBrightnessDown
 * pendrives and usb sticks management
   - use =udisksctl= and =udiskie=
   - place udiskie & on =~/.xinitrc= for maximum comfort
+* beep infernal
+  - taken from [[https://wiki.archlinux.org/index.php/PC_speaker][here]]
+  #+BEGIN_SRC sh
+    echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
+  #+END_SRC
