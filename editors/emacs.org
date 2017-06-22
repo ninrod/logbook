@@ -71,3 +71,10 @@ echo hello >>> #<buffer *scratch*>
 ** magit
 - tranform a magit-diff buffer into a normal text buffer: =C-t= or =M-x evil-magit-toggle-text-mode=
 - open any file in any revision/branch: use ~magit-find-file~ and ~magit-log-buffer-file~. more info [[http://emacs.stackexchange.com/a/7683/12585][here]]
+* buffers
+** ibuffer
+*** to kill all buffers
+    - M-x =ibuffer-mark-by-name-regexp=
+    - pass the =.*= regexp
+    - hit =D=
+
