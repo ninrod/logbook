@@ -156,3 +156,5 @@ XF86MonBrightnessDown
   #+END_SRC
 * AUR helpers
   - cylon wrapper para cower e pacaur
+* screen locker
+** physlock from aur
