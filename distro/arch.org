@@ -154,3 +154,5 @@ XF86MonBrightnessDown
   #+BEGIN_SRC sh
     echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
   #+END_SRC
+* AUR helpers
+  - cylon wrapper para cower e pacaur
