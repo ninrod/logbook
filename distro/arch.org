@@ -158,3 +158,5 @@ XF86MonBrightnessDown
   - cylon wrapper para cower e pacaur
 * screen locker
 ** physlock from aur
+* pdf reader
+  - zathura or evince
