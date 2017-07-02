@@ -37,7 +37,9 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
 #+BEGIN_SRC sh
 $ pacman -Ss $package
 #+END_SRC
-
+* pacaur
+  - install from AUR.
+  - talvez o cylon wrapper para cower e pacaur
 * sudo without a password
 
 - stolen from here: [[https://bbs.archlinux.org/viewtopic.php?id=7482][here]]
@@ -48,11 +50,13 @@ auth           sufficient      pam_wheel.so trust use_uid
 
 * X
   - had to install xorg and xorg-xinit
+* terminal
+  - install xst-git from AUR
 * bspwm
   - pacman -S bspwm sxhkd dmenu
-  - copy the config files (arch wiki on bspwm) to .config/bspwm, etc...
-  - export XDG_CONFIG_HOME="$HOME/.config" on bashrc
+  - install pacaur
   - install pulse audio
+  - install xst git from aur
 * audio
   - install pulse audio, alsa, etc...
   - install alsamixer
@@ -154,9 +158,9 @@ XF86MonBrightnessDown
   #+BEGIN_SRC sh
     echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
   #+END_SRC
-* AUR helpers
-  - cylon wrapper para cower e pacaur
 * screen locker
 ** physlock from aur
 * pdf reader
   - zathura or evince
+* video
+  - mpv
