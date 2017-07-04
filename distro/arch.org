@@ -164,6 +164,6 @@ XF86MonBrightnessDown
   - zathura or evince
 * video
   - mpv
-* char viewer (fontawesome, nerdfonts, material icons, etc...)
+* font/char viewer (fontawesome, nerdfonts, material icons, etc...)
   - tip from [[https://redd.it/6l3ivb][here]]
   - pacman -S =gucharmap=
