@@ -31,42 +31,17 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
  "boot with std options" "root=/dev/nvme0n1p3 rw add_efi_memmap"
  ...
  #+END_SRC
-* pacman
-
-- search for a package?
-#+BEGIN_SRC sh
-$ pacman -Ss $package
-#+END_SRC
-* pacaur
-  - install from AUR.
-  - talvez o cylon wrapper para cower e pacaur
-* sudo without a password
-
-- stolen from here: [[https://bbs.archlinux.org/viewtopic.php?id=7482][here]]
-- edit /etc/pam.d/sudo and set the following as the 1st line to allow wheel group to use sudo with no password :
-#+BEGIN_SRC sh
-auth           sufficient      pam_wheel.so trust use_uid
-#+END_SRC
-
-* X
-  - had to install xorg and xorg-xinit
-* terminal
-  - install xst-git from AUR
-* bspwm
-  - pacman -S bspwm sxhkd dmenu
-  - install pacaur
-  - install pulse audio
-  - install xst git from aur
-* gpg and pass
-- [[https://superuser.com/questions/813421/can-you-extend-the-expiration-date-of-an-already-expired-gpg-key/814663#814663][extend the expiration date of an already expired key]]
-* audio
-  - install pulse audio, alsa, etc...
-  - install alsamixer
-  - install pavucontrol and tweak settings and umute things
-  - pavucontrol is actually the volume slider
-* wifi
-  - =netctl enable profile= to permanent add your profile
 * keyboard
+** fix virtual console
+   #+BEGIN_SRC sh
+   echo "KEYMAP=us-acentos" > /etc/vconsole.conf
+   #+END_SRC
+** fix lang
+1. uncomment pt_BR.UTF-8 in /etc/locale.gen
+2. run =locale-gen=
+3. certify that pt_BR is installed: run =localectl list-locales=
+4. now install pt_BR: localectl set-locale LANG=pt_BR.UTF-8
+5. reboot and login
 ** fix layout
 
  - with help from [[https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg#Setting_keyboard_layout][arch wiki]]
@@ -108,6 +83,41 @@ auth           sufficient      pam_wheel.so trust use_uid
  5)restart your computer
  #+END_SRC
 
+* pacman
+
+- search for a package?
+#+BEGIN_SRC sh
+$ pacman -Ss $package
+#+END_SRC
+* pacaur
+  - install from AUR.
+  - talvez o cylon wrapper para cower e pacaur
+* sudo without a password
+
+- stolen from here: [[https://bbs.archlinux.org/viewtopic.php?id=7482][here]]
+- edit /etc/pam.d/sudo and set the following as the 1st line to allow wheel group to use sudo with no password :
+#+BEGIN_SRC sh
+auth           sufficient      pam_wheel.so trust use_uid
+#+END_SRC
+
+* X
+  - had to install xorg and xorg-xinit
+* terminal
+  - install xst-git from AUR
+* bspwm
+  - pacman -S bspwm sxhkd dmenu
+  - install pacaur
+  - install pulse audio
+  - install xst git from aur
+* gpg and pass
+- [[https://superuser.com/questions/813421/can-you-extend-the-expiration-date-of-an-already-expired-gpg-key/814663#814663][extend the expiration date of an already expired key]]
+* audio
+  - install pulse audio, alsa, etc...
+  - install alsamixer
+  - install pavucontrol and tweak settings and umute things
+  - pavucontrol is actually the volume slider
+* wifi
+  - =netctl enable profile= to permanent add your profile
 * github
 ** generate ssh-key
 
