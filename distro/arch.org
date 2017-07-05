@@ -37,11 +37,12 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
    echo "KEYMAP=us-acentos" > /etc/vconsole.conf
    #+END_SRC
 ** fix lang
-1. uncomment pt_BR.UTF-8 in /etc/locale.gen
-2. run =locale-gen=
-3. certify that pt_BR is installed: run =localectl list-locales=
-4. now install pt_BR: localectl set-locale LANG=pt_BR.UTF-8
-5. reboot and login
+1. verify that you are not setting =$LANG= manually
+2. uncomment pt_BR.UTF-8 in /etc/locale.gen
+3. run =locale-gen=
+4. certify that pt_BR is installed: run =localectl list-locales=
+5. now install pt_BR: localectl set-locale LANG=pt_BR.UTF-8
+6. reboot and login
 ** fix layout
 
  - with help from [[https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg#Setting_keyboard_layout][arch wiki]]
