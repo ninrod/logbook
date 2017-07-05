@@ -57,6 +57,8 @@ auth           sufficient      pam_wheel.so trust use_uid
   - install pacaur
   - install pulse audio
   - install xst git from aur
+* gpg and pass
+- [[https://superuser.com/questions/813421/can-you-extend-the-expiration-date-of-an-already-expired-gpg-key/814663#814663][extend the expiration date of an already expired key]]
 * audio
   - install pulse audio, alsa, etc...
   - install alsamixer
@@ -72,7 +74,7 @@ auth           sufficient      pam_wheel.so trust use_uid
    localectl set-x11-keymap us pc104 intl
  #+END_SRC
 
-** fix cedilha in US-internation with deadkeys
+** fix cedilha in US-international with deadkeys
 
  - stolen from: [[https://gist.github.com/ninrod/a29a99a20e695ba1a2ce7e774803a501][here]]
  #+BEGIN_SRC txt
@@ -167,3 +169,4 @@ XF86MonBrightnessDown
 * font/char viewer (fontawesome, nerdfonts, material icons, etc...)
   - tip from [[https://redd.it/6l3ivb][here]]
   - pacman -S =gucharmap=
+
