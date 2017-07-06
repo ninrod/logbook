@@ -180,7 +180,7 @@ XF86MonBrightnessDown
 * font/char viewer (fontawesome, nerdfonts, material icons, etc...)
   - tip from [[https://redd.it/6l3ivb][here]]
   - pacman -S =gucharmap=
-* wdmycloudx2 | nfs
+* julicloud | wdmycloudx2 | nfs
   1. export the share as NFS
   2. showmount -e server
   3. =sudo mount server:/path/of/the/mount /mnt/mountpoint=
