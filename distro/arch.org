@@ -184,5 +184,9 @@ XF86MonBrightnessDown
   1. export the share as NFS
   2. showmount -e server
   3. =sudo mount server:/path/of/the/mount /mnt/mountpoint=
+* mpd + ncmpcpp
+  - pacman -S mpd ncmpcpp
+  - ncmpcpp [[https://wiki.archlinux.org/index.php/Ncmpcpp][arch wiki]]
+  - mpd [[https://wiki.archlinux.org/index.php/Music_Player_Daemon][arch wiki]]
 * gpg and pass
 - [[https://superuser.com/questions/813421/can-you-extend-the-expiration-date-of-an-already-expired-gpg-key/814663#814663][extend the expiration date of an already expired key]]
