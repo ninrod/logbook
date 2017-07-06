@@ -180,6 +180,9 @@ XF86MonBrightnessDown
 * font/char viewer (fontawesome, nerdfonts, material icons, etc...)
   - tip from [[https://redd.it/6l3ivb][here]]
   - pacman -S =gucharmap=
-
+* wdmycloudx2 | nfs
+  1. export the share as NFS
+  2. showmount -e server
+  3. =sudo mount server:/path/of/the/mount /mnt/mountpoint=
 * gpg and pass
 - [[https://superuser.com/questions/813421/can-you-extend-the-expiration-date-of-an-already-expired-gpg-key/814663#814663][extend the expiration date of an already expired key]]
