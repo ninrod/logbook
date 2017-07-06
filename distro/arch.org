@@ -84,6 +84,9 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
  5)restart your computer
  #+END_SRC
 
+* wifi / networking
+  - =netctl enable profile= to permanent add your profile
+  - [[https://www.reddit.com/r/archlinux/comments/6llvgv/chromium_taking_a_long_ass_time_to_load_up/djuuq0r/][fix hosts file]]
 * pacman
 
 - search for a package?
@@ -117,8 +120,6 @@ auth           sufficient      pam_wheel.so trust use_uid
   - install alsamixer
   - install pavucontrol and tweak settings and umute things
   - pavucontrol is actually the volume slider
-* wifi
-  - =netctl enable profile= to permanent add your profile
 * github
 ** generate ssh-key
 
