@@ -32,10 +32,6 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
  ...
  #+END_SRC
 * keyboard
-** fix virtual console
-   #+BEGIN_SRC sh
-   echo "KEYMAP=us-acentos" > /etc/vconsole.conf
-   #+END_SRC
 ** fix lang
 1. verify that you are not setting =$LANG= manually
 2. uncomment pt_BR.UTF-8 in /etc/locale.gen
@@ -43,49 +39,57 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
 4. certify that pt_BR is installed: run =localectl list-locales=
 5. now install pt_BR: localectl set-locale LANG=pt_BR.UTF-8
 6. reboot and login
+** fix virtual console
+   #+BEGIN_SRC sh
+   echo "KEYMAP=us-acentos" > /etc/vconsole.conf
+   #+END_SRC
 ** fix layout
+*** without klfc
+**** fix layout
 
- - with help from [[https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg#Setting_keyboard_layout][arch wiki]]
- #+BEGIN_SRC sh
-   localectl set-x11-keymap us pc104 intl
- #+END_SRC
+   - with help from [[https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg#Setting_keyboard_layout][arch wiki]]
+   #+BEGIN_SRC sh
+     localectl set-x11-keymap us pc104 intl
+   #+END_SRC
 
-** fix cedilha in US-international with deadkeys
-*** if using en_US.UTF-8 as lang
+**** fix cedilha in US-international with deadkeys
+***** if using en_US.UTF-8 as lang
 
-  - stolen from: [[https://gist.github.com/ninrod/a29a99a20e695ba1a2ce7e774803a501][here]]
-  #+BEGIN_SRC txt
-  Author: Nilo Dantas - n1lo
-  Based on: https://bugs.launchpad.net/ubuntu/+source/ibus/+bug/518056 - helio-valente post
+    - stolen from: [[https://gist.github.com/ninrod/a29a99a20e695ba1a2ce7e774803a501][here]]
+    #+BEGIN_SRC txt
+    Author: Nilo Dantas - n1lo
+    Based on: https://bugs.launchpad.net/ubuntu/+source/ibus/+bug/518056 - helio-valente post
 
-  How to use Cedilha on US Keyboard on ArchLinux
+    How to use Cedilha on US Keyboard on ArchLinux
 
-  1) Put: English(US, internacional with dead Keys) on your system keyboard layout.
-  2) Editing the files:
-  sudo vim /usr/lib/gtk-3.0/3.0.0/immodules.cache
-  sudo vim /usr/lib/gtk-2.0/2.10.0/immodules.cache
+    1) Put: English(US, internacional with dead Keys) on your system keyboard layout.
+    2) Editing the files:
+    sudo vim /usr/lib/gtk-3.0/3.0.0/immodules.cache
+    sudo vim /usr/lib/gtk-2.0/2.10.0/immodules.cache
 
-  changing the line
+    changing the line
 
-  "cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa"
-  to
-  "cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa:en"
+    "cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa"
+    to
+    "cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa:en"
 
-  3) replacing "ć" to "ç" and "Ć" to "Ç" on /usr/share/X11/locale/en_US.UTF-8/Compose
+    3) replacing "ć" to "ç" and "Ć" to "Ç" on /usr/share/X11/locale/en_US.UTF-8/Compose
 
-  sudo cp /usr/share/X11/locale/en_US.UTF-8/Compose /usr/share/X11/locale/en_US.UTF-8/Compose.bak
-  sed 's/ć/ç/g' < /usr/share/X11/locale/en_US.UTF-8/Compose | sed 's/Ć/Ç/g' > Compose
-  sudo mv Compose /usr/share/X11/locale/en_US.UTF-8/Compose
+    sudo cp /usr/share/X11/locale/en_US.UTF-8/Compose /usr/share/X11/locale/en_US.UTF-8/Compose.bak
+    sed 's/ć/ç/g' < /usr/share/X11/locale/en_US.UTF-8/Compose | sed 's/Ć/Ç/g' > Compose
+    sudo mv Compose /usr/share/X11/locale/en_US.UTF-8/Compose
 
-  4) add two lines on /etc/environment
+    4) add two lines on /etc/environment
 
-  GTK_IM_MODULE=cedilla
-  QT_IM_MODULE=cedilla
+    GTK_IM_MODULE=cedilla
+    QT_IM_MODULE=cedilla
 
-  5)restart your computer
-  #+END_SRC
-*** if using pt_BR.UTF-8 as lang
-    - no need to do anything
+    5)restart your computer
+    #+END_SRC
+***** if using pt_BR.UTF-8 as lang
+      - no need to do anything
+*** with klfc
+    - just run the build script and execute the generated install
 * hosts file
   - [[https://www.reddit.com/r/archlinux/comments/6llvgv/chromium_taking_a_long_ass_time_to_load_up/djuuq0r/][fix hosts file]]
 * wifi / networking
