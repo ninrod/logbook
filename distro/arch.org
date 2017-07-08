@@ -137,15 +137,6 @@ ssh-add ~/.ssh/id_rsa
 # add key to github
 cat .ssh/id_rsa.pub
 #+END_SRC
-* screenshots
-
-#+BEGIN_SRC sh
-$ pacman -S maim
-$ maim screenshot.png
-$ maim -d 5 screenshot.png # pause for 5 seconds
-$ maim -s shot.png # select an area
-$ man maim # for more options
-#+END_SRC
 * bspwm
 ** set brightness
 - just put this in your sxkhdrc:
@@ -171,6 +162,15 @@ XF86MonBrightnessDown
   #+BEGIN_SRC sh
     echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
   #+END_SRC
+* screenshots
+
+#+BEGIN_SRC sh
+$ pacman -S maim
+$ maim screenshot.png
+$ maim -d 5 screenshot.png # pause for 5 seconds
+$ maim -s shot.png # select an area, or window (just click on the window)
+$ man maim # for more options
+#+END_SRC
 * screen locker
 ** physlock from aur
 * pdf reader

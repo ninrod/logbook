@@ -1,6 +1,3 @@
-#+STARTUP: overview
-#+STARTUP: indent
-
 * tables
 ** exporting an org table to csv format
  #+name: foo
