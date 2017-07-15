@@ -1,0 +1,16 @@
+* to use pass in multiple computers
+
+  #+BEGIN_SRC sh
+  # from centos
+  sudo yum install epel-release
+  yum repolist
+  yum install -y pass
+  # export the original key
+  gpg --export-secret-key -a "my@id.com" > private.key
+  # in the new computer
+  gpg --allow-secret-key-import --import private.key
+  # list keys to see if it worked
+  gpg --list-keys
+  # now use pass at will (will ask for your passphrase)
+  pass minha/senha/legal
+  #+END_SRC
