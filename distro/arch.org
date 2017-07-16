@@ -181,9 +181,12 @@ $ man maim # for more options
   - zathura or evince
 * video
   - mpv
-* font/char viewer (fontawesome, nerdfonts, material icons, etc...)
-  - tip from [[https://redd.it/6l3ivb][here]]
-  - pacman -S =gucharmap=
+* font management
+** font/char viewer (fontawesome, nerdfonts, material icons, etc...)
+   - tip from [[https://redd.it/6l3ivb][here]]
+   - pacman -S =gucharmap=
+** viewing available fonts
+   - =$ fc-list=
 * julicloud | wdmycloudx2 | nfs
   1. export the share as NFS
   2. showmount -e server
