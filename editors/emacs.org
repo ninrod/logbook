@@ -77,4 +77,9 @@ echo hello >>> #<buffer *scratch*>
     - M-x =ibuffer-mark-by-name-regexp=
     - pass the =.*= regexp
     - hit =D=
-
+* modeline
+** hiding
+   #+BEGIN_SRC emacs-lisp
+     ;; this is buffer local
+     (setq mode-line-format nil)
+   #+END_SRC
