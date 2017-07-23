@@ -89,7 +89,14 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
 ***** if using pt_BR.UTF-8 as lang
       - no need to do anything
 *** with klfc
-    - just run the build script and execute the generated install
+    1. run the build script and execute the generated install
+    2. add these lines to =/etc/environment=
+
+#+BEGIN_SRC sh
+GTK_IM_MODULE=cedilla
+QT_IM_MODULE=cedilla
+#+END_SRC
+
 * hosts file
   - [[https://www.reddit.com/r/archlinux/comments/6llvgv/chromium_taking_a_long_ass_time_to_load_up/djuuq0r/][fix hosts file]]
 * wifi / networking
