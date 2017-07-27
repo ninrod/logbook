@@ -160,9 +160,10 @@ XF86MonBrightnessDown
 * battery life
   - =pacman -S acpi; acpi -V=
   - tlp stat
-* hmdi
+* hdmi
 ** video
    - just use xrandr
+   - =xrandr --output HDMI2 --auto=
 ** audio
    - just use pavucontrol
 * pendrives and usb sticks management
