@@ -1,0 +1,13 @@
+* rsync tricks
+** copy a huge file with a progress bar
+
+#+BEGIN_SRC sh
+$ rsync -ah --progress source destination
+#+END_SRC
+
+** copy a directory, excluding certain extensions
+
+- from [[https://superuser.com/a/105236/555734][this]] SO question
+#+BEGIN_SRC sh
+$ rsync -avh --exclude='*.foo' --exclude='*.bar' /source /dest
+#+END_SRC
