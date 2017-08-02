@@ -198,7 +198,8 @@ $ man maim # for more options
 * julicloud | wdmycloudx2 | nfs
   1. export the share as NFS
   2. showmount -e server
-  3. =sudo mount server:/path/of/the/mount /mnt/mountpoint=
+  3. nmap: =nmap -p 111 192.168.0.0/24=
+  4. =sudo mount server:/path/of/the/mount /mnt/mountpoint=
 * mpd + ncmpcpp
   - pacman -S mpd ncmpcpp
   - ncmpcpp [[https://wiki.archlinux.org/index.php/Ncmpcpp][arch wiki]]
