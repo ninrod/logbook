@@ -29,7 +29,6 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
  - had to manually edit the refind_linux.conf
  #+BEGIN_SRC sh
  "boot with std options" "root=/dev/nvme0n1p3 rw add_efi_memmap"
- ...
  #+END_SRC
 * keyboard
 ** fix lang
