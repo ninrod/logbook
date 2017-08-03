@@ -37,6 +37,7 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
    - and [[http://rlog.rgtti.com/2014/05/01/how-to-modify-a-keyboard-layout-in-linux/][this]] blog post by romano gianeti
    - and [[https://help.ubuntu.com/community/Custom%2520keyboard%2520layout%2520definitions?action=show&redirect=Howto%253A+Custom+keyboard+layout+definitions][this]] ubuntu tutorial
    - and [[https://ubuntuforums.org/showthread.php?t=1387812][this]] ubuntu blog post
+   - and [[https://www.freedesktop.org/wiki/Software/XKeyboardConfig/][this]] entry on xdesktop site
 ** fix lang
 1. verify that you are not setting =$LANG= manually
 2. uncomment pt_BR.UTF-8 in /etc/locale.gen
