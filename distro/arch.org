@@ -30,6 +30,52 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
  #+BEGIN_SRC sh
  "boot with std options" "root=/dev/nvme0n1p3 rw add_efi_memmap"
  #+END_SRC
+* Great XKB hellish configuration
+** a new hope: create options
+   - blog [[https://realh.co.uk/wp/linux-keymap-hacking/][post]] looks promissing
+   - SO [[https://unix.stackexchange.com/a/215062/155613][question]] also looks promising
+   - SO [[https://unix.stackexchange.com/q/294286][question]] interesting links
+   - [[https://www.charvolant.org/doug/xkb/html/node5.html][aqui]] you have a full keyboard layout displaying key codes
+** resources
+   - this arch linux specific [[https://wiki.archlinux.org/index.php/X_KeyBoard_extension][entry]] (arch wiki) (não explica quais arquivos você tem que criar)
+   - see also [[https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg][this]] entry on arch wiki (keyboard configuration) (não explica quais arquivos você tem que criar)
+   - see [[https://askubuntu.com/questions/325272/permanent-xmodmap-in-ubuntu-13-04/347382#347382?newreg=4eb097870a15490ebbe39d78412f9797][this]] SO answer (não ajudou)
+   - and [[https://askubuntu.com/questions/684459/configure-caps-lock-as-altgr-and-arrows-like-in-vim/898462#898462][this]] (não ajudou)
+   - and [[http://rlog.rgtti.com/2014/05/01/how-to-modify-a-keyboard-layout-in-linux/][this]] blog post by romano gianeti
+   - and [[https://help.ubuntu.com/community/Custom%2520keyboard%2520layout%2520definitions?action=show&redirect=Howto%253A+Custom+keyboard+layout+definitions][this]] ubuntu tutorial
+   - and [[https://ubuntuforums.org/showthread.php?t=1387812][this]] ubuntu blog post
+   - and [[https://www.freedesktop.org/wiki/Software/XKeyboardConfig/][this]] entry on xdesktop site
+   - um [[https://www.x.org/wiki/XKB/][monte]] de artigos sobre xkb
+   - talvez [[https://unix.stackexchange.com/questions/318359/map-right-alt-to-ctrl-key][essa]] seja a solução para o alt
+** step by step
+*** system wide configuration
+/usr/share/X11/xkb/symbols/
+*** arquivos relevantes:
++ rules/evdev.lst
++ rules/evdev.xml
++ symbols/custom (maioria das customizações)
++ types/custom (não tem nada, só um boilerplate)
++ keycodes/custom (não tem nada, nada mesmo)
+** fix alt_r -> contro_l e capslock -> esc
+    altere essas linhas do /usr/share/X11/xkb/symbols/us, na seção =xkb_symbols "intl" {=
+#+BEGIN_SRC sh
+    //include "level3(ralt_switch)"
+    include "ctrl(ralt_rctrl)"
+    include "capslock(escape)"
+#+END_SRC
+
+- alternativamente, apenas crie um arquivo em  com o seguinte conteúdo e salve em /etc/X11/xorg.conf.d/90-custom-kbd.conf:
+- mas não funciona para o alt. mesmo assim teria que descomentar a linha no us intl
+
+#+BEGIN_SRC sh
+Section "InputClass"
+    Identifier "keyboard defaults"
+    MatchIsKeyboard "on"
+    Option "XKbOptions" "caps:escape"
+EndSection
+#+END_SRC
+
+
 * keyboard
 ** fix lang
 1. verify that you are not setting =$LANG= manually
