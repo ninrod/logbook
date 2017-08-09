@@ -114,12 +114,6 @@ EndSection
   - [[https://www.reddit.com/r/archlinux/comments/6llvgv/chromium_taking_a_long_ass_time_to_load_up/djuuq0r/][fix hosts file]]
 * wifi / networking
   - =netctl enable profile= to permanent add your profile
-* pacman
-
-- search for a package?
-#+BEGIN_SRC sh
-$ pacman -Ss $package
-#+END_SRC
 * pacaur
   - install from AUR.
 * sudo without a password
@@ -132,17 +126,15 @@ auth           sufficient      pam_wheel.so trust use_uid
 
 * X
   - had to install xorg and xorg-xinit
-* terminal
-  - install xst-git from AUR
 * bspwm
   - pacman -S bspwm sxhkd dmenu
   - install pulse audio
-  - pacaur -S xst
+  - pacaur -S xst-git
 * audio
   - install pulse audio, alsa, etc...
   - install alsamixer
   - install pavucontrol and tweak settings and umute things
-  - pavucontrol is actually the volume slider
+  - pavucontrol is actually the volume slider, as is alsamixer
 * github
 ** generate ssh-key
 
@@ -160,15 +152,6 @@ ssh-add ~/.ssh/id_rsa
 
 # add key to github
 cat .ssh/id_rsa.pub
-#+END_SRC
-* bspwm
-** set brightness
-- just put this in your sxkhdrc:
-#+BEGIN_SRC
-XF86MonBrightnessUp
-    xbacklight -inc 10
-XF86MonBrightnessDown
-    xbacklight -dec 10
 #+END_SRC
 * battery life
   - =pacman -S acpi; acpi -V=
