@@ -43,15 +43,14 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
    echo "KEYMAP=us-acentos" > /etc/vconsole.conf
    #+END_SRC
 ** fix layout
-*** without klfc
-**** fix layout
+*** fix layout
 
-   - with help from [[https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg#Setting_keyboard_layout][arch wiki]]
-   #+BEGIN_SRC sh
-     localectl set-x11-keymap us pc104 intl
-   #+END_SRC
+  - with help from [[https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg#Setting_keyboard_layout][arch wiki]]
+  #+BEGIN_SRC sh
+    localectl set-x11-keymap us pc104 intl
+  #+END_SRC
 
-**** fix cedilha in US-international with deadkeys
+*** fix cedilha in US-international with deadkeys
 ***** if using en_US.UTF-8 as lang
 
     - stolen from: [[https://gist.github.com/ninrod/a29a99a20e695ba1a2ce7e774803a501][here]]
@@ -87,8 +86,6 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
     #+END_SRC
 ***** if using pt_BR.UTF-8 as lang
       - no need to do anything
-*** with klfc
-    1. run the build script and execute the generated installs
 * touchpad
   eu botei o seguinte arquivo em /etc/X11/xorg.conf.d/30-touchpad.conf
 #+BEGIN_SRC sh
@@ -163,9 +160,8 @@ cat .ssh/id_rsa.pub
 ** audio
    - just use pavucontrol
 * pendrives and usb sticks management
-  - use =udisksctl= and =udiskie=
-  - place udiskie & on =~/.xinitrc= for maximum comfort
-* beep infernal
+  - install =udisksctl= and =udiskie=
+* infernal beep
   - taken from [[https://wiki.archlinux.org/index.php/PC_speaker][here]]
   #+BEGIN_SRC sh
     echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
@@ -180,9 +176,9 @@ $ maim -s shot.png # select an area, or window (just click on the window)
 $ man maim # for more options
 #+END_SRC
 * screen locker
-** physlock from aur
+  - pacaur -S physlock
 * pdf reader
-  - zathura or evince
+  - zathura and evince
 * video
   - mpv
 * font management
@@ -206,3 +202,4 @@ $ man maim # for more options
   - [[https://wiki.archlinux.org/%209.php/FFmpeg#Package_installation][ffmpeg]]
 * caveats, pitfalls and traps
   - don't install =ibus=. If you do that, inkscape and visual studio code will not work, among other things.
+  - do not use gtk_module=anything globally. It will fuck up many apps, including thunar, darktable and inkscape.
