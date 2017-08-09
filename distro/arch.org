@@ -88,13 +88,7 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
 ***** if using pt_BR.UTF-8 as lang
       - no need to do anything
 *** with klfc
-    1. run the build script and execute the generated install
-    2. add these lines to =/etc/environment=
-
-#+BEGIN_SRC sh
-GTK_IM_MODULE=cedilla
-QT_IM_MODULE=cedilla
-#+END_SRC
+    1. run the build script and execute the generated installs
 * touchpad
   eu botei o seguinte arquivo em /etc/X11/xorg.conf.d/30-touchpad.conf
 #+BEGIN_SRC sh
