@@ -1,0 +1,7 @@
+* Tar commands
+** create a tar.xz compressed archive
+
+- take from [[https://stackoverflow.com/a/18855909/4921402][here]]
+#+BEGIN_SRC sh
+$ tar cfJ <file.tar.xz> <files>
+#+END_SRC
