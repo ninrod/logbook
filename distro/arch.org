@@ -174,10 +174,15 @@ auth           sufficient      pam_wheel.so trust use_uid
    - and [[https://unix.stackexchange.com/a/45821/155613][this]]
    - and also [[https://unix.stackexchange.com/a/178648/155613][this]]
    - udiskie already auto mounts pendrives for you.
-** step
+** the simple way step
    1. identify the disk with =lsblk -fm=
    2. verify if the disk is already mounted with =df -h=
    3. umont with =sudo umount /mnt/sdn=, or =sudo umount /dev/sdxm=
+** the professional way (udiskie)
+   1. identify the disk with =lsblk -fm=
+   2. verify if the disk is already mounted with =df -h=
+   3. udisksctl =unmount -b /dev/sda1=
+   4. udisksctl =power-off -b /dev/sda=
 * X
   - had to install xorg and xorg-xinit
 * bspwm
