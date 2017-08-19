@@ -251,3 +251,7 @@ $ man maim # for more options
 * caveats, pitfalls and traps
   - don't install =ibus=. If you do that, inkscape and visual studio code will not work, among other things.
   - do not use gtk_module=anything globally. It will fuck up many apps, including thunar, darktable and inkscape.
+* mount, umount, eject pendrives on the command line
+  - see [[https://askubuntu.com/a/859798/685029][this]] SO answer
+  - and [[https://unix.stackexchange.com/a/45821/155613][this]]
+  - and also [[https://unix.stackexchange.com/a/178648/155613][this]]
