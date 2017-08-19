@@ -167,6 +167,17 @@ EndSection
 auth           sufficient      pam_wheel.so trust use_uid
 #+END_SRC
 
+* mount, umount, eject pendrives on the command line
+  - install =udisksctl= and =udiskie= auto mount pendrives for you. install these
+** info
+   - see [[https://askubuntu.com/a/859798/685029][this]] SO answer
+   - and [[https://unix.stackexchange.com/a/45821/155613][this]]
+   - and also [[https://unix.stackexchange.com/a/178648/155613][this]]
+   - udiskie already auto mounts pendrives for you.
+** step
+   1. identify the disk with =lsblk -fm=
+   2. verify if the disk is already mounted with =df -h=
+   3. umont with =sudo umount /mnt/sdn=, or =sudo umount /dev/sdxm=
 * X
   - had to install xorg and xorg-xinit
 * bspwm
@@ -207,8 +218,6 @@ cat .ssh/id_rsa.pub
    - =xrandr --output HDMI2 --auto=
 ** audio
    - just use pavucontrol
-* pendrives and usb sticks management
-  - install =udisksctl= and =udiskie=
 * infernal beep
   - taken from [[https://wiki.archlinux.org/index.php/PC_speaker][here]]
   #+BEGIN_SRC sh
@@ -251,7 +260,3 @@ $ man maim # for more options
 * caveats, pitfalls and traps
   - don't install =ibus=. If you do that, inkscape and visual studio code will not work, among other things.
   - do not use gtk_module=anything globally. It will fuck up many apps, including thunar, darktable and inkscape.
-* mount, umount, eject pendrives on the command line
-  - see [[https://askubuntu.com/a/859798/685029][this]] SO answer
-  - and [[https://unix.stackexchange.com/a/45821/155613][this]]
-  - and also [[https://unix.stackexchange.com/a/178648/155613][this]]
