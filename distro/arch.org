@@ -178,6 +178,8 @@ auth           sufficient      pam_wheel.so trust use_uid
   - install alsamixer
   - install pavucontrol and tweak settings and umute things
   - pavucontrol is actually the volume slider, as is alsamixer
+* file manager
+  - just use nautilus
 * github
 ** generate ssh-key
 
