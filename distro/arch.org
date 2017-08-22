@@ -83,7 +83,6 @@ Section "InputClass"
 EndSection
 #+END_SRC
 
-
 * keyboard
 ** fix lang
 1. verify that you are not setting =$LANG= manually
