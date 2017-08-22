@@ -30,7 +30,7 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
 - had to use gdisk to get a GPT/UEFI partition table
 - used a / and a /boot and a swap partition
 - the / had to be ext4 formated (mounted on /mnt)
-- the /boot had to be vfat formated (mounted on /mnt/boot)
+- the /boot, the EFI partition, had to be vfat formated (mounted on /mnt/boot)
 
 ** reFind bootloader
 
