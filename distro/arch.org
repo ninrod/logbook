@@ -28,7 +28,8 @@ $ dd bs=4M if=/home/ninrod/Desktop/archlinux-2017.08.01-x86_64.iso of=/dev/sda s
 
 **** using just cp
 - see this [[https://www.debian.org/releases/stable/amd64/ch04s03.html.en#usb-copy-isohybrid][entry]] (debian manual)
-#+BEGIN_SRC
+#+BEGIN_SRC sh
+# first verify if the disk is umounted. then:
 $ cp debian.iso /dev/sda && sync
 #+END_SRC
 ** partitioning
