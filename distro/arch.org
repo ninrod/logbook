@@ -23,7 +23,7 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
 - then, write this:
 
 #+BEGIN_SRC sh
-$ dd bs=4M if=/home/ninrod/Desktop/archlinux-2017.08.01-x86_64.iso of=/dev/sda status=progress && sync
+$ sudo dd bs=4M if=/home/ninrod/Desktop/archlinux-2017.08.01-x86_64.iso of=/dev/sda status=progress && sync
 #+END_SRC
 
 **** using just cp
