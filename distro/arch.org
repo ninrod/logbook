@@ -18,13 +18,19 @@ dd bs=4M if=/path/to/archlinux.iso of=/dev/rdiskX status=progress && sync
 #+END_SRC
 
 *** In Arch
-    - first, umount the pendrive
-    - then, write this:
+**** using dd
+- first, umount the pendrive
+- then, write this:
 
-  #+BEGIN_SRC sh
-  $ dd bs=4M if=/home/ninrod/Desktop/archlinux-2017.08.01-x86_64.iso of=/dev/sda status=progress && sync
-  #+END_SRC
+#+BEGIN_SRC sh
+$ dd bs=4M if=/home/ninrod/Desktop/archlinux-2017.08.01-x86_64.iso of=/dev/sda status=progress && sync
+#+END_SRC
 
+**** using just cp
+- see this [[https://www.debian.org/releases/stable/amd64/ch04s03.html.en#usb-copy-isohybrid][entry]] (debian manual)
+#+BEGIN_SRC
+$ cp debian.iso /dev/sda && sync
+#+END_SRC
 ** partitioning
 
 - had to use gdisk to get a GPT/UEFI partition table
