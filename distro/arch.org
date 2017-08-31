@@ -173,41 +173,41 @@ EndSection
   #+END_SRC
 
 *** fix cedilha in US-international with deadkeys
-***** if using en_US.UTF-8 as lang
+**** if using en_US.UTF-8 as lang
 
-    - stolen from: [[https://gist.github.com/ninrod/a29a99a20e695ba1a2ce7e774803a501][here]]
-    #+BEGIN_SRC txt
-    Author: Nilo Dantas - n1lo
-    Based on: https://bugs.launchpad.net/ubuntu/+source/ibus/+bug/518056 - helio-valente post
+   - stolen from: [[https://gist.github.com/ninrod/a29a99a20e695ba1a2ce7e774803a501][here]]
+   #+BEGIN_SRC txt
+   Author: Nilo Dantas - n1lo
+   Based on: https://bugs.launchpad.net/ubuntu/+source/ibus/+bug/518056 - helio-valente post
 
-    How to use Cedilha on US Keyboard on ArchLinux
+   How to use Cedilha on US Keyboard on ArchLinux
 
-    1) Put: English(US, internacional with dead Keys) on your system keyboard layout.
-    2) Editing the files:
-    sudo vim /usr/lib/gtk-3.0/3.0.0/immodules.cache
-    sudo vim /usr/lib/gtk-2.0/2.10.0/immodules.cache
+   1) Put: English(US, internacional with dead Keys) on your system keyboard layout.
+   2) Editing the files:
+   sudo vim /usr/lib/gtk-3.0/3.0.0/immodules.cache
+   sudo vim /usr/lib/gtk-2.0/2.10.0/immodules.cache
 
-    changing the line
+   changing the line
 
-    "cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa"
-    to
-    "cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa:en"
+   "cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa"
+   to
+   "cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa:en"
 
-    3) replacing "ć" to "ç" and "Ć" to "Ç" on /usr/share/X11/locale/en_US.UTF-8/Compose
+   3) replacing "ć" to "ç" and "Ć" to "Ç" on /usr/share/X11/locale/en_US.UTF-8/Compose
 
-    sudo cp /usr/share/X11/locale/en_US.UTF-8/Compose /usr/share/X11/locale/en_US.UTF-8/Compose.bak
-    sed 's/ć/ç/g' < /usr/share/X11/locale/en_US.UTF-8/Compose | sed 's/Ć/Ç/g' > Compose
-    sudo mv Compose /usr/share/X11/locale/en_US.UTF-8/Compose
+   sudo cp /usr/share/X11/locale/en_US.UTF-8/Compose /usr/share/X11/locale/en_US.UTF-8/Compose.bak
+   sed 's/ć/ç/g' < /usr/share/X11/locale/en_US.UTF-8/Compose | sed 's/Ć/Ç/g' > Compose
+   sudo mv Compose /usr/share/X11/locale/en_US.UTF-8/Compose
 
-    4) add two lines on /etc/environment
+   4) add two lines on /etc/environment
 
-    GTK_IM_MODULE=cedilla
-    QT_IM_MODULE=cedilla
+   GTK_IM_MODULE=cedilla
+   QT_IM_MODULE=cedilla
 
-    5)restart your computer
-    #+END_SRC
-***** if using pt_BR.UTF-8 as lang
-      - no need to do anything
+   5)restart your computer
+   #+END_SRC
+**** if using pt_BR.UTF-8 as lang
+     - no need to do anything
 * touchpad
   eu botei o seguinte arquivo em /etc/X11/xorg.conf.d/30-touchpad.conf
 #+BEGIN_SRC sh
@@ -251,15 +251,14 @@ EndSection
   - had to install xorg and xorg-xinit
 * bspwm
   - pacman -S bspwm sxhkd dmenu
-  - install pulse audio
-  - pacaur -S xst-git
+  - pacaur -S xfce4-terminal
 * audio
   - install pulse audio, alsa, etc...
   - install alsamixer
   - install pavucontrol and tweak settings and umute things
   - pavucontrol is actually the volume slider, as is alsamixer
 * file manager
-  - just use nautilus
+  - pacman -S nautilus
 * github
 ** generate ssh-key
 
