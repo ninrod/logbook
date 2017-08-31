@@ -1,4 +1,4 @@
-* command line install
+* Install
 ** NOTE
    - follow the arch wiki and complement with this section
 ** BIOS
@@ -87,6 +87,22 @@ lsblk -no UUID /dev/nvme0n1p2 | vim -
  #+BEGIN_SRC sh
  "boot with std options" "root=/dev/nvme0n1p3 rw add_efi_memmap"
  #+END_SRC
+** on restart: create ninrod user
+useradd -m -g study -G wheel -s /bin/zsh ninrod
+** sudo without a password
+
+ - stolen from here: [[https://bbs.archlinux.org/viewtopic.php?id=7482][here]]
+ - edit /etc/pam.d/sudo and set the following as the 1st line to allow wheel group to use sudo with no password :
+ #+BEGIN_SRC sh
+ auth           sufficient      pam_wheel.so trust use_uid
+ #+END_SRC
+ - edit the sudoers file
+#+BEGIN_SRC sh
+# add ninrod
+ninrod ALL=(ALL) ALL
+#+END_SRC
+
+
 * Great XKB hellish configuration
 ** a new hope: create options
    - blog [[https://realh.co.uk/wp/linux-keymap-hacking/][post]] looks promissing
@@ -215,14 +231,6 @@ EndSection
   - =netctl enable profile= to permanent add your profile
 * pacaur
   - install from AUR.
-* sudo without a password
-
-- stolen from here: [[https://bbs.archlinux.org/viewtopic.php?id=7482][here]]
-- edit /etc/pam.d/sudo and set the following as the 1st line to allow wheel group to use sudo with no password :
-#+BEGIN_SRC sh
-auth           sufficient      pam_wheel.so trust use_uid
-#+END_SRC
-
 * mount, umount, eject pendrives on the command line
   - install =udisksctl= and =udiskie= auto mount pendrives for you. install these
 ** info
