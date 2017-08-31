@@ -83,6 +83,11 @@ lsblk -no UUID /dev/nvme0n1p2 | vim -
 #+END_SRC
 ** pacstrap
    - add base-devel, vim, zsh, git
+** label partitions
+   - name partitions using [[https://wiki.archlinux.org/index.php/Persistent_block_device_naming#by-partlabel][cgdisk]]
+   - boot: ESP
+   - swap: SWAP
+   - /: SLASH
 ** reFind bootloader
 
  - had to manually edit the refind_linux.conf
@@ -92,7 +97,6 @@ lsblk -no UUID /dev/nvme0n1p2 | vim -
  - this is because =refind-install= on the chroot env does not work
  - maybe if I restart and run refind-install in the fucked up restarted state it will work
  - anyway, git clone the dotfiles and copy the ~/.dotfiles/options/arch/boot/refind_linux.conf to the appropriate place and restart
-
 ** on restart: create ninrod user
 useradd -m -g study -G wheel -s /bin/zsh ninrod
 ** sudo without a password
