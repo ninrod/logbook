@@ -81,6 +81,8 @@ $ mount /dev/nvme0n1p1 /mnt/boot
 lsblk -no UUID /dev/nvme0n1p2 | vim -
 # then in vim: :e /mnt/etc/fstab
 #+END_SRC
+** pacstrap
+   - add base-devel, vim, zsh, git
 ** reFind bootloader
 
  - had to manually edit the refind_linux.conf
