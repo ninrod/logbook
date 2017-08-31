@@ -71,7 +71,7 @@ $ mount /dev/nvme0n1p1 /mnt/boot
    - just select all brazil and all united states
    - use the rankmirror script
    - profit
-** fstab: add the swap partition
+** fstab: add the swap partition (optional for gpt disks)
 - after the genstab command, add this [[https://wiki.archlinux.org/index.php/swap#Swap_partition][entry]] to fstab
 - protip: use this trick in vim
 
