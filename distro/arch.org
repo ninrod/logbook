@@ -89,6 +89,10 @@ lsblk -no UUID /dev/nvme0n1p2 | vim -
  #+BEGIN_SRC sh
  "boot with std options" "root=/dev/nvme0n1p3 rw add_efi_memmap"
  #+END_SRC
+ - this is because =refind-install= on the chroot env does not work
+ - maybe if I restart and run refind-install in the fucked up restarted state it will work
+ - anyway, git clone the dotfiles and copy the ~/.dotfiles/options/arch/boot/refind_linux.conf to the appropriate place and restart
+
 ** on restart: create ninrod user
 useradd -m -g study -G wheel -s /bin/zsh ninrod
 ** sudo without a password
