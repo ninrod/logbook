@@ -32,12 +32,22 @@ $ sudo dd bs=4M if=/home/ninrod/Desktop/archlinux-2017.08.01-x86_64.iso of=/dev/
 # first verify if the disk is umounted. then:
 $ cp debian.iso /dev/sda && sync
 #+END_SRC
+** boot into chroot: keyboard
+   - loadkeys us-acentos
+** setup wireless
+   - wifi-menu, choose your wifi network
+   - netctl start [yourchosenprofile]
 ** partitioning
+*** gdisk
 
-- had to use gdisk to get a GPT/UEFI partition table
-- used a / and a /boot and a swap partition
-- the / had to be ext4 formated (mounted on /mnt)
-- the /boot, the EFI partition, had to be vfat formated (mounted on /mnt/boot)
+ - had to use gdisk to get a GPT/UEFI partition table
+ - used a / and a /boot and a swap partition
+ - the / had to be ext4 formated (mounted on /mnt)
+ - the /boot, the EFI partition, had to be vfat formated (mounted on /mnt/boot)
+
+*** parted
+
+- will try a / and a swap partition
 
 ** reFind bootloader
 
