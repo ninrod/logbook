@@ -1,4 +1,6 @@
 * command line install
+** NOTE
+   - follow the arch wiki and complement with this section
 ** BIOS
 *** disable secure boot on bios
 *** TPM error (6)
