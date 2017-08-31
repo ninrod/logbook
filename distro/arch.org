@@ -59,7 +59,20 @@ $ cp debian.iso /dev/sda && sync
 - =mkfs.fat -F32 /dev/nvme0n1p1=
 *** format the / partition
 - =mkfs.ext4 /dev/nvme0n1p3=
+*** format the swap partition
+- mkswap /dev/nvme0n1p2
 ** mounting the partitions
+#+BEGIN_SRC sh
+$ mount /dev/nvme0n1p3 /mnt
+$ mkdir /mnt/
+$ mount /dev/nvme0n1p1 /mnt/boot
+#+END_SRC
+** choose mirrors
+   - just select all brazil and all united states
+   - use the rankmirror script
+   - profit
+** fstab: add the swap partition
+- add this [[https://wiki.archlinux.org/index.php/swap#Swap_partition][entry]] to fstab
 ** reFind bootloader
 
  - had to manually edit the refind_linux.conf
