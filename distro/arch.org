@@ -72,7 +72,13 @@ $ mount /dev/nvme0n1p1 /mnt/boot
    - use the rankmirror script
    - profit
 ** fstab: add the swap partition
-- add this [[https://wiki.archlinux.org/index.php/swap#Swap_partition][entry]] to fstab
+- after the genstab command, add this [[https://wiki.archlinux.org/index.php/swap#Swap_partition][entry]] to fstab
+- protip: use this trick in vim
+
+#+BEGIN_SRC sh
+lsblk -no UUID /dev/nvme0n1p2 | vim -
+# then in vim: :e /mnt/etc/fstab
+#+END_SRC
 ** reFind bootloader
 
  - had to manually edit the refind_linux.conf
