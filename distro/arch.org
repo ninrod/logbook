@@ -37,6 +37,10 @@ $ cp debian.iso /dev/sda && sync
 ** setup wireless
    - wifi-menu, choose your wifi network
    - netctl start [yourchosenprofile]
+** time and timezone
+- timedatectl set-ntp true
+- timedatectl list-timezones
+- timedatectl set-timezone America/Sao_Paulo
 ** partitioning
 *** gdisk
 
@@ -48,7 +52,14 @@ $ cp debian.iso /dev/sda && sync
 *** parted
 
 - will try a / and a swap partition
+- more info [[https://wiki.archlinux.org/index.php/GNU_Parted#Usage][here]]
 
+** formating
+*** format the /boot (ESP) partition
+- =mkfs.fat -F32 /dev/nvme0n1p1=
+*** format the / partition
+- =mkfs.ext4 /dev/nvme0n1p3=
+** mounting the partitions
 ** reFind bootloader
 
  - had to manually edit the refind_linux.conf
