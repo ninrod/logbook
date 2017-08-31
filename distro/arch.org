@@ -104,6 +104,8 @@ useradd -m -g study -G wheel -s /bin/zsh ninrod
 ninrod ALL=(ALL) ALL
 #+END_SRC
 
+** wifi / networking
+   - =netctl enable profile= to permanent add your profile
 
 * Great XKB hellish configuration
 ** a new hope: create options
@@ -227,10 +229,6 @@ Section "Device"
 	Option	    "DRI"	"false"
 EndSection
 #+END_SRC
-* hosts file
-  - [[https://www.reddit.com/r/archlinux/comments/6llvgv/chromium_taking_a_long_ass_time_to_load_up/djuuq0r/][fix hosts file]]
-* wifi / networking
-  - =netctl enable profile= to permanent add your profile
 * pacaur
   - install from AUR.
 * mount, umount, eject pendrives on the command line
