@@ -101,6 +101,10 @@ sudo pacman -S git diff-so-fancy
    - boot: ESP
    - swap: SWAP
    - /: SLASH
+** intel microcode
+   - install the microcode package
+** git clone dotfiles
+   - and place the /boot/UEFI/refind/refind.conf file accordingly
 ** reFind bootloader
 
  - had to manually edit the refind_linux.conf
