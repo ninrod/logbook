@@ -77,6 +77,11 @@ $ mount /dev/nvme0n1p1 /mnt/boot
    - just select all brazil and all united states
    - use the rankmirror script
    - profit
+** pacstrap
+   - add base-devel, vim, zsh, git
+#+BEGIN_SRC
+sudo pacman -S base-devel parted
+#+END_SRC
 ** fstab: add the swap partition (optional for gpt disks)
 - after the genstab command, add this [[https://wiki.archlinux.org/index.php/swap#Swap_partition][entry]] to fstab
 - protip: use this trick in vim
@@ -85,10 +90,9 @@ $ mount /dev/nvme0n1p1 /mnt/boot
 lsblk -no UUID /dev/nvme0n1p2 | vim -
 # then in vim: :e /mnt/etc/fstab
 #+END_SRC
-** pacstrap
-   - add base-devel, vim, zsh, git
-#+BEGIN_SRC
-sudo pacman -S base-devel parted terminus-font
+** additional packages
+#+BEGIN_SRC sh
+sudo pacman -S terminus-font
 sudo pacman -S vim zsh
 sudo pacman -S git diff-so-fancy
 #+END_SRC
