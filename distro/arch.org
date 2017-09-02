@@ -83,6 +83,11 @@ lsblk -no UUID /dev/nvme0n1p2 | vim -
 #+END_SRC
 ** pacstrap
    - add base-devel, vim, zsh, git
+#+BEGIN_SRC
+sudo pacman -S base-devel parted terminus-font
+sudo pacman -S vim zsh
+sudo pacman -S git diff-so-fancy
+#+END_SRC
 ** label partitions
    - name partitions using [[https://wiki.archlinux.org/index.php/Persistent_block_device_naming#by-partlabel][cgdisk]]
    - boot: ESP
