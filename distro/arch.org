@@ -52,21 +52,25 @@ $ cp debian.iso /dev/sda && sync
  - the /boot, the EFI partition, had to be vfat formated (mounted on /mnt/boot)
 
 *** parted
-
-- will try a / and a swap partition
 - more info [[https://wiki.archlinux.org/index.php/GNU_Parted#Usage][here]]
-
+**** /boot vfat partition
+- mkpart ESP fat32 1MiB 513MiB
+- set 1 boot on
+**** swap partition
+- mkpart  primary linux-swap 513MiB 20GiB
+**** / ext4 partition
+- mkpart primary ext4 20GiB 100%
 ** formating
 *** format the /boot (ESP) partition
 - =mkfs.fat -F32 /dev/nvme0n1p1=
-*** format the / partition
-- =mkfs.ext4 /dev/nvme0n1p3=
 *** format the swap partition
 - mkswap /dev/nvme0n1p2
+*** format the / partition
+- =mkfs.ext4 /dev/nvme0n1p3=
 ** mounting the partitions
 #+BEGIN_SRC sh
 $ mount /dev/nvme0n1p3 /mnt
-$ mkdir /mnt/
+$ mkdir /mnt/boot
 $ mount /dev/nvme0n1p1 /mnt/boot
 #+END_SRC
 ** choose mirrors
