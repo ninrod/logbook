@@ -274,7 +274,7 @@ EndSection
    3. udisksctl =unmount -b /dev/sda1= (use this to just umount the drive)
    4. udisksctl =power-off -b /dev/sda=
 * fonts
-  - pacaur -S ttf-font-awesome
+  - pacaur -S ttf-font-awesome office-code-pro adobe-source-code-pro-fonts ttf-iosevka-term-ss07
 * bspwm
   - install cower and pacaur from AUR
   - pacaur -S dropbox-cli
