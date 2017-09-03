@@ -288,6 +288,7 @@ EndSection
   - pacaur -S polybar
   - pacaur -S physlock
   - pacman -S maim
+  - pacman -S setroot
   - zathura and evince (pdf readers)
   - mpv and xf86-video-intel
 * audio
