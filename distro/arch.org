@@ -282,7 +282,8 @@ EndSection
   - pacaur -S nautilus-dropbox
   - pacman -S bspwm sxhkd dmenu
   - pacman -S xfce4-terminal
-  - pacman -S polybar
+  - pacaur -S polybar
+  - pacaur -S physlock
 * audio
   - install alsa-utils
   - $ amixer sset Master unmute
