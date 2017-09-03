@@ -286,7 +286,7 @@ EndSection
 * audio
   - install alsa-utils
   - $ amixer sset Master unmute
-  - install pulseaudio
+  - install pulseaudio and pulseaudio-alsa
   - install pavucontrol and tweak settings and umute things
   - pavucontrol is actually the volume slider, as is alsamixer
 * github
