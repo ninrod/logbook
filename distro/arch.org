@@ -284,12 +284,11 @@ EndSection
   - pacman -S xfce4-terminal
   - pacman -S polybar
 * audio
-  - install pulse audio, alsa, etc...
-  - install alsamixer
+  - install alsa-utils
+  - $ amixer sset Master unmute
+  - install pulseaudio
   - install pavucontrol and tweak settings and umute things
   - pavucontrol is actually the volume slider, as is alsamixer
-* file manager
-  - pacman -S nautilus
 * github
 ** generate ssh-key
 
