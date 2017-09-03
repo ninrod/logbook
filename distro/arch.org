@@ -134,6 +134,7 @@ ninrod ALL=(ALL) ALL
 
 * X
   - had to install xorg and xorg-xinit
+* dropbox
 * Great XKB hellish configuration
 ** a new hope: create options
    - blog [[https://realh.co.uk/wp/linux-keymap-hacking/][post]] looks promissing
@@ -272,9 +273,16 @@ EndSection
    2. verify if the disk is already mounted with =df -h=
    3. udisksctl =unmount -b /dev/sda1= (use this to just umount the drive)
    4. udisksctl =power-off -b /dev/sda=
+* fonts
+  - pacaur -S ttf-font-awesome
 * bspwm
+  - install cower and pacaur from AUR
+  - pacaur -S dropbox-cli
+  - pacman -S nautilus
+  - pacaur -S nautilus-dropbox
   - pacman -S bspwm sxhkd dmenu
-  - pacaur -S xfce4-terminal
+  - pacman -S xfce4-terminal
+  - pacman -S polybar
 * audio
   - install pulse audio, alsa, etc...
   - install alsamixer
