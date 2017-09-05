@@ -1,3 +1,27 @@
+* pacman tricks
+** Retrieve a database cache from remote servers (yum makecache fast)
+- tip taken from [[https://superuser.com/a/584131/555734][here]]
+
+#+BEGIN_SRC sh
+sudo pacman -Fy
+#+END_SRC
+
+** what package provides this command?
+
+- with pacman
+#+BEGIN_SRC sh
+$ pacman -Fs ssh-keygen
+core/openssh 7.2p2-1
+    usr/bin/ssh-keygen
+#+END_SRC
+
+- or use [[https://superuser.com/a/584131/555734][pkgfile]]
+#+BEGIN_SRC sh
+$ sudo pkgfile -u
+$ pkgfile -v ssh-keygen
+core/openssh 7.2p2-1        /usr/bin/ssh-keygen
+#+END_SRC
+
 * Install
 ** NOTE
    - follow the arch wiki and complement with this section
@@ -234,69 +258,67 @@ EndSection
    #+END_SRC
 **** if using pt_BR.UTF-8 as lang
      - no need to do anything
-* touchpad
-  eu botei o seguinte arquivo em /etc/X11/xorg.conf.d/30-touchpad.conf
-#+BEGIN_SRC sh
-# configs de touchpad
-Section "InputClass"
-        Identifier "libinput touchpad catchall"
-        MatchIsTouchpad "on"
-        MatchDevicePath "/dev/input/event*"
-        Driver "libinput"
-	Option "Tapping" "on"
-EndSection
-#+END_SRC
-* intel graphics card
-  eu botei o seguinte arquivo em /etc/X11/xorg.conf.d/20-intel.conf
-#+BEGIN_SRC sh
-Section "Device"
-	Identifier  "Intel Graphics"
-	Driver      "intel"
-	Option	    "DRI"	"false"
-EndSection
-#+END_SRC
-* pacaur
-  - install from AUR.
-* mount, umount, eject pendrives on the command line
-  - install =udiskie=. it will auto mount pendrives for you.
-** info
-   - see [[https://askubuntu.com/a/859798/685029][this]] SO answer
-   - and [[https://unix.stackexchange.com/a/45821/155613][this]]
-   - and also [[https://unix.stackexchange.com/a/178648/155613][this]]
-   - udiskie already auto mounts pendrives for you.
-** the simple way step
-   1. identify the disk with =lsblk -fm=
-   2. verify if the disk is already mounted with =df -h=
-   3. umont with =sudo umount /mnt/sdn=, or =sudo umount /dev/sdxm=
-** the professional way (udiskie)
-   1. identify the disk with =lsblk -fm=
-   2. verify if the disk is already mounted with =df -h=
-   3. udisksctl =unmount -b /dev/sda1= (use this to just umount the drive)
-   4. udisksctl =power-off -b /dev/sda=
-* fonts
-* dropbox
-  - pacaur -S xdg-utils
-  - pacaur -S dropbox-cli
-  - dropbox-cli start
 * bspwm
-  - pacaur -S ttf-font-awesome office-code-pro adobe-source-code-pro-fonts ttf-iosevka-term-ss07
-  - install cower and pacaur from AUR
-  - pacman -S nautilus
-  - pacaur -S nautilus-dropbox
-  - pacman -S bspwm sxhkd dmenu
-  - pacman -S xfce4-terminal
-  - pacaur -S polybar
-  - pacaur -S physlock
-  - pacman -S maim
-  - pacman -S setroot
-  - zathura and evince (pdf readers)
-  - mpv and xf86-video-intel
-* audio
-  - install alsa-utils
-  - $ amixer sset Master unmute
-  - install pulseaudio and pulseaudio-alsa
-  - install pavucontrol and tweak settings and umute things
-  - pavucontrol is actually the volume slider, as is alsamixer
+** touchpad
+   eu botei o seguinte arquivo em /etc/X11/xorg.conf.d/30-touchpad.conf
+ #+BEGIN_SRC sh
+ # configs de touchpad
+ Section "InputClass"
+         Identifier "libinput touchpad catchall"
+         MatchIsTouchpad "on"
+         MatchDevicePath "/dev/input/event*"
+         Driver "libinput"
+	 Option "Tapping" "on"
+ EndSection
+ #+END_SRC
+
+** pacaur
+   - install from AUR.
+** aur
+   - install cower and pacaur from AUR
+** mount, umount, eject pendrives on the command line
+   - install =udiskie=. it will auto mount pendrives for you.
+*** info
+    - see [[https://askubuntu.com/a/859798/685029][this]] SO answer
+    - and [[https://unix.stackexchange.com/a/45821/155613][this]]
+    - and also [[https://unix.stackexchange.com/a/178648/155613][this]]
+    - udiskie already auto mounts pendrives for you.
+*** the simple way step
+    1. identify the disk with =lsblk -fm=
+    2. verify if the disk is already mounted with =df -h=
+    3. umont with =sudo umount /mnt/sdn=, or =sudo umount /dev/sdxm=
+*** the professional way (udiskie)
+    1. identify the disk with =lsblk -fm=
+    2. verify if the disk is already mounted with =df -h=
+    3. udisksctl =unmount -b /dev/sda1= (use this to just umount the drive)
+    4. udisksctl =power-off -b /dev/sda=
+
+** polybar
+   - pacaur -S ttf-font-awesome office-code-pro adobe-source-code-pro-fonts ttf-iosevka-term-ss07
+   - xf86-video-intel
+   - from https://github.com/jaagr/polybar/issues/176#issuecomment-261817530
+     - pacman -S wireless_tools
+   - pacaur -S polybar-git
+
+** dropbox
+   - pacaur -S xdg-utils
+   - pacaur -S dropbox-cli
+   - pacman -S nautilus
+   - pacaur -S nautilus-dropbox
+   - dropbox-cli start
+** additional tools
+   - pacman -S xfce4-terminal
+   - pacaur -S physlock
+   - pacman -S maim
+   - pacman -S bspwm sxhkd dmenu
+   - evince (pdf readers)
+   - mpv and 
+** audio
+   - install alsa-utils
+   - $ amixer sset Master unmute
+   - install pulseaudio and pulseaudio-alsa
+   - install pavucontrol and tweak settings and umute things
+   - pavucontrol is actually the volume slider, as is alsamixer
 * github
 ** generate ssh-key
 
