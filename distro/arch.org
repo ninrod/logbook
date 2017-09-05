@@ -295,8 +295,9 @@ EndSection
    - pacaur -S physlock
    - pacman -S maim
    - pacman -S bspwm sxhkd dmenu
+   - pacman -S rsync
    - evince (pdf readers)
-   - mpv and 
+   - mpv and mpd
 ** audio
    - install alsa-utils
    - $ amixer sset Master unmute
