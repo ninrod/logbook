@@ -304,6 +304,25 @@ EndSection
    - install pulseaudio and pulseaudio-alsa
    - install pavucontrol and tweak settings and umute things
    - pavucontrol is actually the volume slider, as is alsamixer
+* xdg-open
+** to set default apps for filetypes
+   - taken from [[https://bbs.archlinux.org/viewtopic.php?id=93956][here]]
+#+BEGIN_SRC sh
+
+  # Get the registered filetype of the file (NB. I just picked a pdf file)
+  $ xdg-mime query filetype Documents/Stuff/Stuff.pdf
+  application/pdf; charset=binary
+
+  # Make evince the default for opening files of type application/pdf
+  $ xdg-mime default evince.desktop application/pdf
+  $ xdg-mime query default application/pdf
+  evince.desktop
+
+  # Confirmation that the default took
+  $ xdg-open Documents/Stuff/Stuff.pdf
+  method return sender=:1.6 -> dest=:1.27 reply_serial=2
+
+#+END_SRC
 * mount, umount, eject pendrives on the command line
   - install =udiskie=. it will auto mount pendrives for you.
 ** info
