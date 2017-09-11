@@ -308,7 +308,8 @@ EndSection
   - read arch wiki entry on docker
   - pacman -S docker
   - had to add ninrod to group docker
-  - systemctl start docker
+  - systemctl start docker.service
+  - systemctl enable docker.service
 * xdg-open
 ** to set default apps for filetypes
    - taken from [[https://bbs.archlinux.org/viewtopic.php?id=93956][here]]
