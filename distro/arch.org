@@ -225,7 +225,9 @@ EndSection
 *** fix cedilha in US-international with deadkeys
 **** if using en_US.UTF-8 as lang
 
-   - stolen from: [[https://gist.github.com/ninrod/a29a99a20e695ba1a2ce7e774803a501][here]]
+   - =NOTE=: if gtk or other correlated system files gets updated, you have to perfom this again!
+
+   - originally stolen from: [[https://gist.github.com/ninrod/a29a99a20e695ba1a2ce7e774803a501][here]]
    #+BEGIN_SRC txt
    Author: Nilo Dantas - n1lo
    Based on: https://bugs.launchpad.net/ubuntu/+source/ibus/+bug/518056 - helio-valente post
