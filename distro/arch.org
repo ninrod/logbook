@@ -290,6 +290,7 @@ EndSection
 - from [[https://wiki.archlinux.org/index.php/fonts#Non-latin_scripts][here]]
 - adobe-source-han-sans-otc-fonts - Sans fonts
 - adobe-source-han-serif-otc-fonts - Serif fonts
+- ttf-hannom
 
 ** dropbox
    - pacaur -S xdg-utils
