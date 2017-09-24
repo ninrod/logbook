@@ -284,6 +284,12 @@ EndSection
    - from https://github.com/jaagr/polybar/issues/176#issuecomment-261817530
      - pacman -S wireless_tools
    - pacaur -S polybar-git
+** fonts
+*** install non latin fonts
+
+- from [[https://wiki.archlinux.org/index.php/fonts#Non-latin_scripts][here]]
+- adobe-source-han-sans-otc-fonts - Sans fonts
+- adobe-source-han-serif-otc-fonts - Serif fonts
 
 ** dropbox
    - pacaur -S xdg-utils
