@@ -156,6 +156,13 @@ ninrod ALL=(ALL) ALL
 ** wifi / networking
    - =netctl enable profile= to permanent add your profile
 
+** wifi network strength query
+
+#+BEGIN_SRC sh
+$ iwconfig wlp4s0|grep -i --color quality
+# or use wavemon (pacman -S wavemon)
+#+END_SRC
+
 * X
   - had to install xorg and xorg-xinit
 * dropbox
