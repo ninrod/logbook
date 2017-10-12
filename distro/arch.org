@@ -325,6 +325,8 @@ EndSection
     - https://wiki.archlinux.org/index.php/java#Impersonate_another_window_manager
     - This works because the JVM contains a hard-coded list of known, non-re-parenting window managers. For maximum irony, 
 some users prefer to impersonate LG3D, the non-re-parenting window manager
+*** use the AUR version of the community edition, that comes bundled with a jetbrains JRE
+    - [[https://aur.archlinux.org/packages/intellij-idea-ce/][intellij-idea-ce]]
 * docker
   - read arch wiki entry on docker
   - pacman -S docker
