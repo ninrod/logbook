@@ -323,6 +323,7 @@ EndSection
 ** java
 *** use the impersonate another window manager trick (to run intellij, etc...)
     - https://wiki.archlinux.org/index.php/java#Impersonate_another_window_manager
+    - resume: apparently, jdk has a whitelist of non-parenting window managers that are supported.
 * docker
   - read arch wiki entry on docker
   - pacman -S docker
