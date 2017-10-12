@@ -320,6 +320,9 @@ EndSection
    - install pulseaudio and pulseaudio-alsa
    - install pavucontrol and tweak settings and umute things
    - pavucontrol is actually the volume slider, as is alsamixer
+** java
+*** use the impersonate another window manager trick (to run intellij, etc...)
+    - https://wiki.archlinux.org/index.php/java#Impersonate_another_window_manager
 * docker
   - read arch wiki entry on docker
   - pacman -S docker
