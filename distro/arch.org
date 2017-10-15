@@ -327,6 +327,8 @@ EndSection
 some users prefer to impersonate LG3D, the non-re-parenting window manager
 *** use the AUR version of the community edition, that comes bundled with a jetbrains JRE
     - [[https://aur.archlinux.org/packages/intellij-idea-ce/][intellij-idea-ce]]
+** whatsapp
+   - install whatsie from AUR
 * docker
   - read arch wiki entry on docker
   - pacman -S docker
