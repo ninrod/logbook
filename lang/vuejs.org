@@ -1,0 +1,3 @@
+- proxy problems with vue-cli:
+https://github.com/vuejs/vue-cli/issues/258
+
