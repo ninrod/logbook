@@ -17,3 +17,4 @@
 * find what package provides what binary
 
 - =yum provides $(which pkill)=
+* show package upgrade history
