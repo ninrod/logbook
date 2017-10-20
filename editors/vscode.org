@@ -1,0 +1,5 @@
+* problem getting the capslock to esc binding to work in vscode
+place this in settings.json
+#+BEGIN_SRC js
+"keyboard.dispatch": "keyCode"
+#+END_SRC
