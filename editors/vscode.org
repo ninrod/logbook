@@ -1,4 +1,5 @@
 * problem getting the capslock to esc binding to work in vscode
+- tip stolen from [[https://github.com/VSCodeVim/Vim/issues/854#issuecomment-316646622][here]]
 place this in settings.json
 #+BEGIN_SRC js
 "keyboard.dispatch": "keyCode"
