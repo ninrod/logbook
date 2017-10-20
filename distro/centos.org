@@ -17,4 +17,10 @@
 * find what package provides what binary
 
 - =yum provides $(which pkill)=
-* show package upgrade history
+* locally install packages with local dependencies
+  - more info [[https://stackoverflow.com/a/16406806/4921402][here]]
+#+BEGIN_SRC sh
+# for example centos has golang-1.6, and you have 5 rpms for golang1.9: golang-src, golan-bin, blah in the current folder
+yum --nogpgcheck localinstall golang*
+# done!
+#+END_SRC
