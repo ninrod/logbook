@@ -6,6 +6,8 @@ emacs -Q
 
 * emacs broke flowchart
 - [[http://brause.cc/emacs-flowchart.png][emacs-flowchart.png]]
+* start emacsclient from an app link
+- http://dlukes.github.io/emacs-daemon-osx.html
 * locally force a mode inside a file
 - see here [[http://emacs.stackexchange.com/a/26508/12585][emacs.stackexchange]]
 - for example, put this on top of your shell file (but substitute for sh)
