@@ -85,3 +85,20 @@ echo hello >>> #<buffer *scratch*>
      ;; this is buffer local
      (setq mode-line-format nil)
    #+END_SRC
+* edbug
+** cheatsheet
+
+- all these work in evil with:
+
+#+BEGIN_SRC emacs-lisp
+(add-hook 'edebug-mode-hook 'evil-normalize-keymaps)
+#+END_SRC
+
+| key | action                                |
+|-----+---------------------------------------|
+| i   | step inside                           |
+| c   | continue                              |
+| SPC | next step                             |
+| v   | switch cursor to live-editor position |
+| w   | switch back to debug mode             |
+
