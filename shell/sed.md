@@ -19,3 +19,9 @@ $ sed -r 's/^.{15}//' < ~/.zsh_history | sort | uniq -c | sort -rn | head -n 10
 # the regex is striping everything from the first '/' to the end of the filename.
 $ git ls-files -d | sed 's/\/.*$//g' | sort | uniq
 ```
+
+## replace regex of a file inplace
+
+```sh
+sed -i.bak 's/your/regex/g' file.txt
+```
