@@ -11,9 +11,15 @@ emacs -Q
 * locally force a mode inside a file
 - see here [[http://emacs.stackexchange.com/a/26508/12585][emacs.stackexchange]]
 - for example, put this on top of your shell file (but substitute for sh)
-  #+BEGIN_SRC txt
-# -*- mode: org -*-
+  #+BEGIN_SRC emacs-lisp
+;; -*- mode: org -*-
   #+END_SRC
+* locally force a minor mode inside a file
+#+BEGIN_SRC emacs-lisp
+;; Local Variables:
+;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode +1))
+;; End:
+#+END_SRC
 * eshell
 ** to redirect the output of a command
 #+BEGIN_SRC shell
