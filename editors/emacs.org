@@ -91,7 +91,7 @@ echo hello >>> #<buffer *scratch*>
      ;; this is buffer local
      (setq mode-line-format nil)
    #+END_SRC
-* edbug
+* edebug
 ** cheatsheet
 
 - all these work in evil with:
@@ -107,4 +107,8 @@ echo hello >>> #<buffer *scratch*>
 | SPC | next step                             |
 | v   | switch cursor to live-editor position |
 | w   | switch back to debug mode             |
+
+** interesting functions
+
+- lispy-edebug-stop
 
