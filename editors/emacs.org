@@ -111,4 +111,8 @@ echo hello >>> #<buffer *scratch*>
 ** interesting functions
 
 - lispy-edebug-stop
+* lispy
 
+| key | action                                |
+|-----+---------------------------------------|
+| ?   | format the form                       |
