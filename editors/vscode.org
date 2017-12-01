@@ -4,3 +4,5 @@ place this in settings.json
 #+BEGIN_SRC js
 "keyboard.dispatch": "keyCode"
 #+END_SRC
+* disable selection copy (in X)
+  - add: ="editor.selectionClipboard": false,=
