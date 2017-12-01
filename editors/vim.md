@@ -20,6 +20,12 @@ nnoremap <Plug>(blankDown) :<C-u>call <SID>blankDown()<CR>
 nmap K <Plug>(blankDown)
 ```
 
+## what vimrc file is vim using?
+
+```viml
+:echo $MYVIMRC
+```
+
 ## Top rebindable binds
 
 * `g + char`: `gb`, `gf`, `gh`,`gl`,`gp`,`gr`,`gs`,`gx`,`gy`,`gz`, `go`, `g<cr>`, `g<space>`.
