@@ -440,6 +440,8 @@ $ man maim # for more options
 - [[https://superuser.com/questions/813421/can-you-extend-the-expiration-date-of-an-already-expired-gpg-key/814663#814663][extend the expiration date of an already expired key]]
 * video recording
   - [[https://wiki.archlinux.org/%209.php/FFmpeg#Package_installation][ffmpeg]]
+* dictionary
+  - install aspell-en and aspell-pt
 * caveats, pitfalls and traps
   - don't install =ibus=. If you do that, inkscape and visual studio code will not work, among other things.
   - do not use gtk_module=anything globally. It will fuck up many apps, including thunar, darktable and inkscape.
