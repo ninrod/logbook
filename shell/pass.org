@@ -1,4 +1,4 @@
-* to use pass in multiple computers
+* use pass in multiple computers
   - from this [[https://superuser.com/a/1071104/555734][tip]]
 
   #+BEGIN_SRC sh
