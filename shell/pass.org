@@ -15,3 +15,5 @@
   # now use pass at will (will ask for your passphrase)
   pass minha/senha/legal
   #+END_SRC
+
+  - note that you have to have a valid ~/.password-store dir
