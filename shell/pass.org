@@ -17,3 +17,4 @@
   #+END_SRC
 
   - note that you have to have a valid ~/.password-store dir
+  - to restart gpg-agent use: =gpg-connect-agent reloadagent /bye=
