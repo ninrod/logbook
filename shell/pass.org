@@ -23,3 +23,8 @@
 #+BEGIN_SRC sh
 gpg-connect-agent reloadagent /bye
 #+END_SRC
+
+** to trust the imported key
+#+BEGIN_SRC sh
+gpg --edit-key "MY KEY ID" trust
+#+END_SRC
