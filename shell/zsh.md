@@ -256,6 +256,14 @@ $ /usr/local/Cellar/zsh/5.0.8/share/zsh/functions
   * tinha um `_git` symlink e um link para um bash completions. retirei esses links e funcionou perfeitamente.
   * a `_git` symlink and a link to a bash completion. I removed these and everything worked like a charm.
 
+## restart compinit
+
+from this [tip](https://github.com/justwatchcom/gopass/issues/585#issuecomment-355345970):
+
+```sh
+autoload -U compinit && compinit
+```
+
 ## interesting links, tutorials, infos, docs, you name it
 
 [ZSH Gems series #2](http://www.refining-linux.org/archives/37/ZSH-Gem-2-Extended-globbing-and-expansion/#CommentsPane)
