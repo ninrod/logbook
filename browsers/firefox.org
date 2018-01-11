@@ -1,0 +1,5 @@
+* disable www. and .com autocompletion
+- see this so [[https://stackoverflow.com/a/11582978][question]]
+- just turn these properties to false in about:config
+  - browser.fixup.alternate.enabled
+  - browser.urlbar.autocomplete.enabled
