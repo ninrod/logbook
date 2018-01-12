@@ -165,7 +165,6 @@ $ iwconfig wlp4s0|grep -i --color quality
 
 * X
   - had to install xorg and xorg-xinit
-* dropbox
 * Great XKB hellish configuration
 ** a new hope: create options
    - blog [[https://realh.co.uk/wp/linux-keymap-hacking/][post]] looks promissing
@@ -334,6 +333,8 @@ some users prefer to impersonate LG3D, the non-re-parenting window manager
    - install whatsie from AUR
 ** telegram
    - pacaur -S telegram-desktop-bin
+* blue light filter
+  - pacman -S redshift
 * firefox-quantum
   - [[https://fedoramagazine.org/how-to-get-firefox-looking-right-on-a-high-dpi-display-and-fedora/][ajustando ui-scale (zoom)]]
 * docker
@@ -445,3 +446,5 @@ $ man maim # for more options
 * caveats, pitfalls and traps
   - don't install =ibus=. If you do that, inkscape and visual studio code will not work, among other things.
   - do not use gtk_module=anything globally. It will fuck up many apps, including thunar, darktable and inkscape.
+* clipboard
+  - why you cannot paste after copying some text and exit source application? Here's the [[https://stackoverflow.com/a/3571949/4921402][answer]].
