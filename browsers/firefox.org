@@ -3,3 +3,6 @@
 - just turn these properties to false in about:config
   - browser.fixup.alternate.enabled
   - browser.urlbar.autocomplete.enabled
+* zoom scale adjust
+  - [[https://fedoramagazine.org/how-to-get-firefox-looking-right-on-a-high-dpi-display-and-fedora/][ajustando ui-scale (zoom)]]
+
