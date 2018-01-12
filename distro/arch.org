@@ -448,3 +448,6 @@ $ man maim # for more options
   - do not use gtk_module=anything globally. It will fuck up many apps, including thunar, darktable and inkscape.
 * clipboard
   - why you cannot paste after copying some text and exit source application? Here's the [[https://stackoverflow.com/a/3571949/4921402][answer]].
+  - pacman -S rofi
+  - yay -S greenclip
+
