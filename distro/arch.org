@@ -426,11 +426,6 @@ $ man maim # for more options
    - pacman -S =gucharmap=
 ** viewing available fonts
    - =$ fc-list=
-* julicloud | wdmycloudx2 | nfs
-  1. export the share as NFS
-  2. showmount -e server
-  3. nmap: =nmap -p 111 192.168.0.0/24=
-  4. =sudo mount server:/path/of/the/mount /mnt/mountpoint=
 * mpd + ncmpcpp
   - pacman -S mpd ncmpcpp
   - ncmpcpp [[https://wiki.archlinux.org/index.php/Ncmpcpp][arch wiki]]
@@ -444,6 +439,11 @@ $ man maim # for more options
 * caveats, pitfalls and traps
   - don't install =ibus=. If you do that, inkscape and visual studio code will not work, among other things.
   - do not use gtk_module=anything globally. It will fuck up many apps, including thunar, darktable and inkscape.
+* julicloud | wdmycloudx2 | nfs
+  1. export the share as NFS
+  2. showmount -e server
+  3. nmap: =nmap -p 111 192.168.0.0/24=
+  4. =sudo mount server:/path/of/the/mount /mnt/mountpoint=
 * clipboard
   - why you cannot paste after copying some text and exit source application? Here's the [[https://stackoverflow.com/a/3571949/4921402][answer]].
   - pacman -S rofi
