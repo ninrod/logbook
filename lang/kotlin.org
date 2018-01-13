@@ -1,0 +1,4 @@
+* Kotlin In Action Notes
+** when: interesting construct
+ - to use when you have if/else branches that check type.
+ - ref: listing 2.20
