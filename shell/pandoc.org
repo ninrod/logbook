@@ -1,0 +1,4 @@
+* convert file from org-mode to markdown
+#+BEGIN_SRC sh
+pandoc -s "a.md" -o "a.org"
+#+END_SRC
