@@ -1,0 +1,2 @@
+* what jdk was used to compile this .class?
+- there's a =javap -verbose= [[https://stackoverflow.com/a/27505/4921402][command]]
