@@ -1,0 +1,12 @@
+* distro
+  - fedora 25
+  - debian
+  - arch linux
+* image programs
+  - lightroom -> darktable
+  - photoshop -> gimp
+  - illustrator -> inkscape
+* spreadsheet
+  - excel -> libreoffice + python pandas,numpy,matplotlib
+* text editing
+  - word -> emacs with latex / libre writer
