@@ -58,7 +58,10 @@ $ docker inspect -f '{{.NetworkSettings.Gateway}}' $HOSTNAME
 #+BEGIN_SRC sh
     alias dp='docker ps --format="table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Command}}\t{{.Status}}"'
 #+END_SRC
-
+* docker run
+#+BEGIN_SRC shell
+docker run --privileged --security-opt=seccomp=unconfined
+#+END_SRC
 * docker inspect
 ** discover what is the real path of a mountpoint from within a container
 
