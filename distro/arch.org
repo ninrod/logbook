@@ -30,6 +30,11 @@ pacman -Qent
 
 # list all foreign packages, manually installed
 pacman -Qm
+
+# list all foreign packages (m);
+# which where installed as dependencies(d);
+# which are orphans.
+pacman -Qmdt
 #+END_SRC
 
 * Install
