@@ -36,7 +36,8 @@ pacman -Qm
 # which are orphans.
 pacman -Qmdt
 #+END_SRC
-
+** log
+   - all your pacman action is registered in =/var/log/pacman.log=
 * Install
 ** NOTE
    - follow the arch wiki and complement with this section
