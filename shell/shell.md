@@ -8,6 +8,16 @@
 * __[the \[\[ operator](http://mywiki.wooledge.org/BashFAQ/031)__
 * `$ man test`
 
+## manipulating directory strings
+
+### get the parent dir of a dir string
+
+use the `dirname` utility
+
+### get the tail or the last component of a dir string
+
+use the `basename` utility
+
 ## running commands/scripts in background
 
 ```sh
