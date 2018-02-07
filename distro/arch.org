@@ -38,6 +38,8 @@ pacman -Qmdt
 #+END_SRC
 ** log
    - all your pacman action is registered in =/var/log/pacman.log=
+** makepkg
+   - makepkg --repackage: can save time if you just want to change the "depends" variable
 * Install
 ** NOTE
    - follow the arch wiki and complement with this section
