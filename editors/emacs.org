@@ -1,9 +1,12 @@
+* sudo editing files
+  - here's the trick: you have to start C-x C-f with =sudo::=
+  - in counsel-find-file -> =sudo::= -> TAB -> then just type the file
+  - then emacs will use tramp to edit the file
 * start a clean emacs
 
 #+BEGIN_SRC shell
 emacs -Q
 #+END_SRC
-
 * emacs broke flowchart
 - [[http://brause.cc/emacs-flowchart.png][emacs-flowchart.png]]
 * start emacsclient from an app link
