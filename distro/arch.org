@@ -170,17 +170,18 @@ useradd -m -g study -G wheel -s /bin/zsh ninrod
 # add ninrod
 ninrod ALL=(ALL) ALL
 #+END_SRC
+** wifi hacking
+*** wifi / networking
+    - =netctl enable profile= to permanent add your profile
 
-** wifi / networking
-   - =netctl enable profile= to permanent add your profile
+*** wifi network strength query
 
-** wifi network strength query
-
-#+BEGIN_SRC sh
-$ iwconfig wlp4s0|grep -i --color quality
-# or use wavemon (pacman -S wavemon)
-#+END_SRC
-
+ #+BEGIN_SRC sh
+ $ iwconfig wlp4s0|grep -i --color quality
+ # or use wavemon (pacman -S wavemon)
+ #+END_SRC
+*** wifi band analysis
+    - aircrack-ng
 * X
   - had to install xorg and xorg-xinit
 * Great XKB hellish configuration
@@ -440,7 +441,13 @@ cat .ssh/id_rsa.pub
 #+END_SRC
 * battery life
   - =pacman -S acpi; acpi -V=
-  - tlp stat
+  - pacman -S tlp
+  - pacman -S powertop
+  - pacman -S tlp
+  - pacman -S ethtool
+  - pacman -S smartmontools
+  - pacman -S acpi_call
+
 * hdmi
 ** video
    - just use xrandr
