@@ -3,3 +3,4 @@
  - the == operator always compares values.
  - there's a separate function in std that compares addresses
  - references are never null in rust. instead use Option<T> Some<T> or None.
+ - lifetimes: segment of your program in which references are safe to use.
