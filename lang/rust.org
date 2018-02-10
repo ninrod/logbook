@@ -1,0 +1,4 @@
+* Jim Blandy's rust book
+** chapter 05: references
+ - the == operator always compares values.
+ - there's a separate function in std that compares addresses

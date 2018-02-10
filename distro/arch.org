@@ -440,13 +440,16 @@ ssh-add ~/.ssh/id_rsa
 cat .ssh/id_rsa.pub
 #+END_SRC
 * battery life
-  - =pacman -S acpi; acpi -V=
-  - pacman -S tlp
-  - pacman -S powertop
-  - pacman -S tlp
-  - pacman -S ethtool
-  - pacman -S smartmontools
-  - pacman -S acpi_call
+
+- see [[http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html][this]] article about tlp on thinkpad
+- =pacman -S acpi; acpi -V=
+- pacman -S tlp
+- pacman -S powertop
+- pacman -S tlp
+- pacman -S ethtool
+- pacman -S smartmontools
+- pacman -S tp_smapi acpi_call
+- if not using NetworkManager, edit tlp.service unit file
 
 * hdmi
 ** video
