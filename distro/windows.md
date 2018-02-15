@@ -22,3 +22,7 @@ gpresult /V
 * To export all putty configs: `regedit /e "%userprofile%\desktop\putty.reg" HKEY_CURRENT_USER\Software\SimonTatham`
 
 [1]: <http://www.sevenforums.com/tutorials/87555-user-profile-change-default-location.html>
+
+### directory size trick
+
+* just use the app: `windirstat`
