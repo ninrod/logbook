@@ -248,7 +248,7 @@ EndSection
   #+END_SRC
 
 *** fix cedilha in US-international with deadkeys
-**** if using en_US.UTF-8 as lang
+**** if using en_US.UTF-8 as lang (gtk fix. do this after every gtk update)
 
    - =NOTE=: if gtk or other correlated system files gets updated, you have to perfom this again!
 
