@@ -504,6 +504,9 @@ $ man maim # for more options
   - yay -S greenclip
 * picture viewer
   - sxiv
+* pdf viwer
+  - evince
+  - mupdf
 * mini desktop environment
   - pcmanfm-gtk3: desktop simulation
   - dunst and libnotify: notifications
