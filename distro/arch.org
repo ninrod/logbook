@@ -441,6 +441,7 @@ cat .ssh/id_rsa.pub
 #+END_SRC
 * battery life
 
+- go to your bios and disable all "wake-on-lan" capabilities. this turns off any eth0 lights that might be on.
 - see [[http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html][this]] article about tlp on thinkpad
 - =pacman -S acpi; acpi -V=
 - pacman -S tlp
