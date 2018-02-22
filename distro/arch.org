@@ -397,7 +397,6 @@ some users prefer to impersonate LG3D, the non-re-parenting window manager
     3. =udisksctl unmount -b /dev/sda1= (use this to just umount the drive)
     4. =udisksctl power-off -b /dev/sda=
 ** mount na unha
-*** udiskie already auto mounts pendrives for you
 *** mount na unha
 #+BEGIN_SRC sh
   # acha a partição
@@ -406,14 +405,14 @@ some users prefer to impersonate LG3D, the non-re-parenting window manager
   # monta a partição (quando for uma partição bizarra tem que passar o type)
   mount /dev/sda1 /minha/pasta
 
-# para saber saber se tá montado ou não:
-mount | grep /dev/sda1
+  # para saber saber se tá montado ou não:
+  mount | grep /dev/sda1
 
-# para desmontar
-umount /dev/sda1
+  # para desmontar
+  umount /dev/sda1
 
-# ou
-umount minhapasta
+  # ou
+  umount minhapasta
 
 #+END_SRC
 ** formatting
