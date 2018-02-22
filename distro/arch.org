@@ -512,3 +512,9 @@ $ man maim # for more options
   - dunst and libnotify: notifications
   - tumbler, freetype2, ffmpegthumbnailer: thumbnail preview
   - file-roller: mouse driven file compression
+* android development
+  - seems like I have to have genymotion as an emulator
+  - yay android-studio
+* steam
+  - enable multilib
+  - pacman -S ttf-liberation steam
