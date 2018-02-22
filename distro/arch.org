@@ -502,4 +502,5 @@ $ man maim # for more options
   - why you cannot paste after copying some text and exit source application? Here's the [[https://stackoverflow.com/a/3571949/4921402][answer]].
   - pacman -S rofi
   - yay -S greenclip
-
+* desktop icons, wallpaper
+  - install the pcmanfm-gtk3 package
