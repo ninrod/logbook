@@ -507,6 +507,7 @@ $ man maim # for more options
 * pdf viwer
   - evince
   - mupdf
+  - qpdfview
 * mini desktop environment
   - pcmanfm-gtk3: desktop simulation
   - dunst and libnotify: notifications
