@@ -513,8 +513,19 @@ $ man maim # for more options
   - tumbler, freetype2, ffmpegthumbnailer: thumbnail preview
   - file-roller: mouse driven file compression
 * android development
-  - seems like I have to have genymotion as an emulator
-  - yay android-studio
+** fix libstdc++ incompatibility
+   - hack found here
+   #+BEGIN_SRC sh
+$ cd $ANDROID_SDK_HOME/emulator/lib64/libstdc++/
+$ mkdir old
+$ mv *.so* old/
+$ ln -s /usr/lib/libstdc++.so.6
+$ ln -s /usr/lib/libstdc++.so.6.*
+   #+END_SRC
+   - [[https://bbs.archlinux.org/viewtopic.php?pid=1698496#p1698496][fix libstdc++ incompatibility]]
+** packages
+   - yay android-studio
+   - seems like I can have genymotion as an emulator
 * steam
   - enable multilib
   - pacman -S ttf-liberation steam
