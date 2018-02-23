@@ -512,7 +512,7 @@ $ man maim # for more options
   - dunst and libnotify: notifications
   - tumbler, freetype2, ffmpegthumbnailer: thumbnail preview
   - file-roller: mouse driven file compression
-* android development
+* android
 ** fix libstdc++ incompatibility
    - hack found here
    #+BEGIN_SRC sh
@@ -526,6 +526,6 @@ $ ln -s /usr/lib/libstdc++.so.6.*
 ** packages
    - yay android-studio
    - seems like I can have genymotion as an emulator
-* steam
-  - enable multilib
-  - pacman -S ttf-liberation steam
+* galaxy s8+
+  - android-file-transfer
+  - libmtp
