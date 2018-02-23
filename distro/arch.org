@@ -303,8 +303,9 @@ EndSection
    - install from AUR.
 ** aur
    - install cower and pacaur from AUR
-** polybar
-   - pacaur -S ttf-font-awesome office-code-pro adobe-source-code-pro-fonts ttf-iosevka-term-ss07
+** polybar (fonts)
+   - yay ttf-font-awesome phallus-fonts-git aur/ttf-fantasque-sans-mono
+   - sunaku's tamzen font (aur/tamzen-font-git)
    - xf86-video-intel
    - from https://github.com/jaagr/polybar/issues/176#issuecomment-261817530
      - pacman -S wireless_tools
