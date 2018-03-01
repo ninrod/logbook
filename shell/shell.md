@@ -8,6 +8,10 @@
 * __[the \[\[ operator](http://mywiki.wooledge.org/BashFAQ/031)__
 * `$ man test`
 
+## memory comsumption
+
+    free -hm
+
 ## manipulating directory strings
 
 ### get the parent dir of a dir string

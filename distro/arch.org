@@ -530,3 +530,52 @@ $ ln -s /usr/lib/libstdc++.so.6.*
 * galaxy s8+
   - android-file-transfer
   - libmtp
+* network manager
+** step 01: pacman -S
+
+#+BEGIN_SRC sh
+sudo pacman -S networkmanager-applet network-manager-applet gnome-keyring libsecret
+#+END_SRC
+
+** step 02: disable other network managers
+   - sudo netctl disable [suaconfig]
+   - sudo netctl stop-all
+   - systemctl enable NetworkManager.service
+   - systemctl start NetworkManager.service
+** step 03: keyring bspwm config
+   #+BEGIN_SRC sh
+     # nm-applet
+     eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg.pkcs11,secrets,ssh)
+     export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT SSH_AUTH_SOCK
+     nm-applet &
+   #+END_SRC
+** step 04: polybar tray configuration
+
+#+BEGIN_SRC sh
+tray-position = right
+tray = right
+tray-padding = 2
+tray-transparent = false
+#+END_SRC
+
+** step 05: check and fix docker routes, if applicable
+   #+BEGIN_SRC sh
+     # temos que desabilitar as rotas do docker
+     ~ ➜ ip route
+     default via 172.16.208.1 dev wlp4s0 proto dhcp metric 20600
+     172.16.208.0/20 dev wlp4s0 proto kernel scope link src 172.16.219.73 metric 600
+     172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown
+     172.18.0.0/16 dev br-0daf25f23956 proto kernel scope link src 172.18.0.1 linkdown
+     172.19.0.0/16 dev br-c873c5433d4e proto kernel scope link src 172.19.0.1 linkdown
+     ~ ➜ ip route delete 172.17.0.0/16
+     RTNETLINK answers: Operation not permitted
+     ~ ➜ sudo ip route delete 172.17.0.0/16
+     ~ ➜ ip route
+     default via 172.16.208.1 dev wlp4s0 proto dhcp metric 20600
+     172.16.208.0/20 dev wlp4s0 proto kernel scope link src 172.16.219.73 metric 600
+     172.18.0.0/16 dev br-0daf25f23956 proto kernel scope link src 172.18.0.1 linkdown
+     172.19.0.0/16 dev br-c873c5433d4e proto kernel scope link src 172.19.0.1 linkdown
+     ~ ➜ 
+
+   #+END_SRC
+
