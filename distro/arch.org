@@ -452,10 +452,16 @@ cat .ssh/id_rsa.pub
 - pacman -S tp_smapi acpi_call
 - if not using NetworkManager, edit tlp.service unit file
 
-* hdmi
+* hdmi | display port | xrandr/randr | set screen resolution
 ** video
-   - just use xrandr
-   - =xrandr --output HDMI2 --auto=
+   - just use =xrandr= (package: xorg-xrandr)
+   - another possibility is to use the =lxrandr-gtk3= package, a graphical frontend
+   - =arandr= is another very interesting package
+   - if using only xorg-xrandr:
+#+BEGIN_SRC sh
+xrandr --output HDMI2 --auto
+xrandr --output DP1 --mode 1920x1080 # to define a resolution
+#+END_SRC
 ** audio
    - just use pavucontrol
 * infernal beep
