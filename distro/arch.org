@@ -584,4 +584,8 @@ tray-transparent = false
      ~ ➜ 
 
    #+END_SRC
+* linux: console terminal access from anywhere
+  - ctrl + alt + number
+  - generally, ctrl+alt+1 is already "in use"
+  - try 2 or 3 or 4 and you will be all set
 
