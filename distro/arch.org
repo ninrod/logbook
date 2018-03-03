@@ -588,4 +588,14 @@ tray-transparent = false
   - ctrl + alt + number
   - generally, ctrl+alt+1 is already "in use"
   - try 2 or 3 or 4 and you will be all set
+* gdm / login manager
+#+BEGIN_SRC sh
+# /var/lib/AccountsService/users/username
+
+# write this line
+XSession=bspwm
+
+# note: your bspwm script has to have all the configuration
+# xinitrc must only have one line: exec bspwm
+#+END_SRC
 
