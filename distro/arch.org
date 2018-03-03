@@ -585,9 +585,9 @@ tray-transparent = false
 
    #+END_SRC
 * linux: console terminal access from anywhere
-  - ctrl + alt + number
-  - generally, ctrl+alt+1 is already "in use"
-  - try 2 or 3 or 4 and you will be all set
+  - ctrl + alt + F[n]
+  - generally, ctrl+alt+F1 is already "in use"
+  - try F2 or F3 or F4 and you will be all set
 * gdm / login manager
 #+BEGIN_SRC sh
 # /var/lib/AccountsService/users/username
