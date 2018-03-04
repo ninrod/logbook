@@ -452,7 +452,7 @@ cat .ssh/id_rsa.pub
 - pacman -S tp_smapi acpi_call
 - if not using NetworkManager, edit tlp.service unit file
 
-* hdmi | display port | xrandr/randr | set screen resolution
+* hdmi | display port | chromcast | xrandr/randr | set screen resolution
 ** video
    - just use =xrandr= (package: xorg-xrandr)
    - another possibility is to use the =lxrandr-gtk3= package, a graphical frontend
@@ -463,7 +463,10 @@ xrandr --output HDMI2 --auto
 xrandr --output DP1 --mode 1920x1080 # to define a resolution
 #+END_SRC
 ** audio
-   - just use pavucontrol
+   - pavucontrol is the answer here for hdmi
+** chromecast
+   - to cast the whole screen to chrome cast, just use google chrome
+   - on the settings button, upper right corner, there's a =cast= option. go from there.
 * infernal beep
   - taken from [[https://wiki.archlinux.org/index.php/PC_speaker][here]]
   #+BEGIN_SRC sh
