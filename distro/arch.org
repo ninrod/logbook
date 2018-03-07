@@ -497,6 +497,7 @@ $ man maim # for more options
    - mpd [[https://wiki.archlinux.org/index.php/Music_Player_Daemon][arch wiki]]
 ** cmus
    - pacman -S cmus
+   - cmus on [[https://wiki.archlinux.org/index.php/Cmus][arch wiki]]
 * gpg and pass
 - [[https://superuser.com/questions/813421/can-you-extend-the-expiration-date-of-an-already-expired-gpg-key/814663#814663][extend the expiration date of an already expired key]]
 * video recording
