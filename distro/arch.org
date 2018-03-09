@@ -239,6 +239,8 @@ EndSection
 6. reboot and login
 ** fix virtual console
    - just copy the ~/.options/arch/vconsole/vconsole.conf to /etc/vconsole.conf
+   - or you can setfont [thefont]
+   - setfont ter-228b
 ** fix layout
 *** fix layout
 
@@ -469,10 +471,15 @@ xrandr --output DP1 --mode 1920x1080 # to define a resolution
    - to cast the whole screen to chrome cast, just use google chrome
    - on the settings button, upper right corner, there's a =cast= option. go from there.
 * infernal beep
-  - taken from [[https://wiki.archlinux.org/index.php/PC_speaker][here]]
-  #+BEGIN_SRC sh
-    echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
-  #+END_SRC
+- tips taken from [[https://wiki.archlinux.org/index.php/PC_speaker][here]]
+** stop udev from loading pcspeaker module
+#+BEGIN_SRC sh
+$ echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
+#+END_SRC
+** unload the pc speaker kernel module
+#+BEGIN_SRC sh
+$ rmmod pcspkr
+#+END_SRC
 * screenshots
 
 #+BEGIN_SRC sh
