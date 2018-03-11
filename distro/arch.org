@@ -617,4 +617,8 @@ XSession=bspwm
 # note: your bspwm script has to have all the configuration
 # xinitrc must only have one line: exec bspwm
 #+END_SRC
-
+* lock on lid close
+  - place the appropriate unit file in  /etc/systemd/system. it will life on ~/.options/arch/systemd/suspend@ninrod.service
+  - sudo systemctl enable suspend@ninrod.service
+  - sudo systemctl start suspend@ninrod.service
+  - edit /etc/systemd/logind.conf and uncomment HandleLidSwitch=suspend
