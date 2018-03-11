@@ -621,4 +621,3 @@ XSession=bspwm
   - place the appropriate unit file in  /etc/systemd/system. it will life on ~/.options/arch/systemd/suspend@ninrod.service
   - sudo systemctl enable suspend@ninrod.service
   - sudo systemctl start suspend@ninrod.service
-  - edit /etc/systemd/logind.conf and uncomment HandleLidSwitch=suspend
