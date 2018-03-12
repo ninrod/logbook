@@ -495,7 +495,7 @@ $ man maim # for more options
 ** font | char viewer (fontawesome, nerdfonts, material icons, etc...)
    - tip from [[https://redd.it/6l3ivb][here]]
    - pacman -S =gucharmap=
-   - choose view -> by unicode block, then mark show only glyphs by this font. now scroll down and copy whatever you want
+   - choose view -> by unicode block, then mark show only glyphs by this font. go to "private use" in the left menu
 ** viewing available fonts
    - =$ fc-list=
 * mp3
