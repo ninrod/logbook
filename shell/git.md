@@ -457,6 +457,15 @@ $ git merge
 $ git tag -a "my-wonderful-tag-$(git describe --abbrev=7 --tags)" -m 'tag msg'
 ```
 
+
+## git rev-list, git rev-parse
+
+### list all commits of a repo in short form
+
+```sh
+~ ➜ git rev-list --all | tr '\n' '\0' | xargs -0 -n1 git rev-parse --short
+```
+
 ## Other useful commands
 
 * turn off git tracking for a specific file: `git update-index --skip-worktree Gruntfile.js`
