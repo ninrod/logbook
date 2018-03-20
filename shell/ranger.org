@@ -1,0 +1,3 @@
+* to toggle showing hidden files
+  - type =zh=
+  - more tips [[https://github.com/ranger/ranger/blob/master/ranger/config/rc.conf][here]]
