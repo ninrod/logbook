@@ -512,6 +512,7 @@ $ man maim # for more options
 ** spotify
    - yay spotify
    - install playerctl: pacman -S playerctl
+   - warning: maybe you have to pacman -S libcurl-gnutls if you get errors while loading libcurl*.so.4
 * gpg and pass
 - [[https://superuser.com/questions/813421/can-you-extend-the-expiration-date-of-an-already-expired-gpg-key/814663#814663][extend the expiration date of an already expired key]]
 * video recording
