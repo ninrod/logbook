@@ -178,7 +178,7 @@ ninrod ALL=(ALL) ALL
 
  #+BEGIN_SRC sh
  $ iwconfig wlp4s0|grep -i --color quality
- # or use wavemon (pacman -S wavemon)
+ # or use sudo wavemon (pacman -S wavemon)
  #+END_SRC
 *** wifi band analysis
     - aircrack-ng
