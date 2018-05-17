@@ -1,0 +1,18 @@
+* cursor shape hacks
+
+  - see this [[https://github.com/syl20bnr/spacemacs/issues/7112#issuecomment-389855491][comment]]
+  - see this [[https://vt100.net/docs/vt510-rm/DECSCUSR][doc]]
+
+#+BEGIN_SRC emacs-lisp
+For vte based terminal (termite) this works for me:
+(add-hook 'evil-insert-state-entry-hook (lambda () (send-string-to-terminal "\033[5 q")))
+(add-hook 'evil-normal-state-entry-hook (lambda () (send-string-to-terminal "\033[0 q")))
+0, 2- box
+1 - blinking box
+3 - blinking underline
+4 - steady underline
+5 - blinking bar
+6 - steady bar
+Try it by yourself in terminal with e.g. printf '\033[5 q'
+also see https://vt100.net/docs/vt510-rm/DECSCUSR
+#+END_SRC
