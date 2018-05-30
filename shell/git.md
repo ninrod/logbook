@@ -14,6 +14,12 @@ $ cd $(git rev-parse --show-toplevel)
 $ git describe --abbrev=0 --tags
 ```
 
+* how many commits exist in this repo?
+
+```sh
+git shortlog --summary | awk '{print $1}' | paste --serial --delimiters='+' | bc
+```
+
 ## git revision syntax
 
 ### Viewing a file as it appears on Remotes, HEAD or INDEX
