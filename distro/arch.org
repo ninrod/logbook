@@ -305,6 +305,7 @@ EndSection
    - install from AUR.
 ** aur
    - install package-query then yay from AUR
+   - why package-query? more info [[https://www.reddit.com/r/archlinux/comments/8n3xxu/upgrading_corepacman_502_to_510_didnt_work/dzsm8ag/][here]]
 ** polybar (fonts)
    - yay ttf-font-awesome phallus-fonts-git aur/ttf-fantasque-sans-mono
    - yay siji-git. pms xorg-xfd. para ver as fontes clona o siji e roda o ./view.sh. depois vai no terminal echo -e "\u[4utlimos char do icone]"
