@@ -304,7 +304,7 @@ EndSection
 ** pacaur
    - install from AUR.
 ** aur
-   - install cower and pacaur from AUR
+   - install package-query then yay from AUR
 ** polybar (fonts)
    - yay ttf-font-awesome phallus-fonts-git aur/ttf-fantasque-sans-mono
    - yay siji-git. pms xorg-xfd. para ver as fontes clona o siji e roda o ./view.sh. depois vai no terminal echo -e "\u[4utlimos char do icone]"
