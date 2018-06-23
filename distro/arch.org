@@ -545,7 +545,7 @@ $ man maim # for more options
   4. =sudo mount server:/path/of/the/mount /mnt/mountpoint=
 * clipboard
   - why you cannot paste after copying some text and exit source application? Here's the [[https://stackoverflow.com/a/3571949/4921402][answer]].
-  - pacman -S gpaste
+  - pacman -S parcellite
 * picture viewer
   - sxiv
   - vimiv. keybinds are in /etc/vimiv/keys.conf
