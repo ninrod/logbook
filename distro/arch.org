@@ -510,6 +510,9 @@ $ man maim # for more options
 #+END_SRC
 * video
   - mpv
+  - pms totem
+  - pms ffmpegthumbnailer
+  - pms gst-libav gst-plugins-ugly
 * font management
 ** font | char viewer (fontawesome, nerdfonts, material icons, etc...)
    - tip from [[https://redd.it/6l3ivb][here]]
