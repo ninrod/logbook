@@ -1,0 +1,14 @@
+* unix Permission tricks
+** To easily display all the permissions on a path
+   - source: [[https://stackoverflow.com/a/6796648/4921402][so answer]]
+   #+BEGIN_SRC sh
+     - ~ ➜ namei -om $(realpath .dotfiles)
+     f: /home/ninrod/code/sources/dotfiles
+     drwxr-xr-x root   root   /
+     drwxr-xr-x root   root   home
+     drwx------ ninrod ninrod ninrod
+     drwxr-xr-x ninrod ninrod code
+     drwxr-xr-x ninrod ninrod sources
+     drwxr-xr-x ninrod ninrod dotfiles
+     ~ ➜
+   #+END_SRC
