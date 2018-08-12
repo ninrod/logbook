@@ -442,6 +442,7 @@ some users prefer to impersonate LG3D, the non-re-parenting window manager
 - encontrei no arch wiki
 #+BEGIN_SRC shell
 mkfs.ext4 /dev/partition
+mkexfatfs /dev/partition
 #+END_SRC
 * github
 ** generate ssh-key
