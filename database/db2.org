@@ -1,0 +1,19 @@
+* find table and column in DB2 with tbspaceid tableid specified in error message
+  - from [[https://stackoverflow.com/a/41467532/4921402][this]] question
+** given this error
+#+BEGIN_SRC java
+com.ibm.db2.jcc.am.SqlIntegrityConstraintViolationException: 
+DB2 SQL Error: SQLCODE=-407, SQLSTATE=23502, SQLERRMC=TBSPACEID=2,
+TABLEID=19, COLNO=0, DRIVER=4.15.134
+#+END_SRC
+** use this query to extract table and column information
+#+BEGIN_SRC sql
+SELECT C.TABSCHEMA, C.TABNAME, C.COLNAME
+FROM SYSCAT.TABLES AS T,
+SYSCAT.COLUMNS AS C
+WHERE T.TBSPACEID = 2
+AND T.TABLEID = 19
+AND C.COLNO = 0
+AND C.TABSCHEMA = T.TABSCHEMA
+AND C.TABNAME = T.TABNAME
+#+END_SRC
