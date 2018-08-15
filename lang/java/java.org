@@ -25,3 +25,52 @@
 | strategy         | `TODO`      |
 | template method  | `TODO`      |
 | visitor          | `TODO`      |
+
+* Intellij | Idea
+** shortcuts
+*** code folding:
+- [[https://www.jetbrains.com/idea/help/folding-and-expanding-code-blocks.html][ctrl+shift+numpad]]
+
+*** extract a variable
+
+ctrl+alt+v
+#+BEGIN_SRC java
+/* change this */
+tir.getPagadorRecebedorNoPais();
+/* to this */
+PagadorRecebedorNoPais pag = tir.getPagadorRecebedorNoPais();
+#+END_SRC
+
+** ideavim
+*** listing/using possible actions
+
+- just type: `:actionlist [pattern]`
+- sample usage
+
+#+BEGIN_SRC viml
+nnoremap gcc :action CommentByLineComment<cr>
+nnoremap <leader>fu :action FindUsages<cr>
+nnoremap <leader>im :action GotoImplementation<cr>
+nnoremap <leader>cv :action ChangeView<cr>
+nnoremap <leader>br :action ViewBreakpoints<cr>
+nnoremap <leader>ic :action InspectCode<cr>
+nnoremap <leader>oi :action OptimizeImports<cr>
+nnoremap <leader>re :action RenameElement<cr>
+nnoremap <leader>rf :action RenameFile<cr>
+#+END_SRC
+
+** instalando colorschemes
+*** arquivo .icls
+
+- linux: coloca o arquivo aqui: `~/.IdeaICXX/config/colors`
+- more info [[https://github.com/jkaving/intellij-colors-solarized][here]]
+
+** querydsl and code generators
+
+- open dialog like this: settings -> build, execution, deployment -> compiler -> annotation processors
+
+- as vezes tem que configurar o nome do FQ processor, e.g:
+#+BEGIN_SRC java
+com.querydsl.apt.jpa.JPAAnnotationProcessor
+lombok.core.AnnotationProcessor
+#+END_SRC
