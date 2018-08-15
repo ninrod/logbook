@@ -1,7 +1,3 @@
-#+STARTUP: indent
-#+STARTUP: overview
-
-
 * How to know if a transaction is active?
   #+BEGIN_SRC java
     @Transactional

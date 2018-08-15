@@ -74,25 +74,34 @@ nnoremap <leader>rf :action RenameFile<cr>
 com.querydsl.apt.jpa.JPAAnnotationProcessor
 lombok.core.AnnotationProcessor
 #+END_SRC
-* Java CMT Transaction Demarcation
-** REQUIRED
-- default transaction attribute value. Upon entering the method, the container interposes to create a
-new transaction context if one is not already available.
-If the container created a transaction upon entering the method, it commits that transaction
-when the method call completes.
-** MANDATORY
-- A transaction must be in effect at the time the method is called.                                                                                                                                                                                                                         |
-** REQUIRES_NEW
-- The container always creates a new transaction before executing a method thusly marked.                                                                                                                                                                                                   |
-** SUPPORTS
-- This option is basically a no-op, resulting in no additional work by the container.
-If a transaction context is available it is used by the method.
-If no transaction context is available, then the container invokes the method with no transaction context.                            |
-** NOT_SUPPORTED
-- The container invokes the method with an unspecified transaction context.                                                                                                                                                                                                                 |
-** NEVER
-- The method must not be involked with a transaction context.                                                                                                                                                                                                                               |
-* jdk11
+* transactions
+** CMT transaction demarcation
+*** REQUIRED
+ - default transaction attribute value. Upon entering the method, the container interposes to create a
+ new transaction context if one is not already available.
+ If the container created a transaction upon entering the method, it commits that transaction
+ when the method call completes.
+*** MANDATORY
+ - A transaction must be in effect at the time the method is called.                                                                                                                                                                                                                         |
+*** REQUIRES_NEW
+ - The container always creates a new transaction before executing a method thusly marked.                                                                                                                                                                                                   |
+*** SUPPORTS
+ - This option is basically a no-op, resulting in no additional work by the container.
+ If a transaction context is available it is used by the method.
+ If no transaction context is available, then the container invokes the method with no transaction context.                            |
+*** NOT_SUPPORTED
+ - The container invokes the method with an unspecified transaction context.                                                                                                                                                                                                                 |
+*** NEVER
+ - The method must not be involked with a transaction context.                                                                                                                                                                                                                               |
+** How to know if a transaction is active?
+   #+BEGIN_SRC java
+     @Transactional
+     public void blah() throws Exception {
+       assert TransactionSynchronizationManager.isActualTransactionActive();
+       ...
+     }
+   #+END_SRC
+* JDK11
 ** missing java ee modules
 from: https://stackoverflow.com/a/43574427/4921402
 #+BEGIN_SRC xml
