@@ -1,8 +1,0 @@
-* How to know if a transaction is active?
-  #+BEGIN_SRC java
-    @Transactional
-    public void blah() throws Exception {
-      assert TransactionSynchronizationManager.isActualTransactionActive();
-      ...
-    }
-  #+END_SRC
