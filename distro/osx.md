@@ -31,6 +31,16 @@ $ reboot
 * ???
 * profit!
 
+## enable tap to click
+
+* system prefs -> trackpad options 
+
+## enable dragging
+
+* system prefs -> accessibility -> mouse and trackpad -> trackpad options -> mark enable dragging -> three finger dragging
+
+## enable black top bar
+- just go to general
 ## screenshot
 
 * `cmd+shift+4` + `<SPC>` + `click` 
