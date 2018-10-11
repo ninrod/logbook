@@ -6,3 +6,7 @@ place this in settings.json
 #+END_SRC
 * disable selection copy (in X)
   - add: ="editor.selectionClipboard": false,=
+* multiple cursors
+  - criar cursores no fim de cada linha da seleção: shift + alt + i
+  - ctrl + F2: refactoring rápido
+  - alt + click também cria
