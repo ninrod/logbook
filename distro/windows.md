@@ -26,3 +26,7 @@ gpresult /V
 ### directory size trick
 
 * just use the app: `windirstat`
+
+### ctrl+alt+del para mudar senha quando vc está em uma VM
+
+* no lugar disso digite: ctrl+alt+end
