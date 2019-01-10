@@ -26,3 +26,7 @@ yum --nogpgcheck localinstall golang*
 #+END_SRC
 * installing golang 1.9
   - see this link: https://mirror.go-repo.io/centos/7/x86_64/
+* check what files where installed by the package
+  #+BEGIN_SRC sh
+  $ repoquery -l java-11-openjdk-devel.x86_64
+  #+END_SRC
