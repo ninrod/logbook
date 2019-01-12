@@ -1,3 +1,20 @@
 * installation
 ** packages
-   - powernap
+   #+BEGIN_SRC sh
+     sudo apt install         \
+         fonts-fantasque-sans \
+         tmux                 \
+         ./install            \
+         silversearcher-ag    \
+         python-gpg           \
+         nautilus-dropbox     \
+         gimp                 \
+         inkscape             \
+         curl                 \
+         jq                   \
+         neofetch             \
+         nfs-common           \
+         tree                 \
+         powernap
+   #+END_SRC
+
