@@ -17,4 +17,9 @@
          tree                 \
          powernap
    #+END_SRC
-
+* snap
+** watching changes
+   #+BEGIN_SRC sh
+     $ snap changes
+     $ snap watch 7
+   #+END_SRC
