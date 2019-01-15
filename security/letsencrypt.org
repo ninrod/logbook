@@ -1,0 +1,6 @@
+* chain
+  - Assa Abloy from finland/sweden Group owns:
+  - HID GLobal (austin texas) which owns:
+  - IdenTrust (freemont, CA)which owns
+  - DST Root CA X3
+  - which signs ISRG (X1) intermediate certificate from let's encrypt
