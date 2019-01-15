@@ -9,4 +9,5 @@
   - 2M of which are for 10 people in staff (200k/year each)
   - which include a director and a fundraiser
   - 5 devops (24/7) and 3 developers
-* 
+  - em reais, a operação custa 1M por mês
+  - o que significa que cada um da staff ganha 66k por mes
