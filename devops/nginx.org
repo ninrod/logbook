@@ -1,0 +1,13 @@
+* html5 push state
+  #+BEGIN_SRC c
+    server {
+      listen 80;
+      set $host_path "www/***";
+      root $host_path;
+      index index.html;
+
+      location ~ ^/.+/$ {
+        rewrite .* /index.html last;
+      }
+    }
+  #+END_SRC
