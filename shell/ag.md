@@ -18,6 +18,7 @@ $ ag -g [pattern]
 
 # restrict search only to files that matches pattern
 $ ag -G [pattern] query
+$ ag -G'pom.xml' exclusions
 
 # do not print matching lines but filename:count where count is the number of matches 
 $ ag -c query
