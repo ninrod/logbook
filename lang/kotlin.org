@@ -6,3 +6,6 @@
 ** local functions
    - basically you can opt for reuse inside a function through declaring a local function
    - the local function has access to outer parameters
+** infix functions
+   - same as extensions functions, but if an extension function has only one param, you can add "infix" keyword
+   - "hello" shouldbeEqualTo var
