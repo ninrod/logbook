@@ -2,3 +2,7 @@
 ** when: interesting construct
  - to use when you have if/else branches that check type.
  - ref: listing 2.20
+* advanced kotlin programming video (hadi hariri)
+** local functions
+   - basically you can opt for reuse inside a function through declaring a local function
+   - the local function has access to outer parameters
