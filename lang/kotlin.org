@@ -9,3 +9,5 @@
 ** infix functions
    - same as extensions functions, but if an extension function has only one param, you can add "infix" keyword
    - "hello" shouldbeEqualTo var
+** local returns
+   return@forEach
