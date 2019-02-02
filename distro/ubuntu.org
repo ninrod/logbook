@@ -23,3 +23,9 @@
      $ snap changes
      $ snap watch 7
    #+END_SRC
+* test internet connection speed
+  with tip from [[https://askubuntu.com/a/269821/685029][here]]
+  #+BEGIN_SRC sh
+  $ sudo apt install speedtest-cli
+  $ speedtest-cli
+  #+END_SRC
