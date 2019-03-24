@@ -1,12 +1,15 @@
-#+STARTUP: indent
-#+STARTUP: overview
-
 * using curl to test REST apis
+** example 1: simple params
 
 #+BEGIN_SRC sh
 #salva o arquivo cookie.txt
-curl -X POST -c cookie.txt --data 'u=some.user&p=a' 'http://localhost:8080/rest/login'
+$ curl -X POST -c cookie.txt --data 'u=some.user&p=a' 'http://localhost:8080/rest/login'
 
 #usa o cookie
-curl -v -b cookie.txt 'http://localhost:8080/rest/usuario'
+$ curl -v -b cookie.txt 'http://localhost:8080/rest/usuario'
+#+END_SRC
+
+** example 2: json body
+#+BEGIN_SRC sh
+
 #+END_SRC
