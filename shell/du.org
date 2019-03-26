@@ -1,0 +1,5 @@
+* descobrindo o tamanho de pastas
+
+#+BEGIN_SRC sh
+du -hs * | sort -rh | head -5
+#+END_SRC
