@@ -95,3 +95,9 @@
 #+BEGIN_SRC sh
 $ find . -type f -name "*.md" -exec bash -c 'pandoc "$1" -o "${1%.md}.org"' _ {} \;
 #+END_SRC
+
+* using regex to find files
+
+#+BEGIN_SRC sh
+$ find . -type f -regextype posix-egrep -regex '^\.\/DINE2.*log$'
+#+END_SRC
