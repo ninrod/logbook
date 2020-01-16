@@ -23,6 +23,10 @@
     # solution 3: more portable and simpler than solution 2
     $ find . -name .git -prune -o -type d -print
 #+END_SRC
+* find all files whose name matches a pattern and whose size is greater than X
+  #+BEGIN_SRC sh
+  $ sudo find . -type f -regextype posix-egrep -regex '^.*log$' -size +5M -delete
+  #+END_SRC
 
 * prune search with multiple patterns
 
