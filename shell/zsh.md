@@ -262,6 +262,17 @@ from this [tip](https://github.com/justwatchcom/gopass/issues/585#issuecomment-3
 
 ```sh
 autoload -U compinit && compinit
+
+```
+
+## decimal to hex
+ 
+```sh
+~ ➜ dec=3680378700
+~ ➜ hex=$(([##16]dec))
+~ ➜ print $hex 
+DB5E1F4C
+~ ➜ 
 ```
 
 ## interesting links, tutorials, infos, docs, you name it
