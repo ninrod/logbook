@@ -1,0 +1,8 @@
+* working with citations
+** just use =>= like this:
+   - more info [[https://stackoverflow.com/a/2002149/4921402][here]]
+   #+BEGIN_SRC markdown
+   > Never Quote me.
+   >
+   > -- Albert Einstein
+   #+END_SRC
