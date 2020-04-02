@@ -1,0 +1,4 @@
+* search for string inside directories
+  #+BEGIN_SRC sh
+  $ grep string *
+  #+END_SRC
