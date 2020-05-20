@@ -1,0 +1,7 @@
+* sorting processes by column
+#+BEGIN_SRC sh
+$ top
+# press 'z' to enter colour-mode
+# press 'b' to highlight the currently selected sorting column
+# press '<' and '>' at will to change the sorting column
+#+END_SRC
