@@ -1,4 +1,4 @@
-# Ninrod's programming logbook
+# Ninrod's programming logbook 
 
 * where I keep notes about my learnings in the wonderful and mysterious world of programming.
 
