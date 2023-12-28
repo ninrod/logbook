@@ -1,5 +1,10 @@
 # Tmux tricks
 
+## navigate in copy-mode and copy/paste from the shell
+
+* start copy-mode. navigate in vim stytle. 
+* press `SPACE` to begin selection. Press `ENTER` to copy the selection to the clipboard and exit copy-mode
+
 ## build tmux
 
 * obs: make sure `libevent-devel` is available
