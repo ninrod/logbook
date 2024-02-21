@@ -37,8 +37,8 @@ nmap K <Plug>(blankDown)
 
 * `h: earlier` and `h: later` (or `:h g+`, `:h g-`)
 
-## native MRU
-
+## native MRU (most recently used files)
+ 
 * just type `:browse oldfiles`
 
 ## dictionary and spell
@@ -86,6 +86,18 @@ nmap K <Plug>(blankDown)
 
 ```vim
 :s/acharacter/\r/g
+```
+
+* substituting ^M (windows EOL) for linux EOL
+
+```
+Note: <Ctrl+V> (or Q if in windows) +<Ctrl+M> gives you the  special character on vim command line. 
+hack found [here](https://stackoverflow.com/a/811212/4921402)
+:%s/<ctrl+q><ctrl+m>/\r/g 
+
+or
+
+:%s/<ctrl+q><ctrl+m>//g  (if you want to just delete the  character)
 ```
 
 ## Performance Profiling
