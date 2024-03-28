@@ -35,3 +35,6 @@
      $ sudo visudo -f /etc/sudoers.d/90-cloudimg-ubuntu
      $ ninrod ALL=(ALL) NOPASSWD:ALL
    #+END_SRC
+* installing fonts
+  - place fonts to /usr/local/share/fonts and then run sudo
+  - fc-cache -fv
