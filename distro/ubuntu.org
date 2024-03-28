@@ -29,3 +29,9 @@
   $ sudo apt install speedtest-cli
   $ speedtest-cli
   #+END_SRC
+* passwordless sudo
+** Ubuntu 22
+   #+BEGIN_SRC emacs-lisp
+     $ sudo visudo -f /etc/sudoers.d/90-cloudimg-ubuntu
+     $ ninrod ALL=(ALL) NOPASSWD:ALL
+   #+END_SRC
