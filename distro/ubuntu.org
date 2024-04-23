@@ -28,8 +28,14 @@
 ** Ubuntu 22
 tip from [[https://askubuntu.com/a/443071][here]]
    #+BEGIN_SRC emacs-lisp
-     $ sudo visudo -f /etc/sudoers.d/90-cloudimg-ubuntu
-     $ ninrod ALL=(ALL) NOPASSWD:ALL
+     $ sudo visudo
+     # in vim, change this
+     #   %admin  ALL=(ALL) ALL
+     # to this
+     #   %admin  ALL=(ALL) NOPASSWD:ALL     
+
+     # lastly, add your user to the admin group
+     $ sudo usermod -a -G admin ninrod
    #+END_SRC
 * installing fonts
   - place fonts to /usr/local/share/fonts and then run sudo
