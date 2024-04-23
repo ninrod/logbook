@@ -26,6 +26,7 @@
   #+END_SRC
 * passwordless sudo
 ** Ubuntu 22
+tip from [[https://askubuntu.com/a/192062][here]]
    #+BEGIN_SRC emacs-lisp
      $ sudo visudo -f /etc/sudoers.d/90-cloudimg-ubuntu
      $ ninrod ALL=(ALL) NOPASSWD:ALL
