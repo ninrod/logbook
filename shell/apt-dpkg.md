@@ -9,5 +9,5 @@ $ apt list --installed
 ## describe package
 
 ```sh
-$ dpkg -L $package_name
+$ dpkg --listfiles $package_name
 ```
